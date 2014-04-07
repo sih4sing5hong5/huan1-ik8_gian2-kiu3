@@ -45,6 +45,13 @@ class 讀語料:
 # 			print(對應表[華語],華語)
 # 		print(list(對應表)[:10])
 		return 對應表
+	def 讀語料檔案(self,檔名):
+		檔案=open(檔名)
+		資料=[]
+		for 一逝 in 檔案.split('\n'):
+			資料.append(一逝) 
+		檔案.close()
+		return 資料
 		
 if __name__ == '__main__':
 	語料 = 讀語料()
