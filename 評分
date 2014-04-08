@@ -1,0 +1,2 @@
+/usr/local/mosesdecoder-master-1030126/scripts//generic/multi-bleu.perl -lc 語料/試.閩南語音.txt < 翻譯研究/試驗結果.txt 
+/usr/local/mosesdecoder-master-1030126/scripts//generic/multi-bleu.perl -lc 語料/試.閩南語音.txt < 基準/moses試驗結果.txt 
