@@ -43,15 +43,21 @@ class 讀語料:
 		對齊片語檔案 = gzip.open(對齊片語檔名, mode = 'rt')
 		對應表 = {}
 		for 一逝 in 對齊片語檔案:
-			資料=一逝.strip().split('|||')
-			國語=tuple(資料[0].split())
-			閩南語=tuple(資料[1].split())
+			資料 = 一逝.strip().split('|||')
+			國語 = tuple(資料[0].split())
+# 			標準音 = self.__粗胚.建立物件語句前處理減號(臺灣閩南語羅馬字拼音, 資料[1].strip())
+# 			閩南語 = self.__分析器.建立組物件(標準音)
+# 			if 國語 not in 對應表:
+# 				對應表[國語] = self.__分析器.建立集物件('')
+# 			對應表[國語].內底組.append(閩南語)
+			閩南語 = 資料[1].strip()
 			if 國語 not in 對應表:
-				對應表[國語]=[]
+				對應表[國語] = []
 			對應表[國語].append(閩南語)
+			print('產生對齊語料片語表',len(對應表))
 		對齊片語檔案.close()
 # 		print(str(對應表)[:100])
-		return 對應表 
+		return 對應表
 	def 產生辭典對應表(self, 對應華語):
 		對應華語檔案 = open(對應華語)
 		陣列 = json.loads(對應華語檔案.read())
