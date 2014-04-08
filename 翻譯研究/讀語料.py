@@ -48,7 +48,7 @@ class 讀語料:
 	def 讀語料檔案(self,檔名):
 		檔案=open(檔名)
 		資料=[]
-		for 一逝 in 檔案.split('\n'):
+		for 一逝 in 檔案.read().split('\n'):
 			資料.append(一逝) 
 		檔案.close()
 		return 資料
