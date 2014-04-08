@@ -3,6 +3,7 @@
 	<name>翻譯研究</name>
 	<comment></comment>
 	<projects>
+		<project>臺灣言語工具</project>
 	</projects>
 	<buildSpec>
 		<buildCommand>
