@@ -1,0 +1,3 @@
+ngram-count -order 3 -interpolate -kndiscount -unk -text ../語料/訓.閩南語音.txt -lm 訓.閩南語音.txt.lm
+/home/chhsueh/git1/mosesdecoder/scripts//training/train-model.perl -scripts-root-dir /home/chhsueh/git1/mosesdecoder/scripts/ -root-dir work -corpus /home/chhsueh/git/huan1-ik8_gian5-kiu3/基準/../語料/訓 -f 國語字.txt -e 閩南語音.txt -alignment grow-diag-final-and -reordering msd-bidirectional-fe -lm 0:3:/home/chhsueh/git/huan1-ik8_gian5-kiu3/基準/訓.閩南語音.txt.lm -external-bin-dir=/home/chhsueh/mt/
+moses -f work/model/moses.ini  < ../語料/試.國語字.txt > moses試驗結果.txt
