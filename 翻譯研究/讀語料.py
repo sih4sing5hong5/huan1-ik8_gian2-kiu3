@@ -70,11 +70,17 @@ class 讀語料:
 			try:
 				組物件 = self.__分析器.產生對齊組(閩南語字, 音)
 				標準組 = self.__家私.轉做標準音標(臺灣閩南語羅馬字拼音, 組物件)
-				辭典對應表[國語] = self.__譀鏡.看音(標準組)
-				字典對應表[self.__譀鏡.看型(標準組)] = self.__譀鏡.看音(標準組)
-				print('產生辭典對應表',len(辭典對應表))
 			except:
 				pass
+			else:
+				if 國語 not in 辭典對應表:
+					辭典對應表[國語]=[]
+				辭典對應表[國語].append( self.__譀鏡.看音(標準組))
+				型=self.__譀鏡.看型(標準組)
+				if 型 not in 字典對應表:
+					字典對應表[型]=[]
+				字典對應表[型].append(self.__譀鏡.看音(標準組))
+				print('產生辭典對應表',len(辭典對應表))
 		return (辭典對應表, 字典對應表)
 	def 產生萌典辭典對應表(self):
 		網址 = 'https://raw.github.com/g0v/moedict-data-twblg/master/x-%E8%8F%AF%E8%AA%9E%E5%B0%8D%E7%85%A7%E8%A1%A8.csv'
