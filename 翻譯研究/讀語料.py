@@ -1,3 +1,4 @@
+# -*- coding: utf-8 -*-
 import json
 import urllib.request
 from 臺灣言語工具.字詞組集句章.解析整理.文章粗胚 import 文章粗胚
