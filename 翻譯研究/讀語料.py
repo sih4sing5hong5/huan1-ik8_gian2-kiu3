@@ -101,6 +101,8 @@ class 讀語料:
 		資料 = []
 		for 一逝 in 檔案.read().split('\n'):
 			資料.append(一逝)
+			if 一逝=='':
+				continue
 		檔案.close()
 		return 資料
 
