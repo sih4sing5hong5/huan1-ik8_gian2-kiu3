@@ -51,9 +51,10 @@ class 對摩西翻譯改斷字:
 						上好句['align'][這馬閩南語詞組]['src-end'] < 這馬國語字數:
 						閩南語詞組.append(上好句詞陣列[這馬閩南語詞組])
 						這馬閩南語詞組 += 1
-					規句陣列.append('-'.join(閩南語詞組).replace(' ', '-'))
+					if 閩南語詞組!=[]:
+						規句陣列.append('-'.join(閩南語詞組).replace(' ', '-'))
 				print(上好句['hyp'])
-				print(上好句['align'])
+				print(上好句詞陣列)
 				print(斷詞組國語)
 				print(' '.join(規句陣列))
 				print(' '.join(規句陣列), file=結果檔案)
