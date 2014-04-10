@@ -1,5 +1,5 @@
 #!/bin/bash
-cat 翻譯研究/試驗結果斷字.txt | ${SCRIPTS_ROOTDIR}/generic/multi-bleu.perl -lc 語料/試.閩南語音.txt 
+cat 翻譯研究/試驗結果斷字閣組.txt | ${SCRIPTS_ROOTDIR}/generic/multi-bleu.perl -lc 語料/試.閩南語音.txt 
 echo 斷字
 ${SCRIPTS_ROOTDIR}/generic/multi-bleu.perl -lc 語料/試.閩南語音斷字.txt < 基準/moses試驗結果斷字.txt 
 echo 原本斷詞組：
