@@ -35,30 +35,31 @@ class 對摩西翻譯改斷字:
 		標音工具 = 動態規劃標音()
 		譀鏡 = 物件譀鏡()
 		結果檔案 = open('試驗結果斷字.txt', 'w')
-		for 一逝,斷詞組國語 in zip(self.語料.讀語料檔案('../語料/試.國語字斷字.txt'),
+		for 一逝, 斷詞組國語 in zip(self.語料.讀語料檔案('../語料/試.國語字斷字.txt'),
 			self.語料.讀語料檔案('../語料/試.國語字.txt')):
 # 			print(一逝)
 			翻譯結果 = self.用戶端.翻譯(一逝, 另外參數={'nbest':1})
-			全部句 = []
 			for 上好句 in 翻譯結果['nbest']:
-				這馬國語字數=0
-				這馬閩南語詞組=0
-				上好句詞陣列=上好句['hyp'].strip().split('  ')
-				規句陣列=[]
+				這馬國語字數 = 0
+				這馬閩南語詞組 = 0
+				上好句詞陣列 = 上好句['hyp'].strip().split('  ')
+				規句陣列 = []
 				for 一詞組 in 斷詞組國語.split():
-					這馬國語字數+=len(一詞組)
-					閩南語詞組=[]
-					while 這馬閩南語詞組<len(上好句['align']) and\
-						上好句['align'][這馬閩南語詞組]['src-end']<=這馬國語字數:
+					這馬國語字數 += len(一詞組)
+					閩南語詞組 = []
+					while 這馬閩南語詞組 < len(上好句['align']) and\
+						上好句['align'][這馬閩南語詞組]['src-end'] < 這馬國語字數:
 						閩南語詞組.append(上好句詞陣列[這馬閩南語詞組])
-						這馬閩南語詞組+=1
-					規句陣列.append('-'.join(閩南語詞組).replace(' ','-'))
+						這馬閩南語詞組 += 1
+					規句陣列.append('-'.join(閩南語詞組).replace(' ', '-'))
 				print(上好句['hyp'])
 				print(上好句['align'])
+				print(斷詞組國語)
 				print(' '.join(規句陣列))
+				print(' '.join(規句陣列), file=結果檔案)
 # 				print((上好句['hyp'].split('  ')))
-				print(len(上好句['hyp'].strip().split('  ')),len(上好句['align']))
-				if(len(上好句['hyp'].strip().split('  '))!=len(上好句['align'])):
+# 				print(len(上好句['hyp'].strip().split('  ')),len(上好句['align']))
+				if(len(上好句['hyp'].strip().split('  ')) != len(上好句['align'])):
 					raise
 				
 # 			print(譀鏡.看型(上好物件, 物件分字符號='-', 物件分詞符號=' '))
