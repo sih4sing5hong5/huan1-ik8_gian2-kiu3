@@ -22,6 +22,7 @@ class 對摩西翻譯改:
 	辭典對應表 = None
 	字典對應表 = None
 	連詞 = None
+	埠='8080'
 	__分析器 = 拆文分析器()
 	__粗胚 = 文章粗胚()
 	用戶端 = None
@@ -54,7 +55,7 @@ class 對摩西翻譯改:
 			pickle.dump(self.連詞, 語言模型檔案, protocol=pickle.HIGHEST_PROTOCOL)
 			語言模型檔案.close()
 			
-		self.用戶端 = 摩西用戶端('localhost', '8080')
+		self.用戶端 = 摩西用戶端('localhost',self.埠)
 		
 		self.辭典 = 型音辭典(4)
 		for 型, 音陣列 in self.字典對應表.items():
