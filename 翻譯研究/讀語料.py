@@ -15,9 +15,9 @@ class 讀語料:
 	__家私 = 轉物件音家私()
 	__譀鏡 = 物件譀鏡()
 	def 產生對齊語料對應表(self, 來源詞, 目標詞, 機率表):
-		來源詞檔案 = open(來源詞)
-		目標詞檔案 = open(目標詞)
-		機率表檔案 = open(機率表)
+		來源詞檔案 = open(來源詞, encoding='utf-8')
+		目標詞檔案 = open(目標詞, encoding='utf-8')
+		機率表檔案 = open(機率表, encoding='utf-8')
 		來源對應表 = {}
 		for 一逝 in 來源詞檔案:
 			編號, 詞, 出現次數 = 一逝.split()
@@ -41,7 +41,7 @@ class 讀語料:
 # 		print(str(對應表)[:1000])
 		return 對應表
 	def 產生對齊語料片語表(self, 對齊片語檔名):
-		對齊片語檔案 = gzip.open(對齊片語檔名, mode = 'rt')
+		對齊片語檔案 = gzip.open(對齊片語檔名, mode='rt', encoding='utf-8')
 		對應表 = {}
 		for 一逝 in 對齊片語檔案:
 			資料 = 一逝.strip().split('|||')
@@ -55,13 +55,13 @@ class 讀語料:
 			機率 = float(資料[2].split()[2])
 			if 國語 not in 對應表:
 				對應表[國語] = []
-			對應表[國語].append((閩南語,機率))
-			print('產生對齊語料片語表',len(對應表))
+			對應表[國語].append((閩南語, 機率))
+			print('產生對齊語料片語表', len(對應表))
 		對齊片語檔案.close()
 # 		print(str(對應表)[:100])
 		return 對應表
 	def 產生辭典對應表(self, 對應華語):
-		對應華語檔案 = open(對應華語)
+		對應華語檔案 = open(對應華語, encoding='utf-8')
 		陣列 = json.loads(對應華語檔案.read())
 		對應華語檔案.close()
 		辭典對應表 = {}
@@ -75,13 +75,13 @@ class 讀語料:
 				pass
 			else:
 				if 國語 not in 辭典對應表:
-					辭典對應表[國語]=[]
-				辭典對應表[國語].append( self.__譀鏡.看音(標準組))
-				型=self.__譀鏡.看型(標準組)
+					辭典對應表[國語] = []
+				辭典對應表[國語].append(self.__譀鏡.看音(標準組))
+				型 = self.__譀鏡.看型(標準組)
 				if 型 not in 字典對應表:
-					字典對應表[型]=[]
+					字典對應表[型] = []
 				字典對應表[型].append(self.__譀鏡.看音(標準組))
-				print('產生辭典對應表',len(辭典對應表))
+				print('產生辭典對應表', len(辭典對應表))
 		return (辭典對應表, 字典對應表)
 	def 產生萌典辭典對應表(self):
 		網址 = 'https://raw.github.com/g0v/moedict-data-twblg/master/x-%E8%8F%AF%E8%AA%9E%E5%B0%8D%E7%85%A7%E8%A1%A8.csv'
@@ -97,10 +97,10 @@ class 讀語料:
 # 		print(list(對應表)[:10])
 		return 對應表
 	def 讀語料檔案(self, 檔名):
-		檔案 = open(檔名)
+		檔案 = open(檔名, encoding='utf-8')
 		資料 = []
 		for 一逝 in 檔案.read().split('\n'):
-			if 一逝.strip()=='':
+			if 一逝.strip() == '':
 				continue
 			資料.append(一逝.strip())
 		檔案.close()
@@ -123,9 +123,9 @@ class 讀語料:
 if __name__ == '__main__':
 	語料 = 讀語料()
 	語料.產生對齊語料對應表(
-		來源詞 = '../語料/訓.國語字_訓.閩南語音.trn.src.vcb',
-		目標詞 = '../語料/訓.國語字_訓.閩南語音.trn.trg.vcb',
-		機率表 = '../語料/訓.國語字_訓.閩南語音.t3.final')
+		來源詞='../語料/訓.國語字_訓.閩南語音.trn.src.vcb',
+		目標詞='../語料/訓.國語字_訓.閩南語音.trn.trg.vcb',
+		機率表='../語料/訓.國語字_訓.閩南語音.t3.final')
 # 	語料.產生辭典對應表('result.txt')
 	語料.產生對齊語料片語表('../語料/phrase-table.gz')
 
