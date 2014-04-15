@@ -1,4 +1,5 @@
 # -*- coding: utf-8 -*-
+import gzip
 import json
 import urllib.request
 from 臺灣言語工具.字詞組集句章.解析整理.文章粗胚 import 文章粗胚
@@ -7,7 +8,7 @@ from 臺灣言語工具.標音.語句連詞 import 語句連詞
 from 臺灣言語工具.字詞組集句章.音標系統.閩南語.臺灣閩南語羅馬字拼音 import 臺灣閩南語羅馬字拼音
 from 臺灣言語工具.字詞組集句章.解析整理.轉物件音家私 import 轉物件音家私
 from 臺灣言語工具.字詞組集句章.解析整理.物件譀鏡 import 物件譀鏡
-import gzip
+from 臺灣言語工具.斷詞.型音辭典 import 型音辭典
 
 class 讀語料:
 	__分析器 = 拆文分析器()
@@ -119,6 +120,23 @@ class 讀語料:
 			print(數字)
 # 			print(組物件)
 		return 連詞
+	
+	def 產生辭典(self, 對應華語):
+		對應華語檔案 = open(對應華語, encoding='utf-8')
+		陣列 = json.loads(對應華語檔案.read())
+		對應華語檔案.close()
+		辭典=型音辭典(4)
+		for 國語, 流水號, 閩南語字, 閩南語音 in 陣列:
+			音 = self.__粗胚.建立物件語句前處理減號(臺灣閩南語羅馬字拼音, 閩南語音.split('/')[0])
+			try:
+				組物件 = self.__分析器.產生對齊組(閩南語字, 音)
+				標準組 = self.__家私.轉做標準音標(臺灣閩南語羅馬字拼音, 組物件)
+			except:
+				pass
+			else:
+				for 詞物件 in 標準組.內底詞:
+					辭典.加詞(詞物件)
+		return 辭典
 
 if __name__ == '__main__':
 	語料 = 讀語料()

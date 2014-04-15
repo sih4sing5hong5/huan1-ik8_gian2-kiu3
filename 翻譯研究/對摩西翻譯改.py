@@ -39,7 +39,7 @@ class 對摩西翻譯改:
 			教育部對應表 = pickle.load(辭典對應表模型檔案)
 			辭典對應表模型檔案.close()
 		else:
-			教育部對應表 = self.語料.產生辭典對應表('/home/ihc/git/temp/test/test3/結果.json')
+			教育部對應表 = self.語料.產生辭典對應表('../語料/教育部辭典對應詞結果.json')
 			辭典對應表模型檔案 = open(辭典對應表模型檔名, 'wb')
 			pickle.dump(教育部對應表, 辭典對應表模型檔案, protocol=pickle.HIGHEST_PROTOCOL)
 			辭典對應表模型檔案.close()
