@@ -71,6 +71,7 @@ class 對摩西翻譯改:
 		斷詞工具 = 動態規劃斷詞()
 		標音工具 = 動態規劃標音()
 		譀鏡 = 物件譀鏡()
+		斷字用戶端 = 摩西用戶端('localhost',8101)
 		結果檔案 = open('試驗結果.txt', 'w')
 		for 一逝 in self.語料.讀語料檔案('../語料/試.國語字.txt')[:]:
 # 			print(一逝)
@@ -85,7 +86,13 @@ class 對摩西翻譯改:
 					集物件 = self.__分析器.建立集物件('')
 					if 一个詞.endswith('|UNK|UNK|UNK'):
 						國語詞 = 一个詞.replace('|UNK|UNK|UNK', '')
-						if 國語詞 in self.對齊語料對應表:
+						if True:
+							print(國語詞)
+							翻譯結果 = 斷字用戶端.翻譯(' '.join(國語詞))
+							print(翻譯結果['text'])
+							集物件 = self.__分析器.建立集物件(翻譯結果['text'].replace('|UNK|UNK|UNK', ''))
+							句物件.內底集.append(集物件)
+						elif 國語詞 in self.對齊語料對應表:
 							for 閩南語詞, 機率 in self.對齊語料對應表[國語詞]:
 								組物件 = self.__分析器.建立組物件(閩南語詞)
 								組物件.屬性 = {'機率':self.連詞.對數(float(機率))}
