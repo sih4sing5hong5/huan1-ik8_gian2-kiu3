@@ -27,8 +27,7 @@ class 對摩西翻譯改斷字:
 	用戶端 = None
 	def 載入(self):
 		self.語料 = 讀語料()
-			
-		self.用戶端 = 摩西用戶端('localhost', '8081')
+		self.用戶端 = 摩西用戶端('localhost', '8101')
 		
 	def 試驗(self):
 		斷詞工具 = 動態規劃斷詞()
