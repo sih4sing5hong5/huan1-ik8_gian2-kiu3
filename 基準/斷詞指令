@@ -1,0 +1,4 @@
+#!/bin/bash
+ngram-count -order 3 -interpolate -kndiscount -unk -text ../語料/訓.閩南語音斷詞.txt -lm 閩南語音斷詞.txt.lm
+$SCRIPTS_ROOTDIR/training/train-model.perl -root-dir 斷詞 -corpus ${HOME}/git/huan1-ik8_gian5-kiu3/基準/../語料/訓 -f 國語字斷詞.txt -e 閩南語音斷詞.txt -alignment grow-diag-final-and -reordering msd-bidirectional-fe -lm 0:3:${HOME}/git/huan1-ik8_gian5-kiu3/基準/閩南語音斷詞.txt.lm -external-bin-dir=${HOME}/mt/
+moses -f 斷詞/model/moses.ini  < ../語料/試.國語字斷詞.txt > moses試驗結果斷詞.txt

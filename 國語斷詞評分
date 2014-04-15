@@ -1,6 +1,5 @@
 #!/bin/bash
 cat 翻譯研究/試驗結果國語斷詞.txt | sed 's/\-/ /g' | ${SCRIPTS_ROOTDIR}/generic/multi-bleu.perl -lc 語料/試.閩南語音斷字.txt
-head -n -1 翻譯研究/試驗結果國語斷詞.txt | sed 's/\-/ /g' | ${SCRIPTS_ROOTDIR}/generic/multi-bleu.perl -lc 語料/試.閩南語音斷字.txt
 echo 國語斷詞
 ${SCRIPTS_ROOTDIR}/generic/multi-bleu.perl -lc 語料/試.閩南語音斷字.txt < 基準/moses試驗結果國語斷詞.txt 
 echo 斷字
