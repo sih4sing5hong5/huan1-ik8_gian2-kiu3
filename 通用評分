@@ -1,0 +1,6 @@
+#!/bin/bash
+for file in `ls 翻譯研究/試驗結果*.txt`
+do
+	echo $file
+	cat $file | sed 's/\-/ /g' | ${SCRIPTS_ROOTDIR}/generic/multi-bleu.perl -lc 語料/試.閩南語音斷字.txt
+done
