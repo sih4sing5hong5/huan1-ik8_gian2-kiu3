@@ -106,7 +106,7 @@ guan5 pun2 tsun2 pi7 tng1 kang1 tse7 hui1 ki1 khi3 tiong1 kok4 。
 ke2 tsia3 an1 kiam2 tsin1 thau1 theh8 lu2 tsu2 so2 mng5 liah8 tshat8 
 bin5 si7 sin1 bun5 po3 to7 
 u7 lang5 jih8 mng5 ling5 tsin3 hing5 siau1 hong5 an1 kiam2 ， 
-the5 tshenn2 bin5 tsiong3 su1 iau3 se3 ji7 tshut4 。 
+the5 tshenn2 bin5 tsiong3 su1 iau3 se3 ji7 pian7 piat8 。 
 u7 tsit8 mia5 siau1 hong5 khi3 tsai5 kiam2 tsa1 e5 tsa1 poo1 ， 
 ke2 tsia3 an1 kiam2 e5 mia5 gi7 tsin1 thau1 theh8 。 
 i1 tsin3 jip8 tsit8 king1 thai3 sik4 liah8 ling5 tiam3 thau1 theh8 ， 
@@ -137,7 +137,7 @@ u7 tsit8 kua2 sim7 tsi3 pian3 sing5 常態 。
 ong2 ong2 tsham1 ka1 tian7 si7 tsiat4 bok8 e5 piau2 ian2 ， 
 pit4 su1 kai3 siau7 ka1 ki7 e5 mia5 ho7 tshut4 sin1 。 
 「 gua2 tui3 to2 ui7 lai5 e5 」 tsit4 e5 tap4 an3 ， 
-ho7 tit4 tsong1 ge7 tsiat4 bok8 tshut4 hian7 tsing3 sik4 tshai2 。 
+ho7 tit4 tsong1 ge7 tsiat4 bok8 tshut4 hian7 tsing3 ti7 sik4 tshai2 。 
 ge7 jin5 tiann7 tiann7 pi7 the5 tshenn2 pit4 su1 kong2 ： 
 「 gua2 lai5 tsu7 tiong1 kok4 tai5 pak4 ah4 si7 tiong1 kok4 ko1 hiong5 」 ， 
 na7 tsun2 bo5 kong2 iann2 phinn3 kho2 ling5 pi7 tsian2 tiau7 。 
@@ -309,7 +309,7 @@ tsing5 tsit8 kang1 king1 kue3 au1 e5 tsut8 bi2 ，
 koh4 king1 kue3 大火蒸 tsu2 nng7 tiam2 tsing1 。 
 趁熱 ka1 siang7 紅糖 kiau2 la7 tsiau5 un5 ， 
 sua3 loh8 tsng1 jip8 pan2 a2 tsoo1 hap8 e5 lak8 角柱 。 
-khng3 nng7 kang1 koo3 ting7 tsiann5 hing5 liau2 au7 ， 
+khng3 nng7 kang1 koo3 ting7 tsiam7 hing5 sing5 liau2 au7 ， 
 ho2 tsiah8 e5 米糕 栫 tsong2 sng3 tai7 kong1 ko3 sing5 。 
 ng5 sik4 ah4 bi5 a2 suan7 hong1 giap8 tsia2 thui1 tshut4 賞鴨 iu5 thing2 
 bin5 si7 sin1 bun5 po3 to7 
@@ -763,7 +763,7 @@ put4 tuan7 thap4 loh8 khi3 e5 thoo5 tsioh8 hoo7 lang5 心驚膽跳 ，
 it4 tit8 kau3 ting2 puann3 kang1 iau2 u7 lan5 san1 落石 。 
 bin5 tsiong3 記錄下來 kiann1 lang5 e5 sun3 kan1 ， 
 ho2 ka1 tsai3 bo5 jin5 mia7 tsai5 san2 e5 sun2 sit4 。 
-三年 i2 tsing5 kang5 tsit8 e5 te7 khu1 ， 
+sann1 ni5 i2 tsing5 kang5 tsit8 e5 te7 khu1 ， 
 ti7 bok8 la1 khik4 hong1 tsai1 tsan1 king1 huat4 sing1 pang1 thap4 ， 
 tso7 sing5 suann1 khu1 te7 tsit4 bo5 un2 ting7 。 
 tshuan1 bin5 iu1 sim1 gu7 siang7 kiong5 liat8 tua7 tsui2 hoo7 ， 
@@ -792,7 +792,7 @@ siang7 bue2 bo5 huat4 be7 tshut4 khi2 ；
 soo2 i2 tsit4 kui2 kang1 無論如何 ， 
 tioh8 si7 su1 iau3 pai5 tann3 a2 tso3 sing1 li2 。 
 道破 ki1 tsan5 bin5 tsiong3 tsin1 tsiann3 e5 sim1 siann1 ， 
-hi1 bang7 thinn1 kong1 peh4 mai3 koh4 loh8 hoo7 。 
+hi1 bang7 thinn1 kong1 mai3 koh4 loh8 hoo7 。 
 tsit4 ui7 huan3 be7 ka1 ki7 suan3 thau5 e5 a1 ma2 ， 
 than3 tioh8 hoo7 se3 sio2 khua2 tng2 ho5 ， 
 jin7 tsin1 e5 tsing2 li2 tsia1 e5 suan3 thau5 。 
@@ -1069,7 +1069,7 @@ sin1 sui2 siang1 tsha1 ua2 beh4 nng7 ban7 gua7 kho3 ，
 hau7 hong1 kong2 tsit4 si7 hiang3 lau7 su1 tsioh4 khuan2 。 
 in1 ui7 siang1 hong1 sin1 sui2 it4 tit8 kong2 be7 hah8 ， 
 u7 ji7 tsap8 tshit4 ui7 lau7 su1 li7 tsit4 ham1 the3 hiu1 。 
-tsia1 e5 kau3 su1 to1 soo3 kann2 怒 m7 kann2 gian5 ， 
+tsia1 e5 kau3 su1 to1 soo3 kann2 noo7 m7 kann2 gian5 ， 
 hi1 bang7 kau3 iok8 poo7 e7 sai2 hiap8 tsoo7 kai2 kuat4 bun7 te5 ， 
 mai3 ing2 hiang2 tioh8 hak8 sing1 kap4 kau3 su1 e5 kuan5 ik4 。 
 mng7 kui2 sin5 bo5 求醫 tsa1 boo2 gin2 a2 ian5 goo7 tsiu7 i1 si2 bong5 
@@ -1286,7 +1286,7 @@ tsan1 king1 tso3 kue3 太妹 迷失 ka1 ki7 ，
 kau3 tann1 kui1 e5 lang5 kai2 thau5 uann7 bin7 ， 
 tsiann5 tso3 拳擊界 e5 bing5 jit8 tsi1 sing1 。 
 pin5 tong1 kuan7 li2 kang2 kok4 tiong1 e5 楊佩蓉 ， 
-kue3 khi3 oo1 to7 e5 tho2 siau3 kong3 poo7 poo7 lai5 。 
+kue3 khi3 oo1 to7 e5 tho2 siau3 lik8 siok8 poo7 poo7 lai5 。 
 in1 ui7 lau7 pe7 tut8 jian5 e5 kue3 sin1 ， 
 hoo7 i1 kuat4 sim1 痛改前非 。 
 au7 lai5 ka1 jip8 拳擊界 liau2 au7 ， 
@@ -1378,7 +1378,7 @@ sing5 tiong2 kue3 ting5 su1 iau3 ke3 a2 tsiah4 khi2 lai5 ，
 新埤 kok4 sio2 e5 hue2 liong5 ko2 senn1 ti7 ka1 tang1 tshiu7 。 
 ua2 kin7 tsim1 tsiok4 khuann3 tshin1 tshiunn7 sian1 jin5 tshau2 e5 莖 ， 
 kinn1 puann3 ti7 ka1 tang1 tshiu7 tshiu7 khoo1 e5 si3 khoo1 ui5 ， 
-kiong5 beh4 kap4 kui1 tsang5 tshiu7 tsiann5 tso3 hing5 mau7 it4 。 
+kiong5 beh4 kap4 kui1 tsang5 tshiu7 tsiann5 tso3 hing5 mau7 。 
 hau7 hong1 piau2 si7 lak8 ni5 tsing5 i2 king1 huat4 hian7 ， 
 it4 tit8 kau3 kin1 ni5 senn1 tshut4 hue2 liong5 ko2 liau2 au7 ， 
 tsong2 sng3 in2 khi2 tak8 ke1 e5 tsu3 i3 。 
@@ -1584,7 +1584,7 @@ iu5 guan5 lau5 ti7 hak8 hau7 e5 hing5 tsing3 jin5 uan5 ，
 m7 kam1 hak8 hau7 kho2 ling5 bin7 lim5 kuainn1 mng5 ， 
 iau2 si7 bo5 hong3 khi3 siu1 tsian2 hau7 hng5 e5 hue1 tshau2 。 
 tsin1 ku2 bo5 hak8 sing1 siong7 kho3 e5 kau3 sik4 ， 
-khuann3 khi2 lai5 hian2 tit4 u7 tsit8 kua2 雜亂 ， 
+khuann3 khi2 lai5 hian2 tit4 u7 tsit8 kua2 sam1 lu5 tshiang2 ， 
 pian7 soo2 se2 tshiu2 tai5 kau7 kau7 e5 灰塵 。 
 tsap8 ni5 tsing5 guan5 pun2 hak8 hau7 iau2 u7 hoo7 li2 kho1 ， 
 hak8 sing1 tsan1 king1 tat8 kau3 tshit4 pah4 gua7 lang5 ， 
@@ -1808,7 +1808,7 @@ tsit4 e5 iann2 phinn3 ting5 sin1 tai3 tong7 tua7 lang5 e5 鬥志 。
 tian7 iann2 tsing5 tsiat4 tong1 tiong1 帶出 e5 kam2 tong7 ， 
 kah4 sian1 bin5 tsiong3 hi1 bang7 put4 tuan7 tua3 lai5 siong1 ki1 ， 
 tsu7 an2 ne1 thui1 tshut4 tiong7 huan2 kah4 sian1 liap4 iann2 場景 。 
-iau2 e7 sai2 tsiah8 khuann3 mai7 bue5 a2 ke1 ， 
+iau2 e7 sai2 tsiah8 khuann3 mai7 bue5 ke1 ， 
 tshin1 sin1 the2 giam3 tse3 tsok4 ho2 tsiah8 e5 tsha2 oo7 a2 ping1 ， 
 ki5 phan3 tsioh4 tioh4 tian7 iann2 tua3 lai5 tsinn5 tiau5 。 
 tsit4 e5 ham2 tong7 jin5 sim1 e5 khiu2 tua7 soh4 ki3 lok8 phinn3 ， 
@@ -1818,7 +1818,7 @@ lai5 kau3 kah4 sian1 m7 na7 e7 sai2 tsham1 kuan1 tian7 iann2 場景 ，
 ti5 liau2 ho2 tsiah8 e5 bi2 sit8 buan2 tsiok4 khau2 hok4 ； 
 e7 sai2 the2 giam3 tang5 tshiu2 tse3 tsok4 tsha2 oo7 a2 ping1 ， 
 iau2 u7 荔枝木 tong3 tso3 柴火 ， 
-hang1 khi2 lai5 phang1 逼人 e5 bue5 a2 hang1 ke1 。 
+hang1 khi2 lai5 phang1 逼人 e5 bue5 hang1 ke1 。 
 kah4 sian1 kok4 sio2 khiu2 tua7 soh4 tui7 koo2 bu2 liau2 tua7 lang5 e5 i3 tsi3 ， 
 khik4 hok8 siong1 thiann3 koh4 tsit8 pai2 khia7 khi2 lai5 。 
 kah4 sian1 e5 bin5 tsiong3 hi1 bang7 tong1 te7 ti7 bi7 lai5 ， 
@@ -2015,7 +2015,7 @@ tsiong1 hua3 u7 tsit8 e5 penn5 te7 e5 ing1 hue1 lim5 ；
 園子 lai7 bin7 e5 mue5 hue1 kap4 ing1 hue1 ， 
 tsue3 kin7 the5 tsa2 ti7 tshiu1 thinn1 tua7 khui1 。 
 long5 giap8 tsuan1 ka1 piau2 si7 kin1 ni5 hong1 thai1 khah4 tsue7 ， 
-hioh8 a2 lian5 sua3 pi7 hong1 hoo7 phah4 loh8 ， 
+hioh8 a2 lian5 sua3 pi7 hong1 hoo7 loh8 ， 
 tso7 sing5 休眠 e5 ge5 the5 tsa2 khui1 hue1 。 
 tsue3 kin7 tu2 tu2 tsin3 jip8 tsap8 gueh8 e5 kui3 tsiat4 ， 
 tsiong1 hua3 芬園鄉 溪尾村 e5 ing1 hue1 lim5 ； 
@@ -2195,7 +2195,7 @@ hui1 tian2 hing5 sim1 ka2 siu1 hok8 kio5 thau5 thng5 tshiunn2 sok4 sia3 tiong5 s
 bin5 si7 sin1 bun5 po3 to7 
 lau7 ku7 kian3 tiok8 na7 tsun2 m7 si7 huat4 ting7 koo2 tsik4 ， 
 ong2 ong2 lan5 to5 thiah4 sak4 e5 mia7 un7 。 
-ti7 kok4 lip8 ko1 hiong5 tai7 hak8 hu3 kau3 siu7 陳啟仁 gan2 tiong1 ， 
+ti7 kok4 lip8 ko1 hiong5 tai7 hak8 hu3 陳啟仁 gan2 tiong1 ， 
 tsia1 e5 long2 si7 siang7 ho2 e5 kian3 tiok8 kau3 tsai5 。 
 i1 siunn7 tshut4 「 hui1 tian2 hing5 sim1 ka2 siu1 hok8 」 e5 hong1 sik4 ， 
 ham1 hak8 sing1 jin7 iong2 kio5 thau5 thng5 tshiunn2 jit8 sik4 sok4 sia3 。 
@@ -2458,7 +2458,7 @@ bin5 si7 sin1 bun5 po3 to7
 hiang3 lai5 kio3 tso3 pah4 hun1 tsi1 pah4 e5 橄欖油 ， 
 ma7 si7 lam7 廉價油 mua5 phian3 siau1 hui3 tsia2 。 
 koh4 pi7 tsa1 tshut4 花生油 kin1 pun2 bo5 thoo5 tau7 ， 
-kan1 na7 su2 iong7 siok8 ke3 香精 lam7 tiau5 bi7 。 
+kan1 na7 su2 iong7 siok8 香精 lam7 tiau5 bi7 。 
 tang2 su7 tiunn2 高振利 ti7 bin7 tui3 tok8 ka1 tsuan1 hong2 ， 
 phian3 kong2 siu1 ko3 pun2 thoo2 e5 thoo5 tau7 tau3 sann1 kang7 tso3 tshan5 lang5 。 
 大統 tang2 su7 tiunn2 高振利 au7 lai5 kiok4 kiong1 hue7 sit4 le2 ， 
@@ -2474,7 +2474,7 @@ ti7 tshi7 tiunn5 huan3 be7 ua2 beh4 sann1 tsap8 kui2 ni5 。
 tsap8 goo7 khuan2 kap4 花生油 siang1 kuan1 e5 san2 phin2 ， 
 su7 sit8 siang7 uan5 tsuan5 bo5 thoo5 tau7 。 
 long2 si7 su2 iong7 sa1 la2 iu5 ka1 siang7 芥子油 ， 
-jian5 au7 ka1 jip8 thoo5 tau7 香精 ka1 mih8 ， 
+jian5 au7 ka1 jip8 thoo5 tau7 香精 thiam1 ka1 mih8 ， 
 ki5 sit8 ham1 thoo5 tau7 uan5 tsuan5 bo5 kuan1 he7 。 
 大統 tsioh4 tioh4 ke7 ke3 siau3 mua5 phian3 siau1 hui3 tsia2 ， 
 guan5 liau7 tshai2 iong7 pun2 thoo2 thoo5 tau7 ma7 si7 kong2 peh8 tshat8 。 
@@ -2513,7 +2513,7 @@ in1 ui7 penn7 tsing5 ke3 siok8 ok4 hua3 siang7 bue2 kue3 sin1 。
 khiam3 khueh4 tshu3 lai7 tiong7 iau3 e5 king1 tse3 支柱 ， 
 so1 thai3 thai3 su1 iau3 iunn2 tshi7 年邁 e5 lau7 bo2 。 
 tsit8 tui3 ni5 ling5 tsi2 u7 kok4 tiong1 kok4 sio2 e5 kiann2 ji5 ， 
-sim7 tsi3 pit4 su1 hun1 ki5 hu3 khuan2 ang1 sai3 e5 tsong3 hui3 ， 
+sim7 tsi3 pit4 su1 hun1 ki5 hu3 khuan2 ang1 sai3 e5 song1 tsong3 hui3 ， 
 kui1 ke1 lang5 sun3 kan1 ham7 loh8 愁雲慘霧 。 
 soo1 lau7 thai3 thai3 siunn7 tioh8 ka1 ki7 e5 hau7 senn1 ， 
 bak8 sai2 to1 si7 bo5 pan7 huat4 止住 。 
@@ -2536,7 +2536,7 @@ kin1 a2 jit4 tiong1 san1 ko1 sok4 kong1 loo7 e5 loh8 lam5 loo7 tuann7 ，
 tshut4 hian7 tian1 to3 hiang3 khui1 e5 kiann1 hun5 tsing5 hing5 。 
 guan5 lai5 tsit4 si7 tsit8 tui3 lau7 ang1 a2 boo2 ， 
 hoo7 siang1 hu5 tshi5 siunn7 beh4 kau3 penn7 inn7 khuann3 penn7 ； 
-kiat4 ko2 kiann5 tsho3 huan2 hong1 hiang3 e5 kau1 liu5 to1 ， 
+kiat4 ko2 kiann5 tsho3 反方向 e5 kau1 liu5 to1 ， 
 tian1 to3 hiang3 khui1 liau2 tsap8 gua7 kong1 li2 。 
 tsiann3 ping5 nng7 e5 lun5 thai1 i2 king1 磨破 phue5 ， 
 au7 lai5 kok4 to7 king2 tshat4 kuann2 kau3 hong1 loo7 sio1 kiu3 ， 
@@ -2591,7 +2591,7 @@ phian1 ho7 ngoo7 it4 it4 pan1 tshu3 e5 tai5 thih4 ki2 kong1 ho7 ，
 kin1 a2 jit4 e5 poo1 nng7 tiam2 tui3 ka1 gi7 hue2 tshia1 tsam7 。 
 ong2 lam5 hing5 su2 bo5 kau3 tsap8 hun1 tsing1 ， 
 thuan5 tshut4 ka3 su2 tui7 loh8 hue2 tshia1 e5 i3 gua7 ， 
-tso7 sing5 hue2 tshia1 ian5 goo7 si3 tsap8 goo7 hun1 tsing1 。 
+tso7 sing5 hue2 tshia1 ian5 goo7 tsap8 goo7 hun1 tsing1 。 
 huat4 sing1 put4 hing7 e5 ki2 kong1 ho7 un3 tsiang3 ， 
 i5 senn3 ka3 su2 kin2 kip4 sang3 kau3 penn7 inn7 ； 
 m7 koh4 siong1 se3 sit8 tsai7 siunn1 giam5 tiong7 ， 
@@ -2614,7 +2614,7 @@ tai5 lam5 tshi7 lian5 sua3 thuan5 tshut4 phainn2 too5 lik8 siok8 an3 ，
 tsue7 mia5 e5 hu3 siong1 pi7 pang2 ka3 m7 kann2 po3 an3 。 
 siap8 an3 e5 馬姓 tsu2 hiam5 ku7 ni5 tshut4 gak8 liau2 au7 ， 
 king1 siong5 ti7 kiau2 king1 lai7 bin7 tshue7 ti1 。 
-jian5 au7 ke3 ue7 tsia1 e5 lian5 sua3 e5 loo2 lang5 kong3 ， 
+jian5 au7 ke3 ue7 tsia1 e5 lian5 sua3 e5 loo2 lang5 kong3 tsinn5 ， 
 guan5 pun2 an3 sng3 ji7 tsap8 sann1 ho7 thau1 too7 kau3 tiong1 kok4 。 
 king2 hong1 the5 tsa2 ti7 ji7 tsap8 ji7 ho7 ping1 hun1 nng7 loo7 ， 
 tng1 kang1 hun1 piat8 ti7 hun5 lim5 kap4 tai5 tiong1 ， 
@@ -2627,7 +2627,7 @@ tua7 phe1 tsuan5 hu3 bu2 tsong1 e5 king2 hong1 ，
 lai5 kau3 ti7 hun5 lim5 kuan7 khau2 oo5 hiong1 e5 jin5 ke1 tshu3 ， 
 tai7 poo2 ti7 tshu3 lai7 khun3 e5 sann1 mia5 hiam5 huan7 。 
 kue3 khi3 ua2 beh4 si3 koo3 gueh8 i2 lai5 ， 
-tai5 lam5 thuan5 tshut4 tsiann5 tse7 e5 hu3 siong1 pi7 kong3 ， 
+tai5 lam5 thuan5 tshut4 tsiann5 tse7 e5 hu3 siong1 pi7 kong3 tsinn5 ， 
 pi7 hai7 jin5 kiann1 bo5 lang5 tshut4 bin7 po3 an3 tsi2 jin7 。 
 tsia1 e5 hiam5 huan7 tam1 sim1 ka1 ki7 hing5 tsong1 phok8 kng1 ， 
 tsun2 pi7 tsiann5 tse7 ke2 tshia1 pai5 lun5 liu5 掛車 ting2 ， 
@@ -2645,7 +2645,7 @@ au7 lai5 tsit4 king1 中亞 sing1 ki1 kong1 si1 piau2 si7 ，
 ting2 le2 pai3 king1 kue3 tan5 tshiu7 kiok4 e5 huan2 ing3 ； 
 in1 i2 king1 ka7 siang3 phinn3 thiat4 tiau7 ， 
 tui3 i5 tso7 sing5 tan5 tshiu7 kiok4 khun3 jiau2 kam2 kak4 phai2 se3 。 
-中亞 sing1 ki1 e5 tang2 su7 tiunn2 摟 tioh8 tan5 tshiu7 kiok4 ， 
+中亞 sing1 ki1 e5 tang2 su7 tiunn2 tiau5 tan5 tshiu7 kiok4 ， 
 tshiu2 ting2 theh8 tioh4 tsun2 pi7 sang3 i1 e5 e5 a2 。 
 tioh8 si7 in1 ui7 tsit4 tiunn1 hap8 tsiau3 e5 siang3 phinn3 ， 
 hoo7 ti7 tshai3 tshi7 a2 tso3 sing1 li2 e5 tan5 tshiu7 kiok4 ， 
@@ -2677,7 +2677,7 @@ tsing3 sik4 thian2 khui1 ki3 lok8 phinn3 「 khuann3 tioh8 tai5 uan5 」 thau5 p
 nng7 ui7 tshut4 mia5 e5 to7 ian2 ham1 tshi7 tiunn2 tso3 hue2 kian3 tsing3 。 
 tsing5 au7 iong7 tioh4 sann1 ni5 e5 kang1 tsok4 si5 kan1 ， 
 lui2 tsik4 hui1 hing5 si3 pah4 tiam2 tsing1 e5 空拍 ， 
-thau3 kue3 鳥瞰 e5 too7 ki3 lok8 tai5 uan5 e5 bin7 mau7 。 
+thau3 kue3 鳥瞰 e5 kak4 too7 ki3 lok8 tai5 uan5 e5 bin7 mau7 。 
 ki3 lok8 phinn3 ki3 lok8 tiu7 tshan5 e5 koo2 tsui1 kha1 in3 ， 
 登山隊 pe5 tsiunn7 suann1 ting2 e5 jiat8 tsing5 ti3 i3 。 
 iau2 u7 thian1 tsai1 liau2 au7 lau5 loh8 lai5 e5 siong1 hun5 ， 
@@ -3194,7 +3194,7 @@ hak8 sing1 he5 siong2 khi2 lian7 sip8 e5 kue3 ting5 ，
 sui1 jian5 sin1 khoo2 ma7 si7 siang7 kiau1 ngoo7 e5 ki3 ik4 ， 
 siang7 bue2 tuat8 tit4 tsuan5 kok4 lang7 sai1 國小組 kuan3 kun1 。 
 虎虎生風 e5 打滾 kap4 tio5 thiau3 ， 
-sai1 kui2 teh4 bo5 ing5 逗弄 獅子頭 ， 
+sai1 kui2 teh4 bo5 ing5 pinn3 lang7 獅子頭 ， 
 tian2 hian7 sik8 tshiu2 ki1 khiau2 e5 kok4 tsiong2 e5 tong7 tsok4 。 
 學生舞 uan5 tsing2 tho3 e5 獅陣 ， 
 tak8 e5 lang5 汗如雨下 bo5 huah4 khoo2 ， 
@@ -3276,7 +3276,7 @@ tsit4 e5 king2 tiam2 tak8 ke1 it4 ting7 be7 tshenn1 hun7 。
 gua7 kai3 liah8 tso3 tsit4 si7 ing1 kok4 ling2 su7 kuan2 ， 
 ki5 sit8 ling2 su7 kuan2 ti7 pat8 e5 tua7 mng5 。 
 ian5 tioh8 tsit8 pah4 si3 tsap8 tshit4 gam2 poo7 to7 kiann5 loh8 khi3 ， 
-ti7 suann1 kha1 e5 tsit4 tong3 紅瓦 tshu3 ting2 tshu3 theh8 ， 
+ti7 suann1 kha1 e5 tsit4 tong3 紅瓦 tshu3 theh8 ， 
 tsiah4 si7 tsiann3 kang2 e5 ing1 kok4 ling2 su7 kuan2 。 
 guan5 lai5 ti7 suann1 ting2 e5 紅磚 tshu3 theh8 ， 
 tsin1 sit8 e5 sin1 hun7 to1 si7 領事 e5 官邸 。 
@@ -3404,7 +3404,7 @@ tsia1 e5 bi2 hun2 tsun2 pi7 tso3 tsiann5 mi7 tiau5 。
 thau5 sing1 ka7 bi2 hun2 kap4 tsui2 kiau2 la7 tsiau5 un5 ， 
 jian5 au7 koh4 to3 jip8 製麵 ki1 khi3 e5 lai7 bin7 。 
 li7 iong7 ko1 ap4 ham1 ko1 un1 tsi2 sik4 ， 
-e7 sai2 khuann3 tioh8 tsuan5 bi2 mi7 tiau5 khuann1 khuann1 a2 e5 the2 。 
+e7 sai2 khuann3 tioh8 tsuan5 bi2 mi7 tiau5 khuann1 khuann1 a2 e5 it4 the2 。 
 siang7 bue2 king1 kue3 tai7 iok4 八小時 吹乾 ， 
 to1 uan5 sing5 tok8 tik8 han2 kian3 e5 bi2 mi7 tiau5 。 
 thau5 ke1 kong2 tsing5 au7 khai1 liau2 nng7 ni5 gua7 khai1 huat4 ， 
@@ -3460,7 +3460,7 @@ tsit4 e5 tsap8 peh4 kong1 khing2 e5 long5 te7 siang7 tse7 ，
 tsit8 lok4 lok4 a2 pi7 tshue7 tioh8 e5 野鳥 si2 the2 。 
 tsia1 e5 si2 bong5 e5 tsiau2 lui7 king1 kue3 hua3 giam7 ， 
 giam7 tshut4 tsit8 khuan2 long5 ioh8 e5 sing5 hun1 ， 
-tsit4 khuan2 long5 ioh8 thong1 siong5 iong7 ti7 siau1 biat8 thang5 。 
+tsit4 khuan2 long5 ioh8 thong1 siong5 iong7 ti7 siau1 biat8 phainn2 thang5 。 
 m7 koh4 in1 ui7 long5 ioh8 tok8 sing3 siunn1 kiong5 ， 
 tui3 tsiau2 lui7 kap4 tsui2 senn1 tong7 but8 san2 sing1 gui5 hai7 。 
 ti5 liau2 tsiah8 tsing2 tsi2 e5 tshu3 tsiau2 a2 kap4 紅鳩 i2 gua7 ， 
@@ -3504,7 +3504,7 @@ kin1 ni5 tsuan1 kang1 ti7 tai5 pak4 ki2 hing5 kau1 liu5 tse3 uah8 tang7 。
 hue7 tiunn5 ti5 liau2 tsing7 thai3 e5 tian2 si7 i2 gua7 ， 
 iau2 u7 tong7 thai3 e5 bu2 to7 ian2 tshut4 。 
 hi1 bang7 thau3 kue3 an2 ne1 e5 ge7 bun5 uah8 tang7 ， 
-tshiok4 tsin3 tai5 uan5 bin5 tsiong3 liau2 kai2 jit8 pun2 e5 bun5 hua3 。 
+tshiok4 tsin3 tai5 uan5 jin5 bin5 liau2 kai2 jit8 pun2 e5 bun5 hua3 。 
 tong1 ni5 ti7 sam1 it4 it4 tang1 jip8 pun2 e5 tua7 te7 tang7 ， 
 tsiann5 tse7 jiat8 tsing5 e5 tai5 uan5 jin5 bin5 u7 tsinn5 tshut4 tsinn5 ； 
 kuan1 khuann2 e5 kim1 giah8 tshiau1 kue3 二百億 jit8 uan5 ， 
@@ -4548,7 +4548,7 @@ e7 sai2 tai3 tong7 ko1 hiong5 e5 kuan1 kong1 san2 giap8 。
 tshiong1 buan2 東洋 hong1 tsing5 e5 bu2 to7 piau2 ian2 ， 
 suan1 ko3 ko1 hiong5 kap4 tang1 kiann1 e5 hang5 khong1 sin1 lian5 kiat4 ， 
 ko1 hiong5 tit8 pue1 tang1 kiann1 koh4 u7 sin1 suan2 tik8 。 
-tiong2 ing5 hang5 khong1 ti7 tsap8 it4 ho7 tsing3 sik4 ka1 jip8 tsian3 kiok8 ， 
+tiong2 ing5 hang5 khong1 ti7 tsap8 it4 ho7 tsing3 sik4 ka1 jip8 kiok8 ， 
 tak8 kang1 tsa2 khi2 tshit4 tiam2 tit8 pue1 tang1 kiann1 e5 pan1 ki1 ， 
 首航 tsing5 goo7 kang1 e5 pan1 ki1 i2 king1 kheh4 mua2 。 
 te7 it4 tai5 tang1 kiann1 tit8 pue1 ko1 hiong5 e5 tiong2 ing5 pan1 ki1 ， 
@@ -4719,7 +4719,7 @@ hoo7 tsiann5 tse7 bin5 tsiong3 put4 tuan7 kong2 than3 tioh8 ah4 。
 te7 kiam2 su2 soo1 tsa1 koh4 tsa1 hik8 tok8 hun2 tsiunn1 si3 pah4 tong3 
 bin5 si7 sin1 bun5 po3 to7 
 kin1 ni5 goo7 gueh8 tai5 lam5 e5 茂利 澱粉廠 ， 
-pi7 tsa1 hik8 u7 ham5 hua3 hak8 ka1 mih8 e5 tok8 hun2 tsiunn1 。 
+pi7 tsa1 hik8 u7 ham5 hua3 hak8 thiam1 ka1 mih8 e5 tok8 hun2 tsiunn1 。 
 tong1 si5 siau1 hui2 ua2 beh4 sann1 tsap8 ji7 tong3 ， 
 ji5 tshiann2 pi7 huat8 khuan2 sin1 tai5 phio3 tsap8 ji7 ban7 kho3 。 
 bo5 siunn7 kau3 kin1 a2 jit4 koh4 ti7 kang1 tiunn5 lai7 bin7 ， 
@@ -4776,7 +4776,7 @@ tsa1 boo2 gin2 a2 e5 kha1 khah8 ti7 tshau3 kau1 a2 kua3 lai7 bin7 ，
 ti3 su2 tong1 tiunn5 hiang3 tua7 siann1 khau3 。 
 su7 au7 ko1 hiong5 tshi7 e5 tsui2 li7 kiok8 tsian5 ong2 kham3 tsa1 ， 
 bin5 tsiong3 huat4 hian7 tshau3 kau1 a2 kua3 e5 khang1 phang7 pian3 tua7 ， 
-e7 sai2 hiang3 tsui2 li7 kiok8 huan2 ing3 iau1 kiu5 the3 uann7 。 
+e7 sai2 hiong3 tsui2 li7 kiok8 huan2 ing3 iau1 kiu5 the3 uann7 。 
 tioh8 si7 大順 tsit8 loo7 e5 tsit4 e5 tshau3 kau1 a2 kua3 ， 
 hoo7 lang5 kiann5 ti7 jin5 hing5 to7 步步 驚心 。 
 phang7 king2 jian5 tua7 ko3 tsit8 tiunn1 mia5 phinn3 ， 
@@ -5236,12 +5236,12 @@ long2 si7 tsio2 soo3 bin5 tsiong3 bo5 tsun1 siu2 kui1 ting7 ，
 sim7 tsi3 pho3 huai7 kam3 si7 khi3 he7 thong2 。 
 tui3 i5 khiam3 khuat4 kong1 tik4 sim1 e5 bin5 tsiong3 ， 
 khuan5 po2 kiok8 piau2 si7 tsu7 an3 ne1 bo5 koh4 thing2 sing7 。 
-tsa1 boo2 gin2 a2 tso3 扛起母職 tsiau3 koo3 hak8 mue7 
+tsa1 boo2 gin2 a2 tso3 ka1 扛起母職 tsiau3 koo3 hak8 mue7 
 bin5 si7 sin1 bun5 po3 to7 
 tsap8 it4 hue3 e5 tsa1 boo2 gin2 a2 扛起母職 ， 
 tsiau3 koo3 tshu3 lai7 hak8 mue7 e5 擔子 。 
 tan1 tshin1 e5 ma1 ma1 than3 tsinn5 siang7 tua7 ia7 pan1 ， 
-tsi2 ho2 ua2 kho3 tsa1 boo2 gin2 a2 tso3 ， 
+tsi2 ho2 ua2 kho3 tsa1 boo2 gin2 a2 tso3 ka1 ， 
 kui1 ke1 lak8 khau2 tua3 ti7 goo7 penn5 e5 tshu3 。 
 tsa1 boo2 gin2 a2 tai7 the3 母職 e5 sim1 king2 ， 
 to1 ti7 tsit4 e5 e7 siunn7 tsa1 boo2 gin2 a2 e5 pit4 ha7 ， 
@@ -5288,18 +5288,18 @@ kho2 ling5 jiat8 tsui2 khi3 jian5 sio1 bo5 uan5 tsuan5 tso7 sing5 。
 ka1 gi7 e5 ki1 tok4 kau3 penn7 inn7 i1 sing1 kong2 ， 
 huan7 tsia2 hiat4 ik8 e5 it4 iong5 hua3 thuann3 long5 too7 tsin1 kuan5 ， 
 e7 sai2 khak4 ting7 it4 iong5 hua3 thuann3 tso7 sing5 tiong3 tok8 。 
-goo7 gueh8 thinn1 khua3 ni5 khai1 tshiunn3 tua7 ing5 boo7 khau1 se2 時事 
+goo7 gueh8 thinn1 khua3 ni5 khai1 tshiunn3 tua7 ing5 boo7 khau1 se2 si5 su7 
 bin5 si7 sin1 bun5 po3 to7 
 io5 kun2 gak4 thuan5 goo7 gueh8 thinn1 ti7 ko1 hiong5 khua3 ni5 ， 
 ian2 tshiunn3 hue7 tsuan5 tiunn5 lau7 jiat8 kun3 kun3 。 
-it4 hiong3 kuan1 sim1 時事 e5 goo7 gueh8 thinn1 ， 
+it4 hiong3 kuan1 sim1 si5 su7 e5 goo7 gueh8 thinn1 ， 
 ti7 bu2 tai5 tua7 ing5 boo7 phah4 tshut4 tin1 lang5 kong2 ko3 ； 
 suah4 si7 puann3 to7 the2 tua7 tshiunn2 ting1 kiu5 lah4 sap4 tsui2 處理員 ， 
 iau2 u7 ting1 kiu5 kam3 si7 khi3 i5 hoo7 jin5 uan5 。 
 guan5 lai5 ti7 影射 jit8 guat8 kng1 kap4 ang5 tiong7 khu1 an3 kiann7 ， 
 khau1 se2 e5 i3 bi7 siang1 tong1 bing5 hian2 。 
 goo7 gueh8 thinn1 loh8 lam5 ham1 kua1 be5 khua3 ni5 bue2 ， 
-king1 tian2 e5 kua1 khik4 lang5 lun5 liu5 tsiunn7 tin7 。 
+king1 tian2 e5 kua1 khik4 lun5 huan1 tsiunn7 tin7 。 
 bu2 tai5 ting2 e5 goo7 gueh8 thinn1 tshut4 tua7 khui1 tshiunn3 ， 
 iu5 guan5 bo5 be7 ki3 kuan1 sim1 時勢 。 
 tua7 ing5 boo7 phah4 tshut4 po3 tsua2 ting1 tsai5 e5 kong2 ko3 ， 
@@ -5380,7 +5380,7 @@ lau7 sian1 senn1 e5 sin1 the2 tsong7 hong2 be7 bai2 ，
 sim7 tsi3 bo5 su1 iau3 kiu3 hoo7 tshia1 sang3 i1 。 
 空勤隊 ti7 sann1 te7 mng5 口社 suann1 khu1 ， 
 huat4 hian7 siu7 khun3 e5 jip8 pun2 飛行傘 玩家 。 
-sua3 loh8 hoo7 kiu3 lan7 tui7 uan5 tui7 kang3 loh8 khi3 ， 
+sua3 loh8 hoo7 kiu3 lan7 tui7 uan5 kang3 loh8 khi3 ， 
 ka7 tsit4 ui7 jip8 pun2 lang5 giu2 kau3 tit8 sing1 ki1 ， 
 sing5 kong1 hiap8 tsoo7 i1 thuat4 li7 khun3 king2 。 
 lau7 sian1 senn1 e5 tsing1 sin5 tsong7 hong2 siang1 tong1 ho2 ， 
@@ -5928,7 +5928,7 @@ tai5 lam5 e5 空勤隊 tit8 sing1 ki1 peh4 tiam2 tso2 iu7 ，
 kau3 te3 giok8 san1 e5 東南方 tshiau5 tshue7 。 
 ti7 松樹 lim5 tong1 tiong1 e5 khang3 te7 ， 
 tshue7 tioh8 tan2 thai7 kiu3 uan7 e5 tshua3 sin1 senn1 。 
-空勤隊 jin5 uan5 sui5 tui7 kang3 loh8 khi3 ， 
+空勤隊 jin5 uan5 sui5 kang3 loh8 khi3 ， 
 hiap8 tsoo7 ka7 tshua3 sin1 senn1 tiau3 kua3 khi2 lai5 。 
 senn3 tshua3 tsa1 poo1 ti7 kue3 ni5 e5 tshue1 it4 ， 
 tok8 tsu7 lai5 kau3 tiong1 poo7 e5 八通關 peh4 suann1 ， 
@@ -6064,7 +6064,7 @@ sang3 i1 i2 tsing5 i2 king1 bo5 hoo1 khip4 sim1 thiau3 。
 tng1 kang1 i1 khui1 tshia1 king1 kue3 圓通 南路 ， 
 khan3 siu2 e5 po2 tsuan5 tsing3 sit8 i1 tsong5 ping5 kau1 to7 。 
 king2 hong1 phuann3 tuan3 i1 ka7 thih4 ki1 loo7 tong3 tso3 tshia1 loo7 ， 
-soo2 i2 go7 jip4 ping5 kau1 to7 e5 thih4 ki1 loo7 。 
+soo2 i2 誤入 ping5 kau1 to7 e5 thih4 ki1 loo7 。 
 tong1 si5 po2 tsuan5 uan5 tsin7 lik8 e5 tshue1 哨子 king2 ko3 ， 
 tsu7 kiong5 ho7 ka3 su2 khuann3 tioh8 kiau7 tshia1 ti7 thih4 ki1 loo7 ， 
 sui1 jian5 lian5 sua3 bing5 tat8 ma7 si7 be7 tit4 hu3 。 
@@ -6293,7 +6293,7 @@ ku7 ni5 it4 gueh8 li2 sin1 senn1 khui1 tshia1 sang3 hue3 ，
 khui1 tsit4 tai5 tshia1 ling5 tsap8 gua7 ni5 e5 老車 。 
 tsian5 ong2 oh8 甲港尾 kok4 sio2 sang3 hue3 liau2 au7 ， 
 tshia1 tu2 tu2 li7 khui1 hak8 hau7 hau7 mng5 ； 
-ma2 siang7 pi7 king2 hong1 e5 測速器 hip4 tioh8 ， 
+ma2 siang7 pi7 king2 hong1 e5 tshik4 sok4 khi3 hip4 tioh8 ， 
 huat8 tuann1 sia2 tioh8 tshia1 si5 sok4 kau2 tsap8 it4 kong1 li2 。 
 li2 sin1 senn1 put4 hok8 tshu2 huat8 the5 tshut4 soo3 guan7 ， 
 tshia1 khe2 tong7 kau3 te3 hip4 siang3 e5 te7 tiam2 ， 
@@ -6513,7 +6513,7 @@ the3 ka1 ki7 e5 sing1 uah8 贏到 tshut4 loo7 。
 si3 ni5 tshiunn2 siu1 tik4 kia7 奮起湖 sio2 hue2 tshia1 hok8 su2 
 bin5 si7 sin1 bun5 po3 to7 
 king1 kue3 si3 ni5 e5 tsing2 kian3 tshiunn2 siu1 ， 
-a1 li2 san1 thih4 loo7 tui3 tik4 kia7 kau3 奮起湖 ， 
+a1 li2 san1 thih4 tui3 tik4 kia7 kau3 奮起湖 ， 
 tsong2 sng3 ti7 kin1 a2 jit4 ting5 khui1 thong1 tshia1 。 
 khip4 in2 tua7 phe1 火車迷 tsian5 lai5 tse7 ， 
 iau2 u7 lai5 tsu7 tiong1 kok4 e5 火車迷 kuann2 lai5 。 
@@ -6525,7 +6525,7 @@ kiong7 tong5 tsu2 tshi5 kin1 a2 jit4 e5 thong1 tshia1 tian2 le2 ；
 ka7 hue2 tshia1 e5 「 通券 」 kau1 ho5 ka3 su2 ， 
 tik4 kia7 kau3 奮起湖 loo7 tuann7 tsing3 sik4 hok8 su2 。 
 be7 tsio2 火車迷 thau3 tsa2 lai5 kau3 tik4 kia7 tsam7 ， 
-tioh8 si7 tan2 thai7 khui1 tshia1 e5 hun3 si5 khik4 。 
+tioh8 si7 tan2 thai7 khui1 tshia1 e5 thiong3 si5 khik4 。 
 pau1 kuat4 tsit8 mia5 lai5 tsu7 tiong1 kok4 e5 iu5 kheh4 ， 
 tsai1 iann2 a1 li2 san1 som1 lim5 sio2 hue2 tshia1 hok8 su2 ， 
 tsuan1 kang1 pue1 lai5 tai5 uan5 tse7 首發 e5 pan1 tshia1 。 
@@ -6540,7 +6540,7 @@ tsiah8 bok8 kue1 噎 kau3 hoo7 li2 su1 tian7 ue7 hiap8 tsoo7 kiu3 uan7
 bin5 si7 sin1 bun5 po3 to7 
 tsit8 mia5 lau7 lang5 ti7 tshu3 tsiah8 bok8 kue1 噎 kau3 ， 
 ka1 siok8 kha3 tian7 ue7 hiang3 siau1 hong5 tui7 huah4 kiu3 lang5 。 
-than3 tioh8 kiu3 hoo7 tshia1 kau3 ui7 e5 si5 kan1 ， 
+than3 tioh8 kiu3 hoo7 tshia1 kau3 e5 si5 kan1 ， 
 siau1 hong5 kiok8 e5 hoo7 li2 su1 thau3 kue3 tian7 ue7 ， 
 suann3 ting2 tsi2 to7 ka1 siok8 tsin3 hing5 tshiunn2 kiu3 。 
 in1 ui7 pa2 ak4 tiong7 iau3 e5 ng5 kim1 si3 hun1 tsing1 ， 
@@ -6659,13 +6659,13 @@ put4 ko3 si7 m7 si7 u7 ki1 hue7 guan5 te7 tiong5 kian3 ，
 kau3 tann1 iu5 guan5 iau2 si7 bi7 ti1 soo3 。 
 in1 ui7 kuan7 tsing3 hu2 bo5 an3 sng3 sian7 hio7 ， 
 tsit4 ma2 ka7 tsik4 jim7 kiat4 tng2 khi3 tiong1 iang1 。 
-tua7 poo1 si3 ho7 e5 委任 lut8 su1 邱顯智 kong2 ， 
+tua7 poo1 si3 ho7 e5 ui2 jim7 lut8 su1 邱顯智 kong2 ， 
 sun2 hai7 pue5 siong5 to1 si7 he1 hok8 guan5 tsong7 。 
 kuan7 tsing3 hu2 ki3 jian5 tsi2 si7 phue3 hap8 lai7 tsing3 poo7 ， 
 guan5 pun2 tioh8 si7 bo5 ing3 kai1 jim7 i3 thiah4 sak4 。 
 hi1 bang7 siunn7 beh4 tsham1 suan2 kuan7 tiunn2 e5 hau7 suan2 jin5 ， 
 簽字 sing5 lok8 tsi1 tshi5 guan5 te7 e5 tiong5 kian3 。 
-iam5 tsui2 phang1 a2 phau3 tsiunn7 tiunn5 siau1 hong5 kiok8 khe2 tsa1 炮城 
+siau1 hong5 kiok8 khe2 tsa1 炮城 iam5 tsui2 phang1 a2 phau3 tsiunn7 tiunn5 
 bin5 si7 sin1 bun5 po3 to7 
 tai5 tang1 huat4 sing1 tshiong1 thian1 phau3 射死 tsa1 boo2 gin2 a2 e5 i3 gua7 ， 
 tit4 beh4 tsiunn7 tiunn5 e5 iam5 tsui2 phang1 a2 phau3 siu7 tioh8 kuan1 tsu3 。 
@@ -6876,7 +6876,7 @@ tsioh4 tioh4 美食展 khai1 tshong3 sin1 e5 king1 ing5 。
 peh8 bi2 kiam2 san2 mui2 kong1 kin1 si3 tsap8 kho3 lik8 su2 sin1 kuan5 
 bin5 si7 sin1 bun5 po3 to7 
 tsiah8 bi2 be7 ing7 bo5 tsai1 iann2 bi2 ke3 ！ 
-siu7 tioh8 ku7 ni5 tsap4 gueh4 tang1 kiam2 san2 ， 
+siu7 tioh8 ku7 ni5 tsap8 gueh8 tang1 kiam2 san2 ， 
 kue3 ni5 tsing5 au7 e5 peh8 bi2 ke3 siok8 khi2 ke3 。 
 十三點八 kong1 kin1 pau1 tsong1 e5 peh8 bi2 ， 
 kue3 ni5 liau2 au7 e5 ke3 siau3 goo7 tsap8 goo7 kho3 。 
@@ -6897,7 +6897,7 @@ siu7 tioh8 ku7 ni5 tiu7 jiat8 penn7 kap4 hong1 thai1 ing2 hiang2 ，
 peh8 bi2 e5 san2 liang7 kiam2 tsio2 sann1 siann5 。 
 tsiann5 tse7 中下游 giap8 tsia2 sio1 tsenn1 be2 peh8 bi2 ， 
 peh8 bi2 ke3 siau3 tsu7 tsiong5 kue3 ni5 au7 it4 tit8 khi2 。 
-bin5 tsiong3 phau7 uan3 iu5 tian7 ga2 suh4 long2 tsong2 khi2 ， 
+bin5 tsiong3 phau7 uan3 iu5 tian7 ga2 suh4 tsuan5 po7 khi2 ， 
 an2 tsuann2 jit8 siong5 e5 peh8 bi2 tue3 leh4 khi2 ke3 。 
 ke1 siu1 ji7 tsap8 kho3 tsui2 hui3 phenn5 oo5 kuan1 kong1 giap8 tio5 kha1 
 bin5 si7 sin1 bun5 po3 to7 
@@ -6948,7 +6948,7 @@ tiong1 iang1 gin5 hang5 kui1 ting7 m7 si7 lang5 tso3 e5 。
 水漬 污穢 phua3 sun2 e5 sin1 tai5 phio3 ， 
 tsia1 e5 e7 sai2 ti7 tai5 uan5 gin5 hang5 tui2 uann7 。 
 na7 tsun2 tsua2 phio3 kiat4 kak4 a2 bo5 huat4 hun1 li7 ， 
-su1 iau3 tshut4 tsua2 phio3 soo3 liang7 ham1 tsin1 ke2 ， 
+su1 iau3 pian7 piat8 tsua2 phio3 soo3 liang7 ham1 tsin1 ke2 ， 
 koh4 tsuan2 sang3 huat4 bu7 poo7 tiau1 tsa1 kiok8 kam3 ting7 。 
 put4 ko3 kam3 ting7 tsi2 u7 hah8 iong7 ti7 sin1 tai5 phio3 ， 
 gua7 kok4 tsua2 phio3 kan1 na7 tsuan2 sang3 外商 gin5 hang5 。 
