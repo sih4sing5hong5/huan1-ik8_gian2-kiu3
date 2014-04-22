@@ -98,7 +98,10 @@ class 讀語料:
 # 		print(list(對應表)[:10])
 		return 對應表
 	def 讀語料檔案(self, 檔名):
-		檔案 = open(檔名, encoding='utf-8')
+		if 檔名.endswith('gz'):
+			檔案 = gzip.open(檔名, 'rt', encoding='utf-8')
+		else:
+			檔案 = open(檔名, encoding='utf-8')
 		資料 = []
 		for 一逝 in 檔案.read().split('\n'):
 			if 一逝.strip() == '':
@@ -125,7 +128,7 @@ class 讀語料:
 		對應華語檔案 = open(對應華語, encoding='utf-8')
 		陣列 = json.loads(對應華語檔案.read())
 		對應華語檔案.close()
-		辭典=型音辭典(4)
+		辭典 = 型音辭典(4)
 		for 國語, 流水號, 閩南語字, 閩南語音 in 陣列:
 			音 = self.__粗胚.建立物件語句前處理減號(臺灣閩南語羅馬字拼音, 閩南語音.split('/')[0])
 			try:
