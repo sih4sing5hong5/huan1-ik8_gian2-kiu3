@@ -97,10 +97,11 @@ class 對摩西翻譯改:
 						print(國語詞)
 						翻譯結果 = self.斷字用戶端.翻譯(' '.join(國語詞))
 						print(翻譯結果['text'])
-						集物件 = self.__分析器.建立集物件(翻譯結果['text'].replace('|UNK|UNK|UNK', ''))
-						句物件.內底集.append(集物件)
+						for 斷詞 in 翻譯結果['text'].replace('|UNK|UNK|UNK', ''):
+							集物件 = self.__分析器.建立集物件(*斷詞.split('｜'))
+							句物件.內底集.append(集物件)
 					else:
-						集物件 = self.__分析器.建立集物件(一个詞)
+						集物件 = self.__分析器.建立集物件(*一个詞.split('｜'))
 						句物件.內底集.append(集物件)
 					編號 += 1
 				全部句.append(句物件)
