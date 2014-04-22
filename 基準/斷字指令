@@ -6,5 +6,15 @@ trg_type=斷字
 source 公家指令
 
 set_var
+
+cp ../語料/訓.華臺國語字斷字.txt ${src_text}
+zcat ../語料/訓.例句國語字斷字.txt.gz >> ${src_text}
+zcat ../語料/訓.華臺一對一斷字.txt.gz ../語料/訓.例句一對一斷字.txt.gz > ${trg_text}
+cp ${trg_text} ${lm_text}
+zcat ../語料/附錄句一對一斷字.txt.gz >> ${lm_text}
+cp ../語料/試.華臺國語字斷字.txt ${test_text}
+zcat ../語料/試.例句國語字斷字.txt.gz >> ${test_text}
+zcat ../語料/試.華臺一對一斷字.txt.gz ../語料/試.例句一對一斷字.txt.gz > ${ans_text}
+
 prepare_data
 make_model

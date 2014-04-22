@@ -14,16 +14,7 @@ function set_var
 }
 
 function prepare_data
-{
-	cp ../語料/訓.華臺國語字.txt ${src_text}
-	zcat ../語料/訓.例句國語字斷詞.txt.gz >> ${src_text}
-	zcat ../語料/訓.華臺一對一斷詞組.txt.gz ../語料/訓.例句一對一斷詞.txt.gz > ${trg_text}
-	cp ${trg_text} ${lm_text}
-	zcat ../語料/附錄句一對一斷詞.txt.gz >> ${lm_text}
-	cp ../語料/試.華臺國語字.txt ${test_text}
-	zcat ../語料/試.例句國語字斷詞.txt.gz >> ${test_text}
-	zcat ../語料/試.華臺一對一斷詞組.txt.gz ../語料/試.例句一對一斷詞.txt.gz > ${ans_text}
-	
+{	
 	ngram-count -order 3 -interpolate -wbdiscount -unk -text ${lm_text} -lm ${lm_text}.lm
 }
 function make_model
