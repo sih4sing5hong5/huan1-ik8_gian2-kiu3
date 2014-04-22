@@ -109,6 +109,14 @@ class 讀語料:
 			資料.append(一逝.strip())
 		檔案.close()
 		return 資料
+	def 寫語料檔案(self, 檔名, 資料):
+		if 檔名.endswith('gz'):
+			檔案 = gzip.open(檔名, 'wt', encoding='utf-8')
+		else:
+			檔案 = open(檔名, 'w', encoding='utf-8')
+		print(資料, file=檔案)
+		檔案.close()
+		return
 
 
 	def 讀語言模型檔案(self, 檔名):
@@ -124,13 +132,11 @@ class 讀語料:
 # 			print(組物件)
 		return 連詞
 	
-	def 產生辭典(self, 對應華語):
-		對應華語檔案 = open(對應華語, encoding='utf-8')
-		陣列 = json.loads(對應華語檔案.read())
-		對應華語檔案.close()
+	def 產生辭典(self, 閩南語字檔名,閩南語音檔名):
 		辭典 = 型音辭典(4)
-		for 國語, 流水號, 閩南語字, 閩南語音 in 陣列:
-			音 = self.__粗胚.建立物件語句前處理減號(臺灣閩南語羅馬字拼音, 閩南語音.split('/')[0])
+		for 閩南語字, 閩南語音 in zip(self.讀語料檔案(閩南語字檔名),
+					self.讀語料檔案(閩南語音檔名)):
+			音 =閩南語音
 			try:
 				組物件 = self.__分析器.產生對齊組(閩南語字, 音)
 				標準組 = self.__家私.轉做標準音標(臺灣閩南語羅馬字拼音, 組物件)
