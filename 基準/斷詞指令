@@ -1,5 +1,22 @@
 #!/bin/bash
-ngram-count -order 3 -interpolate -kndiscount -unk -text ../語料/訓.閩南語音斷詞.txt -lm 閩南語音斷詞.txt.lm
-ngram-count -order 3 -interpolate -kndiscount -unk -text ../語料/訓.閩南語音斷詞.txt -text ../語料/台語文數位典藏全羅文.txt -lm 閩南語音斷詞.txt.lm
-$SCRIPTS_ROOTDIR/training/train-model.perl -root-dir 斷詞 -corpus ${HOME}/git/huan1-ik8_gian5-kiu3/基準/../語料/訓 -f 國語字斷詞.txt -e 閩南語音斷詞.txt -alignment grow-diag-final-and -reordering msd-bidirectional-fe -lm 0:3:${HOME}/git/huan1-ik8_gian5-kiu3/基準/閩南語音斷詞.txt.lm -external-bin-dir=${HOME}/mt/
-moses -f 斷詞/model/moses.ini  < ../語料/試.國語字斷詞.txt > moses試驗結果斷詞.txt
+name=斷詞
+src=國語斷詞文本.txt
+trg=閩南語斷詞文本.txt
+lm_text=閩南語斷詞模型.txt
+test_text=斷詞試驗文本.txt
+result_text=moses試驗結果斷詞.txt
+
+src_text=${name}.${src}
+trg_text=${name}.${trg}
+
+cp ../語料/訓.華臺國語字斷詞.txt ${src_text}
+zcat ../語料/訓.例句國語字斷詞.txt.gz >> ${src_text}
+zcat ../語料/訓.華臺一對一斷詞.txt.gz ../語料/訓.例句一對一斷詞.txt.gz > ${trg_text}
+cp ${trg_text} ${lm_text}
+zcat ../語料/附錄句一對一斷詞.txt.gz >> ${lm_text}
+cp ../語料/試.華臺國語字斷詞.txt ${test_text}
+zcat ../語料/試.例句國語字斷詞.txt.gz > ${test_text}
+
+ngram-count -order 3 -interpolate -wbdiscount -unk -text ${lm_text} -lm ${lm_text}.lm
+$SCRIPTS_ROOTDIR/training/train-model.perl -root-dir ${name} -corpus ${HOME}/git/huan1-ik8_gian5-kiu3/基準/${name} -f ${src} -e ${trg} -alignment grow-diag-final-and -reordering msd-bidirectional-fe -lm 0:3:${HOME}/git/huan1-ik8_gian5-kiu3/基準/${lm_text}.lm -external-bin-dir=${HOME}/mt/
+moses -f work/model/moses.ini < ${test_text} > ${result_text}

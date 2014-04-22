@@ -1,11 +1,13 @@
 #!/bin/bash
 name=斷詞組
 src=國語斷詞組文本.txt
-trg=閩南語音斷詞組文本.txt
+trg=閩南語斷詞組文本.txt
+lm_text=閩南語斷詞組模型.txt
+test_text=斷詞組試驗文本.txt
+result_text=moses試驗結果.txt
+
 src_text=${name}.${src}
 trg_text=${name}.${trg}
-lm_text=閩南語音斷詞組模型.txt
-test_text=斷詞組試驗文本.txt
 
 cp ../語料/訓.華臺國語字.txt ${src_text}
 zcat ../語料/訓.例句國語字斷詞.txt.gz >> ${src_text}
@@ -16,5 +18,5 @@ cp ../語料/試.華臺國語字.txt ${test_text}
 zcat ../語料/試.例句國語字斷詞.txt.gz > ${test_text}
 
 ngram-count -order 3 -interpolate -wbdiscount -unk -text ${lm_text} -lm ${lm_text}.lm
-$SCRIPTS_ROOTDIR/training/train-model.perl -root-dir work -corpus ${HOME}/git/huan1-ik8_gian5-kiu3/基準/${name} -f ${src} -e ${trg} -alignment grow-diag-final-and -reordering msd-bidirectional-fe -lm 0:3:${HOME}/git/huan1-ik8_gian5-kiu3/基準/${lm_text}.lm -external-bin-dir=${HOME}/mt/
-moses -f work/model/moses.ini < ${test_text} > moses試驗結果.txt
+$SCRIPTS_ROOTDIR/training/train-model.perl -root-dir ${name} -corpus ${HOME}/git/huan1-ik8_gian5-kiu3/基準/${name} -f ${src} -e ${trg} -alignment grow-diag-final-and -reordering msd-bidirectional-fe -lm 0:3:${HOME}/git/huan1-ik8_gian5-kiu3/基準/${lm_text}.lm -external-bin-dir=${HOME}/mt/
+moses -f work/model/moses.ini < ${test_text} > ${result_text}
