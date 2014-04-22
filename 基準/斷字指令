@@ -19,4 +19,4 @@ zcat ../語料/試.例句國語字斷字.txt.gz > ${test_text}
 
 ngram-count -order 3 -interpolate -wbdiscount -unk -text ${lm_text} -lm ${lm_text}.lm
 $SCRIPTS_ROOTDIR/training/train-model.perl -root-dir ${name} -corpus ${HOME}/git/huan1-ik8_gian5-kiu3/基準/${name} -f ${src} -e ${trg} -alignment grow-diag-final-and -reordering msd-bidirectional-fe -lm 0:3:${HOME}/git/huan1-ik8_gian5-kiu3/基準/${lm_text}.lm -external-bin-dir=${HOME}/mt/
-moses -f work/model/moses.ini < ${test_text} > ${result_text}
+moses -f ${name}/model/moses.ini < ${test_text} > ${result_text}
