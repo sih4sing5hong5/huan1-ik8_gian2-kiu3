@@ -6,7 +6,7 @@ if __name__ == '__main__':
 	try:
 		for 一逝 in sys.stdin:
 			一逝 = 一逝.strip()
-			print(編碼器.編碼(一逝))
+			print(編碼器.解碼(一逝))
 	except:
 		pass
 
