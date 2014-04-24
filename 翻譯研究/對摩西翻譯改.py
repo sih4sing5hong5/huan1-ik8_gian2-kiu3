@@ -5,7 +5,6 @@ from 臺灣言語工具.字詞組集句章.解析整理.拆文分析器 import �
 from 臺灣言語工具.標音.語句連詞 import 語句連詞
 from 翻譯研究.讀語料 import 讀語料
 from 臺灣言語工具.字詞組集句章.解析整理.文章粗胚 import 文章粗胚
-from 臺灣言語工具.字詞組集句章.音標系統.閩南語.臺灣閩南語羅馬字拼音 import 臺灣閩南語羅馬字拼音
 import pickle
 import os
 from 臺灣言語工具.標音.動態規劃標音 import 動態規劃標音
@@ -15,6 +14,7 @@ from 臺灣言語工具.翻譯.摩西工具.摩西用戶端 import 摩西用戶�
 from 臺灣言語工具.斷詞.型音辭典 import 型音辭典
 from 臺灣言語工具.斷詞.動態規劃斷詞 import 動態規劃斷詞
 from 臺灣言語工具.翻譯.摩西工具.語句編碼器 import 語句編碼器
+from 臺灣言語工具.字詞組集句章.解析整理.字物件篩仔 import 字物件篩仔
 
 class 對摩西翻譯改:
 	埠 = 8100
@@ -45,9 +45,11 @@ class 對摩西翻譯改:
 # 			教育部對應表 = pickle.load(辭典對應表模型檔案)
 # 			辭典對應表模型檔案.close()
 # 		else:
-# 			教育部對應表 = self.語料.產生辭典對應表('../語料/教育部辭典對應詞結果.json')
+# 			教育部對應表 = self.語料.產生辭典對應表(
+# '../語料/教育部辭典對應詞結果.json')
 # 			辭典對應表模型檔案 = open(辭典對應表模型檔名, 'wb')
-# 			pickle.dump(教育部對應表, 辭典對應表模型檔案, protocol=pickle.HIGHEST_PROTOCOL)
+# 			pickle.dump(教育部對應表, 辭典對應表模型檔案,
+#  protocol=pickle.HIGHEST_PROTOCOL)
 # 			辭典對應表模型檔案.close()
 # 		self.辭典對應表, self.字典對應表 = 教育部對應表
 		
@@ -58,9 +60,11 @@ class 對摩西翻譯改:
 				self.連詞 = pickle.load(語言模型檔案)
 				語言模型檔案.close()
 			else:
-				self.連詞 = self.語料.讀語言模型檔案('../語料/訓.閩南語音.txt')
+				self.連詞 = self.語料.讀語言模型檔案(
+						'../語料/訓.閩南語音.txt')
 				語言模型檔案 = open(語言模型檔名, 'wb')
-				pickle.dump(self.連詞, 語言模型檔案, protocol=pickle.HIGHEST_PROTOCOL)
+				pickle.dump(self.連詞, 語言模型檔案,
+						protocol=pickle.HIGHEST_PROTOCOL)
 				語言模型檔案.close()
 			
 		self.用戶端 = 摩西用戶端('localhost', self.埠)
@@ -82,11 +86,13 @@ class 對摩西翻譯改:
 		斷詞工具 = 動態規劃斷詞()
 		標音工具 = 動態規劃標音()
 		譀鏡 = 物件譀鏡()
+		篩仔=字物件篩仔()
 		結果檔案 = open(self.結果檔名, 'w')
 		for 一逝 in self.語料.讀語料檔案(self.試驗檔名)[:]:
 # 			print(一逝)
 			一逝=self.編碼器.解碼(一逝)
-			翻譯結果 = self.用戶端.翻譯(一逝, self.編碼器, 另外參數={'nbest':self.摩西揀幾个})
+			翻譯結果 = self.用戶端.翻譯(
+				一逝, self.編碼器, 另外參數={'nbest':self.摩西揀幾个})
 			全部句 = []
 			print('翻譯結果',翻譯結果)
 			for 上好句 in 翻譯結果['nbest']:
@@ -99,10 +105,17 @@ class 對摩西翻譯改:
 					if 一个詞.endswith('|UNK|UNK|UNK'):
 						國語詞 = 一个詞.replace('|UNK|UNK|UNK', '')
 						print(國語詞)
-						翻譯結果 = self.斷字用戶端.翻譯(' '.join(國語詞), self.編碼器,)
-						for 斷詞 in 翻譯結果['text'].replace('|UNK|UNK|UNK', '').split():
-							集物件 = self.__分析器.轉做集物件(斷詞)
-							句物件.內底集.append(集物件)
+						翻譯結果 = self.斷字用戶端.翻譯(
+								' '.join(國語詞), self.編碼器,)
+						for 斷詞 in 翻譯結果['text'].split():
+							if 斷詞.endswith('|UNK|UNK|UNK'):
+								斷詞.replace('|UNK|UNK|UNK', '')
+								集物件 = self.__分析器.建立集物件(
+										斷詞.replace('|UNK|UNK|UNK', ''))
+								句物件.內底集.append(集物件)
+							else:
+								集物件 = self.__分析器.轉做集物件(斷詞)
+								句物件.內底集.append(集物件)
 					else:
 						print('一个詞',一个詞)
 						集物件 = self.__分析器.轉做集物件(一个詞)
@@ -119,8 +132,17 @@ class 對摩西翻譯改:
 						上好物件 = 結果物件
 			else:
 				上好物件 = 全部句[0]
-			print(譀鏡.看斷詞(上好物件, 物件分型音符號='｜', 物件分字符號='-', 物件分詞符號=' '))
-			print(譀鏡.看斷詞(上好物件, 物件分型音符號='｜', 物件分字符號='-', 物件分詞符號=' '), file=結果檔案)
+			結果字陣列=篩仔.篩出字物件(上好物件)
+			結果組物件=self.__分析器.建立組物件('')
+			for 字物件 in 結果字陣列:
+				結果詞物件=self.__分析器.建立詞物件('')
+				結果詞物件.內底字=[字物件]
+				結果組物件.內底詞.append(結果詞物件)
+			print(譀鏡.看斷詞(結果組物件,
+				物件分型音符號='｜', 物件分字符號='-', 物件分詞符號=' '))
+			print(譀鏡.看斷詞(結果組物件,
+				物件分型音符號='｜', 物件分字符號=' ', 物件分詞符號=' '),
+				file=結果檔案)
 
 if __name__ == '__main__':
 	翻譯研究 = 對摩西翻譯改()
