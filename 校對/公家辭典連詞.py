@@ -13,9 +13,24 @@ from 臺灣言語工具.字詞組集句章.解析整理.字物件篩仔 import �
 from 臺灣言語工具.字詞組集句章.基本元素.公用變數 import 無音
 from 臺灣言語工具.斷詞.型音辭典 import 型音辭典
 from 翻譯研究.讀語料 import 讀語料
+import os
+import pickle
 class 公家辭典連詞:
 	__語料 = 讀語料()
 	def 產生(self):
+		辭典連詞檔名 = '辭典連詞.pickle'
+		if os.path.isfile(辭典連詞檔名):
+			辭典連詞檔案 = open(辭典連詞檔名, 'rb')
+			辭典, 連詞 = pickle.load(辭典連詞檔案)
+			辭典連詞檔案.close()
+		else:
+			辭典, 連詞 = self.讀文件產生()
+			辭典連詞檔案 = open(辭典連詞檔名, 'wb')
+			pickle.dump((辭典, 連詞), 辭典連詞檔案,
+					protocol=pickle.HIGHEST_PROTOCOL)
+			辭典連詞檔案.close()
+		return 辭典, 連詞
+	def 讀文件產生(self):
 		辭典 = 型音辭典(4)
 		self.__語料.產生辭典(辭典, '../語料/辭典一對一.txt.gz')
 		self.__語料.產生辭典(辭典, '../語料/附錄句一對一斷詞.txt.gz')
