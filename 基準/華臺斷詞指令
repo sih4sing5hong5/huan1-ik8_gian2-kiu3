@@ -1,18 +1,17 @@
 #!/bin/bash
-name=斷詞
-src_type=斷詞
-trg_type=斷詞
+name=華臺斷詞
+src_type=華臺斷詞
+trg_type=華臺斷詞
 
 source 公家指令
 
 set_var
 
-zcat ../語料/訓.華臺國語字斷詞.txt ../語料/訓.例句國語字斷詞.txt.gz | python3 ../資料處理/編碼.py > ${src_text}
-zcat ../語料/訓.華臺一對一斷詞.txt.gz ../語料/訓.例句一對一斷詞.txt.gz | python3 ../資料處理/編碼.py > ${trg_text}
+zcat ../語料/訓.華臺國語字斷詞.txt | python3 ../資料處理/編碼.py > ${src_text}
+zcat ../語料/訓.華臺一對一斷詞.txt.gz | python3 ../資料處理/編碼.py > ${trg_text}
 cp ${trg_text} ${lm_text}
-zcat ../語料/附錄句一對一斷詞.txt.gz | python3 ../資料處理/編碼.py >> ${lm_text}
-zcat ../語料/試.華臺國語字斷詞.txt ../語料/試.例句國語字斷詞.txt.gz | python3 ../資料處理/編碼.py > ${test_text}
-zcat ../語料/試.華臺一對一斷詞.txt.gz ../語料/試.例句一對一斷詞.txt.gz | python3 ../資料處理/編碼.py > ${ans_text}
+zcat ../語料/試.華臺國語字斷詞.txt | python3 ../資料處理/編碼.py > ${test_text}
+zcat ../語料/試.華臺一對一斷詞.txt.gz | python3 ../資料處理/編碼.py > ${ans_text}
 
 prepare_data
 make_model
