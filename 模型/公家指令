@@ -4,10 +4,11 @@ function set_var
 {
 	src=${src_type}.國語文本.txt
 	trg=${trg_type}.閩南語文本.txt
-	lm_text=${trg_type}.閩南語模型.txt
 	test_text=${src_type}.試驗文本.txt
 	ans_text=${trg_type}.閩南語答案.txt
 	result_text=moses${name}試驗結果.txt
+	
+	lm_text=訓.${trg_type}.閩南語模型.txt
 	
 	src_text=訓.${src}
 	trg_text=訓.${trg}
