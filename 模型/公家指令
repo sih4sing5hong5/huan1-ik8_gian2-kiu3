@@ -1,0 +1,24 @@
+#!/bin/bash
+
+function set_var
+{
+	src=${src_type}.國語文本.txt
+	trg=${trg_type}.閩南語文本.txt
+	lm_text=${trg_type}.閩南語模型.txt
+	test_text=${src_type}.試驗文本.txt
+	ans_text=${trg_type}.閩南語答案.txt
+	result_text=moses${name}試驗結果.txt
+	
+	src_text=訓.${src}
+	trg_text=訓.${trg}
+}
+
+function prepare_data
+{	
+	ngram-count -order 3 -interpolate -wbdiscount -unk -text ${lm_text} -lm ${lm_text}.lm
+}
+function make_model
+{
+	$SCRIPTS_ROOTDIR/training/train-model.perl -root-dir ${name} -corpus ${HOME}/git/huan1-ik8_gian5-kiu3/基準/訓 -f ${src} -e ${trg} -alignment grow-diag-final-and -reordering msd-bidirectional-fe -lm 0:3:${HOME}/git/huan1-ik8_gian5-kiu3/基準/${lm_text}.lm -external-bin-dir=${HOME}/mt/
+	moses -f ${name}/model/moses.ini < ${test_text} > ${result_text}
+}
