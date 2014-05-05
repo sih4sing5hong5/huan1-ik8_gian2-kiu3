@@ -19,6 +19,6 @@ function prepare_data
 }
 function make_model
 {
-	$SCRIPTS_ROOTDIR/training/train-model.perl -root-dir ${name} -corpus ${HOME}/git/huan1-ik8_gian5-kiu3/基準/訓 -f ${src} -e ${trg} -alignment grow-diag-final-and -reordering msd-bidirectional-fe -lm 0:3:${HOME}/git/huan1-ik8_gian5-kiu3/基準/${lm_text}.lm -external-bin-dir=${HOME}/mt/
+	$SCRIPTS_ROOTDIR/training/train-model.perl -root-dir ${name} -corpus ${HOME}/git/huan1-ik8_gian5-kiu3/基準/訓 -f ${src} -e ${trg} -alignment grow-diag-final-and -reordering msd-bidirectional-fe -lm 0:3:`pwd`/${lm_text}.lm -external-bin-dir=${HOME}/mt/
 	#moses -f ${name}/model/moses.ini < ${test_text} > ${result_text}
 }
