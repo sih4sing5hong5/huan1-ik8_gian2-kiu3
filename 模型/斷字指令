@@ -1,5 +1,5 @@
 #!/bin/bash
-num=01
+num=$1
 name=${num}.斷字
 src_type=${num}.斷字
 trg_type=${num}.斷字
