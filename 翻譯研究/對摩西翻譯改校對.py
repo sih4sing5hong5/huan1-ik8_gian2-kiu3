@@ -8,13 +8,13 @@ class 對摩西翻譯改通用(對摩西翻譯改):
 	試驗檔名 = None
 	結果檔名 = None
 	愛斷字 = False
-	結果檔名樣版 = '../模型/結.{0:02}.閩南語試驗結果.txt'
-	試驗檔名樣版 = '../模型/試.{0:02}.斷詞.試驗文本.txt'
-	def __init__(self, 號):
+	結果檔名樣版 = '{0}/結.{1:02}.閩南語試驗結果.txt'
+	試驗檔名樣版 = '{0}/試.{1:02}.斷詞.試驗文本.txt'
+	def __init__(self, 所在, 號):
 		self.埠 = 8100 + 號
 		self.斷字埠 = 8200 + 號
-		self.試驗檔名 = self.試驗檔名樣版.format(號)
-		self.結果檔名 = self.結果檔名樣版.format(號)
+		self.試驗檔名 = self.試驗檔名樣版.format(所在, 號)
+		self.結果檔名 = self.結果檔名樣版.format(所在, 號)
 	
 # mosesserver -f 閩南語斷詞/model/moses.ini --server-port 8201
 # mosesserver -f 國語斷詞組/model/moses.ini --server-port 8202
@@ -28,6 +28,6 @@ if __name__ == '__main__':
 			翻譯研究.載入()
 			翻譯研究.試驗()
 	else:
-		翻譯研究 = 對摩西翻譯改通用(int(sys.argv[1]))
+		翻譯研究 = 對摩西翻譯改通用(sys.argv[1], int(sys.argv[2]))
 		翻譯研究.載入()
 		翻譯研究.試驗()
