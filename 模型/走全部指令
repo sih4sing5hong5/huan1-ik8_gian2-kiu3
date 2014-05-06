@@ -1,4 +1,6 @@
 #!/bin/bash
+bash 無典藏斷詞指令 &
+bash 無典藏斷字指令 &
 for i in {01..10}
 do
 	echo $i
