@@ -1,6 +1,6 @@
 #!/bin/bash
 for i in {01..21}
 do
-	mosesserver -f $i.斷詞/model/moses.ini --server-port 81$i
-	mosesserver -f $i.斷字/model/moses.ini --server-port 82$i
+	mosesserver -f $i.斷詞/model/moses.ini --server-port 81$i &
+	mosesserver -f $i.斷字/model/moses.ini --server-port 82$i &
 done
