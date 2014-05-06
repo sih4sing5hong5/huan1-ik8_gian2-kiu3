@@ -12,8 +12,8 @@ class 對摩西翻譯改通用(對摩西翻譯改):
 	def __init__(self, 號):
 		self.埠 = 8100 + 號
 		self.斷字埠 = 8200 + 號
-		self.試驗檔名 = self.試驗檔名樣版.format(擺)
-		self.結果檔名 = self.結果檔名樣版.format(擺)
+		self.試驗檔名 = self.試驗檔名樣版.format(號)
+		self.結果檔名 = self.結果檔名樣版.format(號)
 	
 # mosesserver -f 閩南語斷詞/model/moses.ini --server-port 8201
 # mosesserver -f 國語斷詞組/model/moses.ini --server-port 8202
