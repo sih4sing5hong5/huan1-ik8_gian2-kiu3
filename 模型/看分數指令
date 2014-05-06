@@ -2,7 +2,7 @@
 for i in {00..05}
 do
 	echo $i
-	cat 結.$i.閩南語試驗結果.txt | python3 ../資料處理/編碼.py | ${SCRIPTS_ROOTDIR}/generic/multi-bleu.perl -lc ../模型/試.$i.斷詞.閩南語答案.txt
+	cat 結.$i.閩南語試驗結果.txt | python3 ../資料處理/編碼.py | ${SCRIPTS_ROOTDIR}/generic/multi-bleu.perl -lc ../模型/試.05.斷詞.閩南語答案.txt
 	#cat 試.$i.斷詞.閩南語答案.txt | python3 ../資料處理/解碼.py | head 
 	#cat 結.$i.閩南語試驗結果.txt | head
 done
