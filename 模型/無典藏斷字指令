@@ -4,7 +4,7 @@ name=${num}.斷字
 src_type=${num}.斷字
 trg_type=${num}.斷字
 
-source 公家指令
+source ../模型/公家指令
 
 set_var
 
