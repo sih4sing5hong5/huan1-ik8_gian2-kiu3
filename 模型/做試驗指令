@@ -1,0 +1,6 @@
+#!/bin/bash
+for i in {01..21}
+do
+	echo $i
+	PYTHONPATH=..:../../tai5_uan5_gian5_gi2_kang1_ku7/ python3 對摩西翻譯改校對.py $i &
+done

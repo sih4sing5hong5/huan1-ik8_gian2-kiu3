@@ -1,6 +1,7 @@
 #!/bin/bash
 for i in {01..21}
 do
-	bash 斷詞指令 $i
-	bash 斷字指令 $i
+	echo $i
+	bash 斷詞指令 $i &
+	bash 斷字指令 $i &
 done

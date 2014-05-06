@@ -1,5 +1,6 @@
 # -*- coding: utf-8 -*-
 from 翻譯研究.對摩西翻譯改 import 對摩西翻譯改
+import sys
 
 class 對摩西翻譯改通用(對摩西翻譯改):
 	埠 = None
@@ -20,7 +21,12 @@ class 對摩西翻譯改通用(對摩西翻譯改):
 # mosesserver -f 國語斷詞組閩南語斷詞/model/moses.ini --server-port 8204
 # mosesserver -f 國語斷詞閩南語斷詞組/model/moses.ini --server-port 8205
 if __name__ == '__main__':
-	for 擺 in range(1, 21):
-		翻譯研究 = 對摩西翻譯改通用(擺)
+	if len(sys.argv)==1:
+		for 擺 in range(1, 21):
+			翻譯研究 = 對摩西翻譯改通用(擺)
+			翻譯研究.載入()
+			翻譯研究.試驗()
+	else:
+		翻譯研究 = 對摩西翻譯改通用(int(sys.argv[1]))
 		翻譯研究.載入()
 		翻譯研究.試驗()
