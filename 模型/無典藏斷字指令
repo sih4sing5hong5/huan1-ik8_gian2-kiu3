@@ -14,7 +14,7 @@ zcat ../語料/訓.例句一對一斷字.txt.gz | python3 ../資料處理/編碼
 cp ${trg_text} ${lm_text}
 zcat ../語料/附錄句一對一斷字.txt.gz | python3 ../資料處理/編碼.py >> ${lm_text}
 zcat ../語料/試.華臺國語字斷字.txt ../語料/試.例句國語字斷字.txt.gz | python3 ../資料處理/編碼.py > ${test_text}
-zcat ../華臺/試.華臺一對一斷詞.txt.gz | python3 ../資料處理/斷一對一字.py | python3 ../資料處理/編碼.py > ${ans_text}
+zcat ../語料/試.華臺一對一斷詞.txt.gz | python3 ../資料處理/斷一對一字.py | python3 ../資料處理/編碼.py > ${ans_text}
 zcat ../語料/試.例句一對一斷字.txt.gz | python3 ../資料處理/編碼.py >> ${ans_text}
 
 prepare_data
