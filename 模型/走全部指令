@@ -1,7 +1,5 @@
 #!/bin/bash
-bash 無典藏斷詞指令 &
-bash 無典藏斷字指令 &
-for i in {01..10}
+for i in {01..05}
 do
 	echo $i
 	bash 斷詞指令 $i &

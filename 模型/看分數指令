@@ -1,5 +1,5 @@
 #!/bin/bash
-for i in {00..10}
+for i in {00..05}
 do
 	echo $i
 	cat 結.$i.閩南語試驗結果.txt | python3 ../資料處理/編碼.py | ${SCRIPTS_ROOTDIR}/generic/multi-bleu.perl -lc 試.$i.斷詞.閩南語答案.txt

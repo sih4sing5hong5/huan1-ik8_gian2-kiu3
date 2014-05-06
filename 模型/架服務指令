@@ -1,5 +1,5 @@
 #!/bin/bash
-for i in {00..10}
+for i in {00..05}
 do
 	echo $i
 	mosesserver -f $i.斷詞/model/moses.ini --server-port 81$i &

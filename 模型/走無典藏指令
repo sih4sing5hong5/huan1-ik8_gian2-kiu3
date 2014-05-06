@@ -1,0 +1,9 @@
+#!/bin/bash
+bash 無典藏斷詞指令 00 &
+bash 無典藏斷字指令 00 &
+for i in {01..05}
+do
+	echo $i
+	bash 無典藏斷詞指令 $i &
+	bash 無典藏斷字指令 $i &
+done
