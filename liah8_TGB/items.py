@@ -7,5 +7,6 @@ from scrapy.item import Item, Field
 
 class Liah8TgbItem(Item):
     # define the fields for your item here like:
-    # name = Field()
-    pass
+    title = Field()
+    date = Field()
+    context = Field()
