@@ -6,9 +6,10 @@ class DmozSpider(Spider):
                        'taioan-chouhap.myweb.hinet.net']
     start_urls = [
         "http://taioanchouhap.pixnet.net/blog",
-        "http://taioan-chouhap.myweb.hinet.net/0_boklok.htm"
+        "http://taioan-chouhap.myweb.hinet.net/0_boklok.htm",
+        'http://taioanchouhap.pixnet.net/blog/post/177926499',
     ]
 
     def parse(self, response):
-        filename = response.url.split("/")[-2]
+        filename = response.url.replace("/",'_')
         open(filename, 'wb').write(response.body)
