@@ -1,6 +1,7 @@
 from scrapy.spider import Spider
+from scrapy.contrib.spiders import CrawlSpider, Rule
 
-class DmozSpider(Spider):
+class DmozSpider(CrawlSpider):
     name = "taioanchouhap"
     allowed_domains = ["taioanchouhap.pixnet.net",
                        'taioan-chouhap.myweb.hinet.net']
