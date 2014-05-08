@@ -38,4 +38,4 @@ class TgbSpider(CrawlSpider):
 			item['title']=sel.css('li.publish::title()')
 			item['date']=sel.css('li.publish::text()')
 			item['context']=sel.css('div.article-content-inner::text()')
-			return item
+			yield item
