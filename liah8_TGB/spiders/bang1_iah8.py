@@ -3,8 +3,9 @@ from scrapy.contrib.spiders import CrawlSpider, Rule
 from scrapy.contrib.linkextractors.sgml import SgmlLinkExtractor
 from scrapy.selector import Selector
 from scrapy.http import Request
+from liah8_TGB.items import Liah8TgbItem
 
-class DmozSpider(CrawlSpider):
+class TgbSpider(CrawlSpider):
 	name = "taioanchouhap"
 	allowed_domains = ["taioanchouhap.pixnet.net",
 					   'taioan-chouhap.myweb.hinet.net']
@@ -32,4 +33,9 @@ class DmozSpider(CrawlSpider):
 			elif url.startswith('http://taioanchouhap.pixnet.net/blog/post/'):
 				yield Request(url=url,
 						callback=self.parse_TGB)
-		
+		if '/blog/post/' in response.url:
+			item=Liah8TgbItem()
+			item['title']=sel.css('li.publish::title()')
+			item['date']=sel.css('li.publish::text()')
+			item['context']=sel.css('div.article-content-inner::text()')
+			return item

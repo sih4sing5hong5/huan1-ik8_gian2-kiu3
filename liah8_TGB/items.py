@@ -10,9 +10,3 @@ class Liah8TgbItem(Item):
     title = Field()
     date = Field()
     context = Field()
-
-class TorrentItem(Item):
-    url = Field()
-    name = Field()
-    description = Field()
-    size = Field()
