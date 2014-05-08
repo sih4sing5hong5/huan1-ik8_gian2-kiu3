@@ -15,8 +15,10 @@ class DmozSpider(CrawlSpider):
         # Extract links matching 'category.php' (but not matching 'subsection.php')
         # and follow links from them (since no callback means follow=True by default).
         Rule(SgmlLinkExtractor(allow=(
-    '/taioanchouhap.pixnet.net/blog/.+',)), callback='parse'),
+    '/blog/.+',)), callback='parse'),
     )
+    
+#     rules = [Rule(SgmlLinkExtractor(allow=['/tor/\d+']), 'parse_torrent')]
 
     def parse(self, response):
         filename = response.url.replace("/", '_')
