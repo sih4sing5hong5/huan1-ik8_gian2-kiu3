@@ -1,26 +1,31 @@
 from scrapy.spider import Spider
 from scrapy.contrib.linkextractors.sgml import SgmlLinkExtractor
 from scrapy.contrib.spiders import CrawlSpider, Rule
+from scrapy.selector import Selector
 
 class DmozSpider(CrawlSpider):
-    name = "taioanchouhap"
-    allowed_domains = ["taioanchouhap.pixnet.net",
-                       'taioan-chouhap.myweb.hinet.net']
-    start_urls = [
-        "http://taioanchouhap.pixnet.net/blog",
-        "http://taioan-chouhap.myweb.hinet.net/0_boklok.htm",
-        'http://taioanchouhap.pixnet.net/blog/post/177926499',
-    ]
-    rules = (
-        Rule(
+	name = "taioanchouhap"
+	allowed_domains = ["taioanchouhap.pixnet.net",
+					   'taioan-chouhap.myweb.hinet.net']
+	start_urls = [
+		"http://taioanchouhap.pixnet.net/blog",
+		"http://taioan-chouhap.myweb.hinet.net/0_boklok.htm",
+		'http://taioanchouhap.pixnet.net/blog/post/177926499',
+	]
+	rules = (
+		Rule(
 			SgmlLinkExtractor(
 				allow=('/blog/.+',)
 			),
 			callback='parse'),
-    )
-    
-#     rules = [Rule(SgmlLinkExtractor(allow=['/tor/\d+']), 'parse_torrent')]
+	)
+	
+#	 rules = [Rule(SgmlLinkExtractor(allow=['/tor/\d+']), 'parse_torrent')]
 
-    def parse(self, response):
-        filename = response.url.replace("/", '_')
-        open(filename, 'wb').write(response.body)
+	def parse(self, response):
+		filename = response.url.replace("/", '_')
+		open(filename, 'wb').write(response.body)
+		
+		sel = Selector(response)
+		print(sel.xpath('//a/@href'))
+		
