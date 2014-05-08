@@ -35,7 +35,7 @@ class TgbSpider(CrawlSpider):
 						callback=self.parse_TGB)
 		if self.kinn2 in response.url:
 			item = Liah8TgbItem()
-			item['title'] = sel.css('li.publish::title()')
-			item['date'] = sel.css('li.publish::text()')
-			item['context'] = sel.css('div.article-content-inner::text()')
+			item['title'] = sel.css('li.publish::title()').extract()
+			item['date'] = sel.css('li.publish::text()').extract()
+			item['context'] = sel.css('div.article-content-inner::text()').extract()
 			yield item
