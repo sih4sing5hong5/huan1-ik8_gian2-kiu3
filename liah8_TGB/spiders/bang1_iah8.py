@@ -12,10 +12,11 @@ class DmozSpider(CrawlSpider):
         'http://taioanchouhap.pixnet.net/blog/post/177926499',
     ]
     rules = (
-        # Extract links matching 'category.php' (but not matching 'subsection.php')
-        # and follow links from them (since no callback means follow=True by default).
-        Rule(SgmlLinkExtractor(allow=(
-    '/blog/.+',)), callback='parse'),
+        Rule(
+			SgmlLinkExtractor(
+				allow=('/blog/.+',)
+			),
+			callback='parse'),
     )
     
 #     rules = [Rule(SgmlLinkExtractor(allow=['/tor/\d+']), 'parse_torrent')]
