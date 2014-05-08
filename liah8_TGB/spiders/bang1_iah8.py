@@ -15,10 +15,7 @@ class DmozSpider(CrawlSpider):
         # Extract links matching 'category.php' (but not matching 'subsection.php')
         # and follow links from them (since no callback means follow=True by default).
         Rule(SgmlLinkExtractor(allow=(
-    '/taioanchouhap.pixnet.net/blog/.+',))),
-
-        # Extract links matching 'item.php' and parse them with the spider's method parse_item
-        Rule(SgmlLinkExtractor(allow=('item\.php',)), callback='parse_item'),
+    '/taioanchouhap.pixnet.net/blog/.+',)), callback='parse'),
     )
 
     def parse(self, response):
