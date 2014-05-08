@@ -21,21 +21,21 @@ class TgbSpider(CrawlSpider):
 			callback="parse_items", follow=True
 		),
     ]
-	
+	kinn2 = '/blog/post/177926'
 	def parse_TGB(self, response):
 		print(response.url)
 		
 		sel = Selector(response)
 		for url in sel.xpath('//a/@href').extract():
-			if url.startswith('/blog/post/'):
-				yield Request(url='http://taioanchouhap.pixnet.net/'+url,
+			if url.startswith(self.kinn2):
+				yield Request(url='http://taioanchouhap.pixnet.net/' + url,
 							callback=self.parse_TGB)
-			elif url.startswith('http://taioanchouhap.pixnet.net/blog/post/'):
+			elif url.startswith('http://taioanchouhap.pixnet.net' + self.kinn2):
 				yield Request(url=url,
 						callback=self.parse_TGB)
-		if '/blog/post/' in response.url:
-			item=Liah8TgbItem()
-			item['title']=sel.css('li.publish::title()')
-			item['date']=sel.css('li.publish::text()')
-			item['context']=sel.css('div.article-content-inner::text()')
+		if self.kinn2 in response.url:
+			item = Liah8TgbItem()
+			item['title'] = sel.css('li.publish::title()')
+			item['date'] = sel.css('li.publish::text()')
+			item['context'] = sel.css('div.article-content-inner::text()')
 			yield item
