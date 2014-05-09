@@ -1,5 +1,6 @@
 import json
 from 處理TGB.提掉網頁標仔工具 import 提掉網頁標仔工具
+from 處理TGB.提掉文章標仔工具 import 提掉文章標仔工具
 
 class 解析TGB:
     def 讀(self,json檔名):
@@ -13,6 +14,9 @@ class 解析TGB:
             時間工具=提掉網頁標仔工具()
             時間工具.feed(資料['date'][0])
             print(時間工具.結果())
+            文章工具=提掉文章標仔工具()
+            文章工具.feed(資料['context'][0])
+            print(文章工具.結果())
 
 if __name__=='__main__':
     TGB=解析TGB()
