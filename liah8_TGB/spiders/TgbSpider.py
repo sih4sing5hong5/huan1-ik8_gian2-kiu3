@@ -1,8 +1,6 @@
-from scrapy.spider import Spider
 from scrapy.contrib.spiders import CrawlSpider, Rule
 from scrapy.contrib.linkextractors.sgml import SgmlLinkExtractor
 from scrapy.selector import Selector
-from scrapy.http import Request
 from liah8_TGB.items import Liah8TgbItem
 
 class TgbSpider(CrawlSpider):
@@ -17,7 +15,7 @@ class TgbSpider(CrawlSpider):
 	
 	rules = [
 		Rule(
-			SgmlLinkExtractor(allow=[".*/blog/post/177926499.*", ]),
+			SgmlLinkExtractor(allow=[".*/blog/post/17792.*", ]),
 			callback="parse_TGB", follow=True
 		),
     ]
