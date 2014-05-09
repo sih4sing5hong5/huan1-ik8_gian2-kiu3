@@ -6,7 +6,7 @@ from scrapy.http import Request
 from liah8_TGB.items import Liah8TgbItem
 
 class TgbSpider(CrawlSpider):
-	name = "taioanchouhap"
+	name = "TGB"
 	allowed_domains = ["taioanchouhap.pixnet.net",
 					   'taioan-chouhap.myweb.hinet.net']
 	start_urls = [
