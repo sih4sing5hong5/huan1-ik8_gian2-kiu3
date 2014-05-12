@@ -33,6 +33,7 @@ class TgbSpider(CrawlSpider):
 # 						callback=self.parse_TGB)
 		if self.kinn2 in response.url:
 			item = Liah8TgbItem()
+			item['url'] = response.url
 			item['title'] = sel.css('li.publish').extract()
 			item['date'] = sel.css('li.title').extract()
 			item['context'] = sel.css('div.article-content-inner').extract()
