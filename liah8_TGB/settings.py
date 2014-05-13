@@ -12,4 +12,7 @@ SPIDER_MODULES = ['liah8_TGB.spiders']
 NEWSPIDER_MODULE = 'liah8_TGB.spiders'
 
 # Crawl responsibly by identifying yourself (and your website) on the user-agent
-#USER_AGENT = 'liah8_TGB (+http://www.yourdomain.com)'
+# USER_AGENT = 'liah8_TGB (+http://www.yourdomain.com)'
+DOWNLOAD_DELAY = 0.5
+RANDOMIZE_DOWNLOAD_DELAY = True
+CONCURRENT_REQUESTS_PER_IP = 2
