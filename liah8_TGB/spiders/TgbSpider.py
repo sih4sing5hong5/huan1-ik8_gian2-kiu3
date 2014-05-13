@@ -1,8 +1,11 @@
+# encoding:utf-8
 from scrapy.contrib.spiders import CrawlSpider, Rule
 from scrapy.contrib.linkextractors.sgml import SgmlLinkExtractor
 from scrapy.selector import Selector
 from liah8_TGB.items import Liah8TgbItem
-
+u'''
+# scrapy crawl TGB -o 原來TGB.json -t json
+'''
 class TgbSpider(CrawlSpider):
 	name = "TGB"
 	allowed_domains = ["taioanchouhap.pixnet.net",
@@ -18,6 +21,10 @@ class TgbSpider(CrawlSpider):
 			SgmlLinkExtractor(allow=[".*/blog/post/17792.*", ]),
 			callback="parse_TGB", follow=True
 		),
+# 		Rule(
+# 			SgmlLinkExtractor(allow=[".*0_boklok.*", ]),
+# 			follow=True
+# 		),
     ]
 	kinn2 = '/blog/post/177926'
 	def parse_TGB(self, response):
