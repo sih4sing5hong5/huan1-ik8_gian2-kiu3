@@ -21,27 +21,16 @@ class TgbSpider(CrawlSpider):
 			SgmlLinkExtractor(allow=[".*/blog/post/17792.*", ]),
 			callback="parse_TGB", follow=True
 		),
-# 		Rule(
-# 			SgmlLinkExtractor(allow=[".*0_boklok.*", ]),
-# 			follow=True
-# 		),
+		Rule(
+			SgmlLinkExtractor(allow=[".*0_boklok.*", ]),
+			follow=True
+		),
     ]
-	kinn2 = '/blog/post/177926'
 	def parse_TGB(self, response):
-		print(response.url)
-		
 		sel = Selector(response)
-# 		for url in sel.xpath('//a/@href').extract():
-# 			if url.startswith(self.kinn2):
-# 				yield Request(url='http://taioanchouhap.pixnet.net/' + url,
-# 							callback=self.parse_TGB)
-# 			elif url.startswith('http://taioanchouhap.pixnet.net' + self.kinn2):
-# 				yield Request(url=url,
-# 						callback=self.parse_TGB)
-		if self.kinn2 in response.url:
-			item = Liah8TgbItem()
-			item['url'] = response.url
-			item['title'] = sel.css('li.publish').extract()
-			item['date'] = sel.css('li.title').extract()
-			item['context'] = sel.css('div.article-content-inner').extract()
-			yield item
+		item = Liah8TgbItem()
+		item['url'] = response.url
+		item['title'] = sel.css('li.publish').extract()
+		item['date'] = sel.css('li.title').extract()
+		item['context'] = sel.css('div.article-content-inner').extract()
+		yield item

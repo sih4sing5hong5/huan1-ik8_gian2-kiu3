@@ -17,6 +17,7 @@ class 解析TGB:
             文章工具=提掉文章標仔工具()
             文章工具.feed(資料['context'][0])
             print(文章工具.結果())
+        print(len(全部))
 
 if __name__=='__main__':
     TGB=解析TGB()
