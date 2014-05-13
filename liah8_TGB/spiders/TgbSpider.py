@@ -18,7 +18,7 @@ class TgbSpider(CrawlSpider):
 	
 	rules = [
 		Rule(
-			SgmlLinkExtractor(allow=[".*/blog/post/17792.*", ]),
+			SgmlLinkExtractor(allow=[".*/blog/post/.*", ]),
 			callback="parse_TGB", follow=True
 		),
 		Rule(
