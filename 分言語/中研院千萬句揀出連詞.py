@@ -4,12 +4,19 @@ import os
 from build.lib.臺灣言語工具.字詞組集句章.解析整理.拆文分析器 import 拆文分析器
 from 臺灣言語工具.標音.語句連詞 import 語句連詞
 import pickle
+from build.lib.臺灣言語工具.斷詞.中研院工具.官方斷詞剖析工具 import 官方斷詞剖析工具
+from build.lib.臺灣言語工具.斷詞.中研院工具.斷詞結構化工具 import 斷詞結構化工具
+from build.lib.臺灣言語工具.字詞組集句章.解析整理.物件譀鏡 import 物件譀鏡
 
 class 中研院千萬句揀出連詞:
+	揣標題 = re.compile('<title>(.*?)</title>')
 	分句 = re.compile('<sentence>(.*?)</sentence>')
 	莫詞性 = re.compile('(\(.*?\))|(\[.*?\])')
 	__語料 = 讀語料()
 	__分析器 = 拆文分析器()
+	__斷詞剖析工具 = 官方斷詞剖析工具()
+	__斷詞結構化工具 = 斷詞結構化工具()
+	__譀鏡 = 物件譀鏡()
 	def 處理全部檔案(self, 連詞, 目錄):
 		for (所在, 資料夾, 檔案) in os.walk(目錄):
 			for 檔名 in 檔案:
@@ -20,6 +27,18 @@ class 中研院千萬句揀出連詞:
 					self.加(連詞, 逐逝)
 	def 揀(self, 文章):
 		逐逝 = []
+# 		for 一逝 in self.揣標題.split(文章)[1::2]:
+# 			while True:
+# 				try:
+# 					斷詞結果 = self.__斷詞剖析工具.斷詞(一逝)
+# 				except:
+# 					pass
+# 				else:
+# 					break
+# 			組物件 = self.__斷詞結構化工具.斷詞轉組物件(斷詞結果)
+# 			一逝型 = self.__譀鏡.看型(組物件, 物件分詞符號 = '\u3000')
+# 			print(一逝型)
+# 			逐逝.append(self.莫詞性.sub('', 一逝型))
 		for 一逝 in self.分句.split(文章)[1::2]:
 			逐逝.append(self.莫詞性.sub('', 一逝))
 		return 逐逝
@@ -37,5 +56,5 @@ if __name__ == '__main__':
 	中研院千萬句揀出連詞().處理全部檔案(連詞, '/dev/shm/1000萬(XML)/')
 	中研院連詞檔案 = open('中研院連詞.pickle', 'wb')
 	pickle.dump(連詞, 中研院連詞檔案,
-			protocol=pickle.HIGHEST_PROTOCOL)
+			protocol = pickle.HIGHEST_PROTOCOL)
 	中研院連詞檔案.close()
