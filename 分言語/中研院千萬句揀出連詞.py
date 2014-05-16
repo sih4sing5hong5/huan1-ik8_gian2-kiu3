@@ -7,6 +7,7 @@ import pickle
 from build.lib.臺灣言語工具.斷詞.中研院工具.官方斷詞剖析工具 import 官方斷詞剖析工具
 from build.lib.臺灣言語工具.斷詞.中研院工具.斷詞結構化工具 import 斷詞結構化工具
 from build.lib.臺灣言語工具.字詞組集句章.解析整理.物件譀鏡 import 物件譀鏡
+import gzip
 
 class 中研院千萬句揀出連詞:
 	揣標題 = re.compile('<title>(.*?)</title>')
@@ -45,7 +46,7 @@ class 中研院千萬句揀出連詞:
 	def 加(self, 連詞, 逐逝):
 		for 一句 in 逐逝:
 			組物件 = self.__分析器.建立組物件('')
-			for 詞 in 一句.split('\u3000'):
+			for 詞 in 一句.replace('-',' - ').split('\u3000'):
 				詞物件 = self.__分析器.建立詞物件(詞)
 				組物件.內底詞.append(詞物件)
 # 			print(組物件)
@@ -54,7 +55,7 @@ class 中研院千萬句揀出連詞:
 if __name__ == '__main__':
 	連詞 = 語句連詞(3)
 	中研院千萬句揀出連詞().處理全部檔案(連詞, '/dev/shm/1000萬(XML)/')
-	中研院連詞檔案 = open('中研院連詞.pickle', 'wb')
+	中研院連詞檔案 = gzip.open('中研院連詞.pickle.gz', 'wb')
 	pickle.dump(連詞, 中研院連詞檔案,
 			protocol = pickle.HIGHEST_PROTOCOL)
 	中研院連詞檔案.close()
