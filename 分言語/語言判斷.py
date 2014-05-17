@@ -12,6 +12,7 @@ from 臺灣言語工具.斷詞.中研院工具.斷詞結構化工具 import 斷�
 from 臺灣言語工具.標音.動態規劃標音 import 動態規劃標音
 from 臺灣言語工具.斷詞.動態規劃斷詞 import 動態規劃斷詞
 import Pyro4
+from build.lib.臺灣言語工具.標音.語句連詞 import 語句連詞
 
 class 語言判斷:
 	國語連詞 = None
@@ -55,8 +56,8 @@ class 語言判斷:
 		return 教羅 / len(字陣列), 通用 / len(字陣列),
 	def 國語分數(self, 語句):
 		斷詞結果 = self.__斷詞剖析工具.斷詞(語句, 一定愛成功 = True)
-		組物件 = self.__斷詞結構化工具.斷詞轉組物件(斷詞結果)
-		標好, 分數, 詞數 = self.__標音.標音(self.國語連詞, 組物件)
+		章物件 = self.__斷詞結構化工具.斷詞轉章物件(斷詞結果)
+		標好, 分數, 詞數 = self.__標音.標音(self.國語連詞, 章物件)
 		return 分數
 	def 閩南語分數(self, 語句):
 		組物件 = self.__分析器.建立組物件(語句)
@@ -69,6 +70,11 @@ if __name__ == '__main__':
 # 	print(偌濟漢字)
 # 	偌濟音標 = 判斷.有偌濟音標('chhu1 tsha hi5 gha1')
 # 	print(偌濟音標)
+# 	判斷.國語連詞=語句連詞(3)
+# 	國語分數 = 判斷.國語分數('中研院連詞.pickle.gz閩南語辭典連詞.pickle.gz')
+# 	print(國語分數)
+# 	閩南語分數 = 判斷.閩南語分數('中研院連詞.pickle.gz閩南語辭典連詞.pickle.gz')
+# 	print(閩南語分數)
 	判斷.載入('中研院連詞.pickle.gz', '閩南語辭典連詞.pickle.gz')
 	Pyro4.Daemon.serveSimple(
 	{
