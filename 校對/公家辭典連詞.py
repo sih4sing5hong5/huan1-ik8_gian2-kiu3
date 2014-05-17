@@ -27,7 +27,7 @@ class 公家辭典連詞:
 			辭典, 連詞 = self.讀文件產生()
 			辭典連詞檔案 = open(辭典連詞檔名, 'wb')
 			pickle.dump((辭典, 連詞), 辭典連詞檔案,
-					protocol=pickle.HIGHEST_PROTOCOL)
+					protocol = pickle.HIGHEST_PROTOCOL)
 			辭典連詞檔案.close()
 		return 辭典, 連詞
 	def 讀文件產生(self):
@@ -42,7 +42,10 @@ class 公家辭典連詞:
 		return 辭典, 連詞
 	def 產生而且加一个檔案(self, 檔案):
 		辭典, 連詞 = self.產生()
+		self.加一个檔案(辭典, 連詞, 檔案)
+		return 辭典, 連詞
+	def 加一个檔案(self, 辭典, 連詞, 檔案):
 		self.__語料.產生辭典(辭典, 檔案)
 		self.__語料.產生連詞(連詞, 檔案)
 		return 辭典, 連詞
-	
+
