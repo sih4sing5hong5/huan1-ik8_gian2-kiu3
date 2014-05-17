@@ -11,6 +11,7 @@ from 臺灣言語工具.斷詞.中研院工具.官方斷詞剖析工具 import �
 from 臺灣言語工具.斷詞.中研院工具.斷詞結構化工具 import 斷詞結構化工具
 from 臺灣言語工具.標音.動態規劃標音 import 動態規劃標音
 from 臺灣言語工具.斷詞.動態規劃斷詞 import 動態規劃斷詞
+import Pyro4
 
 class 語言判斷:
 	國語連詞 = None
@@ -21,7 +22,7 @@ class 語言判斷:
 	__斷詞剖析工具 = 官方斷詞剖析工具()
 	__斷詞結構化工具 = 斷詞結構化工具()
 	__標音 = 動態規劃標音()
-	__斷詞=動態規劃斷詞()
+	__斷詞 = 動態規劃斷詞()
 	def 載入(self, 國語連詞檔名, 閩南語辭典連詞檔名):
 		if os.path.isfile(國語連詞檔名):
 			辭典連詞檔案 = gzip.open(國語連詞檔名, 'rb')
@@ -32,8 +33,9 @@ class 語言判斷:
 			self.閩南語辭典, self.閩南語連詞 = pickle.load(閩南語辭典連詞檔案)
 			閩南語辭典連詞檔案.close()
 	def 分數(self, 語句):
-		return (self.國語分數(語句),self.閩南語分數(語句),\
-			self.有偌濟漢字(語句),)+self.有偌濟音標(語句)
+		教羅, 通用 = self.有偌濟音標(語句)
+		return self.國語分數(語句), self.閩南語分數(語句), \
+			self.有偌濟漢字(語句), 教羅, 通用
 	def 有偌濟漢字(self, 語句):
 		漢字 = 0
 		for 字 in 語句:
@@ -63,8 +65,12 @@ class 語言判斷:
 		return 分數
 if __name__ == '__main__':
 	判斷 = 語言判斷()
-	偌濟漢字 = 判斷.有偌濟漢字('中研院連詞.pickle.gz閩南語辭典連詞.pickle.gz')
-	print(偌濟漢字)
-	偌濟音標 = 判斷.有偌濟音標('chhu1 tsha hi5 gha1')
-	print(偌濟音標)
-# 	判斷.載入('中研院連詞.pickle.gz', '閩南語辭典連詞.pickle.gz')
+# 	偌濟漢字 = 判斷.有偌濟漢字('中研院連詞.pickle.gz閩南語辭典連詞.pickle.gz')
+# 	print(偌濟漢字)
+# 	偌濟音標 = 判斷.有偌濟音標('chhu1 tsha hi5 gha1')
+# 	print(偌濟音標)
+	判斷.載入('中研院連詞.pickle.gz', '閩南語辭典連詞.pickle.gz')
+	Pyro4.Daemon.serveSimple(
+	{
+		判斷: "判斷",
+	}, ns = False, port = 9091)
