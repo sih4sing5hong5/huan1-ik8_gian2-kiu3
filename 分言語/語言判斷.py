@@ -12,7 +12,7 @@ from 臺灣言語工具.斷詞.中研院工具.斷詞結構化工具 import 斷�
 from 臺灣言語工具.標音.動態規劃標音 import 動態規劃標音
 from 臺灣言語工具.斷詞.動態規劃斷詞 import 動態規劃斷詞
 import Pyro4
-from build.lib.臺灣言語工具.標音.語句連詞 import 語句連詞
+from 臺灣言語工具.標音.語句連詞 import 語句連詞
 
 class 語言判斷:
 	國語連詞 = None
