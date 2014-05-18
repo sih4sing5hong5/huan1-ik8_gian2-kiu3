@@ -7,7 +7,8 @@ class 提掉文章標仔工具(HTMLParser):
 		super(提掉文章標仔工具, self).__init__()
 		self.剖析結果 = []
 	def handle_starttag(self, tag, attrs):
-		pass
+		if tag == 'hr':
+			self.剖析結果.append('<hr>')
 	def handle_endtag(self, tag):
 		if tag == 'p':
 			self.剖析結果.append('\n')
