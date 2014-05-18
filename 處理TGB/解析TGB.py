@@ -38,11 +38,10 @@ class 解析TGB:
 		json.dump(分數狀況, 分數檔案)
 		分數檔案.close()
 		print(len(全部))
-	def 國閩分數(self, 分數檔名, 國閩句檔名):
+	def 分國閩句(self, 分數檔名, 國閩句檔名):
 		分數檔案 = gzip.open(分數檔名, 'rt')
 		全部 = json.load(分數檔案,)
 		分數檔案.close()
-		分數狀況 = []
 
 # 					'網址':資料['url'],
 # 					'標題':標題工具.結果(),
@@ -61,16 +60,33 @@ class 解析TGB:
 					if 國語 > 0.2 and 教羅 < 0.001:
 						國語句.append(一逝)
 					elif 資料['攏總幾段'] > 1 and 教羅 > 0.1:
-						漢羅句.append(一逝)
+						if 判斷.有偌濟音標(一逝)[0]>0.1:
+							漢羅句.append(一逝)
 		國閩句檔案 = gzip.open(國閩句檔名, 'wt')
 		json.dump((國語句, 漢羅句), 國閩句檔案)
 		國閩句檔案.close()
-		print(國語句[:5])
-		print(漢羅句[:5])
-		print('\n'.join(國語句[:]),file=open('../國語句.txt','w'))
-		print('\n'.join(漢羅句[:]),file=open('../漢羅句.txt','w'))
+# 		print(國語句[:5])
+# 		print(漢羅句[:5])
+# 		print('\n'.join(國語句[:]),file=open('../國語句.txt','w'))
+# 		print('\n'.join(漢羅句[:]),file=open('../漢羅句.txt','w'))
+	def 國閩分數(self, 國閩句檔名,分數檔名 ):
+		國閩句檔案 = gzip.open(國閩句檔名, 'rt')
+		國語句, 漢羅句 = json.load(國閩句檔案,)
+		國閩句檔案.close()
+		問題=[]
+		答案=[]
+		for 一逝 in 國語句:
+			問題.append(判斷.閩南語相關分數(一逝))
+			答案.append(0)
+		for 一逝 in 漢羅句:
+			問題.append(判斷.閩南語相關分數(一逝))
+			答案.append(1)
+		分數檔案 = gzip.open(分數檔名, 'wt')
+		json.dump((問題, 答案), 分數檔案)
+		分數檔案.close()
 
 if __name__ == '__main__':
 	TGB = 解析TGB()
 # 	TGB.段落字分析('../原來TGB.json.gz', '../分數.json.gz')
-	TGB.國閩分數('../分數.json.gz', '../國閩句.json.gz')
+# 	TGB.分國閩句('../分數.json.gz', '../國閩句.json.gz')
+	TGB.國閩分數('../國閩句.json.gz','../逐句訓練分數.json.gz')
