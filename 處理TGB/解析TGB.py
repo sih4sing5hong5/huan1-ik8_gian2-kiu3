@@ -131,5 +131,5 @@ if __name__ == '__main__':
 	TGB = 解析TGB()
 # 	TGB.段落字分析('../原來TGB.json.gz', '../分數.json.gz')
 # 	TGB.分國閩句('../分數.json.gz', '../國閩句.json.gz')
-	TGB.國語斷詞('../分數.json.gz','斷詞.json.gz')
+	TGB.國語斷詞('../分數.json.gz','../斷詞.json.gz')
 # 	TGB.國閩分數('../國閩句.json.gz','../逐句訓練分數.json.gz')
