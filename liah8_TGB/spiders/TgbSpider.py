@@ -5,7 +5,7 @@ from scrapy.selector import Selector
 from liah8_TGB.items import Liah8TgbItem
 u'''
 scrapy crawl TGB -o ./語料/TGB/原來TGB.json -t json
-gzip 原來TGB.json
+gzip ./語料/TGB/原來TGB.json
 '''
 class TgbSpider(CrawlSpider):
 	name = "TGB"
