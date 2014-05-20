@@ -18,7 +18,7 @@ class 解析TGB:
 		訓練問題 = []
 		from sklearn import svm
 		for 問 in 問題:
-			訓練問題.append(問[0:4:2])
+			訓練問題.append(問[0:4])
 			print(訓練問題[-1])
 		clf = svm.SVC()
 		clf.fit(訓練問題, 答案)
@@ -26,8 +26,8 @@ class 解析TGB:
 		結果 = clf.predict(訓練問題)
 		毋著 = 0
 		for 結, 答 in zip(結果, 答案):
-			print(結, 答)
 			if 結 != 答:
+				print(結, 答)
 				毋著 += 1
 		print(毋著, len(答案))
 # 		for 問, 答 in zip(問題, 答案):
