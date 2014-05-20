@@ -87,14 +87,12 @@ class 語言判斷:
 			if 詞物件 in self.詞表:
 				目前幾擺[self.詞表[詞物件]] += 1
 
-
-
 判斷 = 語言判斷()
 Pyro4.config.SERIALIZER = 'pickle'
 判斷.判斷模型 = Pyro4.Proxy("PYRO:判斷模型@localhost:9091")
 
-if os.path.isfile('語言判斷詞表.pickle.gz'):
-	語言判斷詞表檔案 = gzip.open('語言判斷詞表.pickle.gz', 'rb')
+if os.path.isfile('../語料/分言語/語言判斷詞表.pickle.gz'):
+	語言判斷詞表檔案 = gzip.open('../語料/分言語/語言判斷詞表.pickle.gz', 'rb')
 	判斷.詞表 = pickle.load(語言判斷詞表檔案)
 	語言判斷詞表檔案.close()
 else:

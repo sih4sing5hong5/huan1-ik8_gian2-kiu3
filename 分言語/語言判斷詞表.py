@@ -40,7 +40,7 @@ class 語言判斷詞表:
 
 if __name__ == '__main__':
 	對應編號 = 語言判斷詞表().產生()
-	語言判斷詞表檔案 = gzip.open('語言判斷詞表.pickle.gz', 'wb')
+	語言判斷詞表檔案 = gzip.open('../語料/分言語/語言判斷詞表.pickle.gz', 'wb')
 	pickle.dump(對應編號, 語言判斷詞表檔案,
 			protocol = pickle.HIGHEST_PROTOCOL)
 	語言判斷詞表檔案.close()
