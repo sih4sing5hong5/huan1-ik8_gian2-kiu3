@@ -47,6 +47,7 @@ class 語言判斷模型:
 if __name__ == '__main__':
 	判斷模型 = 語言判斷模型()
 	判斷模型.載入('中研院連詞.pickle.gz', '閩南語辭典連詞.pickle.gz')
+	Pyro4.config.SERIALIZERS_ACCEPTED.add('pickle')
 	Pyro4.Daemon.serveSimple(
 	{
 		判斷模型: "判斷模型",
