@@ -7,6 +7,7 @@ import Pyro4
 class 語言判斷詞表:
 	__物件譀鏡 = 物件譀鏡()
 	def 產生(self):
+		Pyro4.config.SERIALIZER = 'pickle'
 		判斷模型 = Pyro4.Proxy("PYRO:判斷模型@localhost:9091")
 		國語孤詞, 閩南語孤詞 = 判斷模型.孤詞表()
 		國語孤詞 = self.揣頭前一萬筆(國語孤詞)
