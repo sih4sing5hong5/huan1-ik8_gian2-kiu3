@@ -6,7 +6,7 @@ from 分言語.語言判斷 import 判斷
 from 處理TGB.資料檔 import 資料檔
 
 class 解析TGB:
-	__資料檔=資料檔()
+	__資料檔 = 資料檔()
 	def 段落字分析(self, json檔名, 分數檔名):
 		全部 = self.__資料檔.讀(json檔名)
 		分數狀況 = []
@@ -51,20 +51,45 @@ class 解析TGB:
 						if 判斷.有偌濟音標(一逝)[0] > 0.1:
 							漢羅句.append(一逝)
 		self.__資料檔.寫(國閩句檔名, (國語句, 漢羅句))
-	def 國閩分數(self, 國閩句檔名, 分數檔名):
+	def 國閩分數(self, 國閩句檔名, 分數檔名, 海東檔名):
 		國語句, 漢羅句 = self.__資料檔.讀(國閩句檔名)
 		問題 = []
 		答案 = []
-		for 一逝 in 國語句[:100]:
+		for 一逝 in 國語句[:]:
 			問題.append(判斷.分數(一逝))
 			答案.append(0)
-		for 一逝 in 漢羅句[:100]:
+		for 一逝 in 漢羅句[:]:
+			問題.append(判斷.分數(一逝))
+			答案.append(1)
+		for 一逝 in self.海東分析(海東檔名)[:]:
 			問題.append(判斷.分數(一逝))
 			答案.append(1)
 		self.__資料檔.寫(分數檔名, (問題, 答案))
+
+	def 海東分析(self, 海東檔名):
+		import html2text
+		海東網頁 = self.__資料檔.讀(海東檔名)
+		逝 = []
+		for 資料 in 海東網頁:
+			h = html2text.HTML2Text()
+			h.ignore_links = True
+			h.ignore_emphasis = True
+			h.ignore_images = True
+			h.google_doc = False
+			上尾結果 = h.handle(資料['context']).strip().replace('\\-', '-')
+			for 一逝 in 上尾結果.split('\n'):
+				一逝 = 一逝.strip()
+				if 一逝 != '':
+					逝.append(一逝)
+# 		print(len(逝))
+		return 逝
+
 
 if __name__ == '__main__':
 	TGB = 解析TGB()
 # 	TGB.段落字分析('../語料/TGB/原來TGB.json.gz', '../語料/TGB/分數.json.gz')
 # 	TGB.分國閩句('../語料/TGB/分數.json.gz', '../語料/TGB/國閩句.json.gz')
-	TGB.國閩分數('../語料/TGB/國閩句.json.gz', '../語料/TGB/逐句訓練分數.json.gz')
+	TGB.國閩分數('../語料/TGB/國閩句.json.gz',
+			'../語料/TGB/逐句訓練分數.json.gz',
+			'../語料/TGB/原來Hai2Tong1.json.gz')
+# 	TGB.海東分析('../語料/TGB/原來Hai2Tong1.json.gz')
