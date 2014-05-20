@@ -23,7 +23,7 @@ class 閩南語辭典連詞:
 
 if __name__ == '__main__':
 	辭典, 連詞 = 閩南語辭典連詞().產生()
-	閩南語辭典連詞檔案 = gzip.open('閩南語辭典連詞.pickle.gz', 'wb')
+	閩南語辭典連詞檔案 = gzip.open('../語料/分言語/閩南語辭典連詞.pickle.gz', 'wb')
 	pickle.dump((辭典, 連詞), 閩南語辭典連詞檔案,
 			protocol = pickle.HIGHEST_PROTOCOL)
 	閩南語辭典連詞檔案.close()

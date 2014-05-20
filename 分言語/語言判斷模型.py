@@ -52,7 +52,7 @@ class 語言判斷模型:
 		return 國語孤詞, 閩南語孤詞,
 if __name__ == '__main__':
 	判斷模型 = 語言判斷模型()
-	判斷模型.載入('中研院連詞.pickle.gz', '閩南語辭典連詞.pickle.gz')
+	判斷模型.載入('../語料/分言語/中研院連詞.pickle.gz', '../語料/分言語/閩南語辭典連詞.pickle.gz')
 	Pyro4.config.SERIALIZERS_ACCEPTED.add('pickle')
 	Pyro4.Daemon.serveSimple(
 	{

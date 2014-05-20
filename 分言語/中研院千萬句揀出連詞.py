@@ -55,7 +55,7 @@ class 中研院千萬句揀出連詞:
 if __name__ == '__main__':
 	連詞 = 語句連詞(3)
 	中研院千萬句揀出連詞().處理全部檔案(連詞, '/dev/shm/1000萬(XML)/')
-	中研院連詞檔案 = gzip.open('中研院連詞.pickle.gz', 'wb')
+	中研院連詞檔案 = gzip.open('../語料/分言語/中研院連詞.pickle.gz', 'wb')
 	pickle.dump(連詞, 中研院連詞檔案,
 			protocol = pickle.HIGHEST_PROTOCOL)
 	中研院連詞檔案.close()
