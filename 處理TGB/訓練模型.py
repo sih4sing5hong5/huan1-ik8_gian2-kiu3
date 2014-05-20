@@ -18,7 +18,8 @@ class 解析TGB:
 		訓練問題 = []
 		from sklearn import svm
 		for 問 in 問題:
-			訓練問題.append([問[0]])
+			訓練問題.append(問[0:4:2])
+			print(訓練問題[-1])
 		clf = svm.SVC()
 		clf.fit(訓練問題, 答案)
 # 		clf.fit(問題, 答案)  
