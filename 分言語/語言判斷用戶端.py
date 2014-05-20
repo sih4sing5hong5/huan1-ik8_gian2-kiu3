@@ -2,6 +2,7 @@ import Pyro4
 from 分言語.語言判斷 import 語言判斷
 
 判斷 = 語言判斷()
+Pyro4.config.SERIALIZER = 'pickle'
 判斷.判斷模型 = Pyro4.Proxy("PYRO:判斷模型@localhost:9091")
 if __name__ == '__main__':
 # 	偌濟漢字 = 判斷.有偌濟漢字('中研院連詞.pickle.gz閩南語辭典連詞.pickle.gz')
