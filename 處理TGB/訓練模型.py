@@ -36,4 +36,4 @@ class 解析TGB:
 
 if __name__ == '__main__':
 	TGB = 解析TGB()
-	TGB.看國閩分數('../逐句訓練分數.json.gz')
+	TGB.看國閩分數('../語料/TGB/逐句訓練分數.json.gz')

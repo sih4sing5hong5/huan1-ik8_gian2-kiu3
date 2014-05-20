@@ -4,7 +4,7 @@ from scrapy.contrib.linkextractors.sgml import SgmlLinkExtractor
 from scrapy.selector import Selector
 from liah8_TGB.items import Liah8TgbItem
 u'''
-scrapy crawl TGB -o 原來TGB.json -t json
+scrapy crawl TGB -o ./語料/TGB/原來TGB.json -t json
 gzip 原來TGB.json
 '''
 class TgbSpider(CrawlSpider):
