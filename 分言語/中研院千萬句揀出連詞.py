@@ -1,12 +1,12 @@
 import re
 from 翻譯研究.讀語料 import 讀語料
 import os
-from build.lib.臺灣言語工具.字詞組集句章.解析整理.拆文分析器 import 拆文分析器
+from 臺灣言語工具.字詞組集句章.解析整理.拆文分析器 import 拆文分析器
 from 臺灣言語工具.標音.語句連詞 import 語句連詞
 import pickle
-from build.lib.臺灣言語工具.斷詞.中研院工具.官方斷詞剖析工具 import 官方斷詞剖析工具
-from build.lib.臺灣言語工具.斷詞.中研院工具.斷詞結構化工具 import 斷詞結構化工具
-from build.lib.臺灣言語工具.字詞組集句章.解析整理.物件譀鏡 import 物件譀鏡
+from 臺灣言語工具.斷詞.中研院工具.官方斷詞剖析工具 import 官方斷詞剖析工具
+from 臺灣言語工具.斷詞.中研院工具.斷詞結構化工具 import 斷詞結構化工具
+from 臺灣言語工具.字詞組集句章.解析整理.物件譀鏡 import 物件譀鏡
 import gzip
 
 class 中研院千萬句揀出連詞:
