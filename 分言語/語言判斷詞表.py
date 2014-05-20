@@ -1,21 +1,8 @@
-import re
-from 翻譯研究.讀語料 import 讀語料
-import os
-from 臺灣言語工具.字詞組集句章.解析整理.拆文分析器 import 拆文分析器
-from 臺灣言語工具.標音.語句連詞 import 語句連詞
-import pickle
 import gzip
-from 校對.公家辭典連詞 import 公家辭典連詞
-from 分言語.語言判斷 import 判斷
-
-from 臺灣言語工具.字詞組集句章.解析整理.拆文分析器 import 拆文分析器
-from 臺灣言語工具.標音.語句連詞 import 語句連詞
 import pickle
-from 臺灣言語工具.斷詞.中研院工具.官方斷詞剖析工具 import 官方斷詞剖析工具
-from 臺灣言語工具.斷詞.中研院工具.斷詞結構化工具 import 斷詞結構化工具
 from 臺灣言語工具.字詞組集句章.解析整理.物件譀鏡 import 物件譀鏡
 import itertools
-from 分言語.語言判斷 import Pyro4
+import Pyro4
 
 class 語言判斷詞表:
 	__物件譀鏡 = 物件譀鏡()

@@ -1,12 +1,8 @@
 import gzip
 import pickle
 import os
-import unicodedata
-from 臺灣言語工具.字詞組集句章.基本元素.公用變數 import 統一碼漢字佮組字式類
 from 臺灣言語工具.字詞組集句章.解析整理.拆文分析器 import 拆文分析器
 from 臺灣言語工具.字詞組集句章.解析整理.字物件篩仔 import 字物件篩仔
-from 臺灣言語工具.字詞組集句章.音標系統.閩南語.教會羅馬字音標 import 教會羅馬字音標
-from 臺灣言語工具.字詞組集句章.音標系統.閩南語.通用拼音音標 import 通用拼音音標
 from 臺灣言語工具.斷詞.中研院工具.官方斷詞剖析工具 import 官方斷詞剖析工具
 from 臺灣言語工具.斷詞.中研院工具.斷詞結構化工具 import 斷詞結構化工具
 from 臺灣言語工具.標音.動態規劃標音 import 動態規劃標音

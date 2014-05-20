@@ -15,6 +15,7 @@ import Pyro4
 from 臺灣言語工具.字詞組集句章.解析整理.文章粗胚 import 文章粗胚
 from 臺灣言語工具.字詞組集句章.解析整理.轉物件音家私 import 轉物件音家私
 from 分言語.語言判斷模型 import 語言判斷模型
+from 分言語.語言判斷詞表 import 語言判斷詞表
 
 class 語言判斷:
 	國語連詞 = None
@@ -29,10 +30,11 @@ class 語言判斷:
 	__標音 = 動態規劃標音()
 	__斷詞 = 動態規劃斷詞()
 	判斷模型 = 語言判斷模型()
+	詞表 = {}
 	def 分數(self, 語句):
 		處理減號 = self.__粗胚.建立物件語句前處理減號(教會羅馬字音標, 語句)
 		國語分數, 國語詞數 = self.國語分數(處理減號)
-		閩南語分數, 閩南語詞數, 教羅, 通用=self.閩南語分數(處理減號)
+		閩南語分數, 閩南語詞數, 教羅, 通用 = self.閩南語分數(處理減號)
 		return 國語分數, 國語詞數, \
 			閩南語分數, 閩南語詞數, 教羅, 通用
 	def 有偌濟漢字(self, 語句):
@@ -70,6 +72,13 @@ class 語言判斷:
 判斷 = 語言判斷()
 Pyro4.config.SERIALIZER = 'pickle'
 判斷.判斷模型 = Pyro4.Proxy("PYRO:判斷模型@localhost:9091")
+
+if os.path.isfile('語言判斷詞表.pickle.gz'):
+	語言判斷詞表檔案 = gzip.open('語言判斷詞表.pickle.gz', 'rb')
+	判斷.詞表 = pickle.load(語言判斷詞表檔案)
+	語言判斷詞表檔案.close()
+else:
+	判斷.詞表 = 語言判斷詞表().產生()
 
 def __試驗():
 	print(判斷.分數('tsiong1-hua3-kuan7 ting2-jim7 gi7-tiunn2 peh8-hong5-sim1 e5 hau7-senn1 peh8-bin2-kiat8 '))
