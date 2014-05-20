@@ -44,6 +44,16 @@ class 語言判斷模型:
 		斷好, 分數, 詞數 = self.__斷詞.斷詞(self.閩南語辭典, 標準組物件)
 		標好, 分數, 詞數 = self.__標音.標音(self.閩南語連詞, 斷好)
 		return 標好, 分數, 詞數
+	def 孤詞表(self):
+		國語孤詞 = []
+		for 詞, 機率 in self.國語連詞.連詞表.items():
+			if len(詞) == 1:
+				國語孤詞.append((詞, 機率))
+		閩南語孤詞 = []
+		for 詞, 機率 in self.閩南語連詞.連詞表.items():
+			if len(詞) == 1:
+				閩南語孤詞.append((詞, 機率))
+		return 國語孤詞, 閩南語孤詞,
 if __name__ == '__main__':
 	判斷模型 = 語言判斷模型()
 	判斷模型.載入('中研院連詞.pickle.gz', '閩南語辭典連詞.pickle.gz')
