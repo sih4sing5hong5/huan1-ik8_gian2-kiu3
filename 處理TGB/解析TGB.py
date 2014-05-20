@@ -115,7 +115,7 @@ class 解析TGB:
 		for 一逝 in 猶未斷:
 			try:
 				處理減號 = self.__粗胚.建立物件語句前處理減號(教會羅馬字音標, 一逝)
-				斷詞結果 = self.__斷詞剖析工具.斷詞(處理減號)
+				斷詞結果 = self.__斷詞剖析工具.斷詞(處理減號,等待=3.0)
 			except Exception as 問題:
 				print(問題)
 			else:
