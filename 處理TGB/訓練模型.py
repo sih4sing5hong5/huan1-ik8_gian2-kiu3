@@ -17,14 +17,18 @@ class 訓練模型:
 		問題, 答案 = self.__資料檔.讀(分數檔名)
 		訓練問題 = []
 		from sklearn import svm
-		前幾常用 = 2000
+		前幾常用 = 20
 # 		問題=問題[:-213]#+問題[-213:]
 # 		答案=答案[:-213]#+答案[-213:]
 		for 問 in 問題:
 			訓練問題.append(問[0:14] + 問[14:14 + 前幾常用] + 問[10014:10014 + 前幾常用])
-# 			print(訓練問題[-1])
-		clf = svm.SVC()
-		clf.fit(訓練問題, 答案)
+			print(訓練問題[-1])
+		import numpy as np
+		sample_weight_constant = np.ones(len(問題))
+# 		sample_weight_constant[-213:] *= 10
+		clf = svm.SVC(C=1)
+		clf = svm.NuSVC()
+		clf.fit(訓練問題, 答案, sample_weight=sample_weight_constant)
 # 		clf.fit(問題, 答案)
 		結果 = clf.predict(訓練問題)
 		毋著 = 0
