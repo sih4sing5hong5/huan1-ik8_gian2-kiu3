@@ -3,9 +3,9 @@ import gzip
 import os
 from 臺灣言語工具.斷詞.中研院工具.官方斷詞剖析工具 import 官方斷詞剖析工具
 from 臺灣言語工具.斷詞.中研院工具.斷詞結構化工具 import 斷詞結構化工具
-from 臺灣言語工具.字詞組集句章.解析整理.物件譀鏡 import 物件譀鏡
-from 臺灣言語工具.字詞組集句章.音標系統.閩南語.教會羅馬字音標 import 教會羅馬字音標
-from 臺灣言語工具.字詞組集句章.解析整理.文章粗胚 import 文章粗胚
+from 臺灣言語工具.解析整理.物件譀鏡 import 物件譀鏡
+from 臺灣言語工具.音標系統.閩南語.教會羅馬字音標 import 教會羅馬字音標
+from 臺灣言語工具.解析整理.文章粗胚 import 文章粗胚
 from 處理TGB.資料檔 import 資料檔
 from 分言語.語言判斷 import 判斷
 from 處理TGB.解析TGB import 解析TGB

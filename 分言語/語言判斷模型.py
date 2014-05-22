@@ -1,15 +1,15 @@
 import gzip
 import pickle
 import os
-from 臺灣言語工具.字詞組集句章.解析整理.拆文分析器 import 拆文分析器
-from 臺灣言語工具.字詞組集句章.解析整理.字物件篩仔 import 字物件篩仔
+from 臺灣言語工具.解析整理.拆文分析器 import 拆文分析器
+from 臺灣言語工具.解析整理.字物件篩仔 import 字物件篩仔
 from 臺灣言語工具.斷詞.中研院工具.官方斷詞剖析工具 import 官方斷詞剖析工具
 from 臺灣言語工具.斷詞.中研院工具.斷詞結構化工具 import 斷詞結構化工具
 from 臺灣言語工具.標音.動態規劃標音 import 動態規劃標音
 from 臺灣言語工具.斷詞.動態規劃斷詞 import 動態規劃斷詞
 import Pyro4
-from 臺灣言語工具.字詞組集句章.解析整理.文章粗胚 import 文章粗胚
-from 臺灣言語工具.字詞組集句章.解析整理.轉物件音家私 import 轉物件音家私
+from 臺灣言語工具.解析整理.文章粗胚 import 文章粗胚
+from 臺灣言語工具.解析整理.轉物件音家私 import 轉物件音家私
 # 國語需要10G記憶體，載入愛4分鐘
 # 閩南語需要5G，愛1分鐘
 class 語言判斷模型:

@@ -1,6 +1,6 @@
 import gzip
 import pickle
-from 臺灣言語工具.字詞組集句章.解析整理.物件譀鏡 import 物件譀鏡
+from 臺灣言語工具.解析整理.物件譀鏡 import 物件譀鏡
 import itertools
 import Pyro4
 
