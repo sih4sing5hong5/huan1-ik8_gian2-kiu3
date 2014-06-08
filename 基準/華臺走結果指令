@@ -1,4 +1,7 @@
 #!/bin/bash
+zcat 語料/試.華臺國語字斷字.txt.gz > 基準/試.華臺國語字斷字.txt
+zcat 語料/試.華臺國語字斷詞.txt.gz > 基準/試.華臺國語字斷詞.txt
+zcat 語料/試.華臺國語字斷詞組.txt.gz > 基準/試.華臺國語字斷詞組.txt
 declare -i port=8101
 for i in 華臺斷字 華臺斷詞 華臺斷詞組
 do
