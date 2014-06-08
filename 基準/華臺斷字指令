@@ -1,7 +1,7 @@
 #!/bin/bash
-name=華臺斷字
 src_type=華臺斷字
 trg_type=華臺斷字
+name=${src_type}_${trg_type}
 
 source 公家指令
 
