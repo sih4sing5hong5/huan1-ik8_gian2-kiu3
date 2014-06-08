@@ -5,7 +5,7 @@ do
 	for j in 華臺斷字 華臺斷詞 華臺斷詞組
 	do
 		echo $i $j $port
-		mosesserver -f $i_$j/model/moses.ini --server-port $port &
+		mosesserver -f ${i}_${j}/model/moses.ini --server-port $port &
 		port=$port+1
 	done
 done
