@@ -11,8 +11,7 @@ for i in 華臺斷字 華臺斷詞 華臺斷詞組
 do
 	for j in 華臺斷字 華臺斷詞 華臺斷詞組
 	do
-		echo $i $j $port
+		echo $i $j
 		cat 基準/試驗結果_${i}_${j} | python3 資料處理/斷一對一字.py | ${SCRIPTS_ROOTDIR}/generic/multi-bleu.perl -lc 基準/試.華臺一對一斷字.txt
-		port=$port+1
 	done
 done
