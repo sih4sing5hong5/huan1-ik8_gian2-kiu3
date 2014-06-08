@@ -1,18 +1,18 @@
 #!/bin/bash
 zcat 語料/試.華臺一對一斷字.txt.gz > 基準/試.華臺一對一斷字.txt
 echo 斷詞組
-cat 基準/moses華臺斷詞組試驗結果.txt | python3 資料處理/解碼.py | python3 資料處理/斷一對一字.py | ${SCRIPTS_ROOTDIR}/generic/multi-bleu.perl -lc 基準/試.華臺一對一斷字.txt 
+cat 基準/moses華臺斷詞組_華臺斷詞組試驗結果.txt | python3 資料處理/解碼.py | python3 資料處理/斷一對一字.py | ${SCRIPTS_ROOTDIR}/generic/multi-bleu.perl -lc 基準/試.華臺一對一斷字.txt 
 echo 斷詞
-cat 基準/moses華臺斷詞試驗結果.txt | python3 資料處理/解碼.py | python3 資料處理/斷一對一字.py | ${SCRIPTS_ROOTDIR}/generic/multi-bleu.perl -lc 基準/試.華臺一對一斷字.txt 
+cat 基準/moses華臺斷詞_華臺斷詞試驗結果.txt | python3 資料處理/解碼.py | python3 資料處理/斷一對一字.py | ${SCRIPTS_ROOTDIR}/generic/multi-bleu.perl -lc 基準/試.華臺一對一斷字.txt 
 echo 斷字
-cat 基準/moses華臺斷字試驗結果.txt | python3 資料處理/解碼.py | python3 資料處理/斷一對一字.py | ${SCRIPTS_ROOTDIR}/generic/multi-bleu.perl -lc 基準/試.華臺一對一斷字.txt 
+cat 基準/moses華臺斷字_華臺斷字試驗結果.txt | python3 資料處理/解碼.py | python3 資料處理/斷一對一字.py | ${SCRIPTS_ROOTDIR}/generic/multi-bleu.perl -lc 基準/試.華臺一對一斷字.txt 
 
 for i in 華臺斷字 華臺斷詞 華臺斷詞組
 do
 	for j in 華臺斷字 華臺斷詞 華臺斷詞組
 	do
 		echo $i $j $port
-		cat 基準/試驗結果_${i}_${j} $i | python3 資料處理/斷一對一字.py | ${SCRIPTS_ROOTDIR}/generic/multi-bleu.perl -lc 基準/試.華臺一對一斷字.txt
+		cat 基準/試驗結果_${i}_${j} | python3 資料處理/斷一對一字.py | ${SCRIPTS_ROOTDIR}/generic/multi-bleu.perl -lc 基準/試.華臺一對一斷字.txt
 		port=$port+1
 	done
 done
