@@ -1,0 +1,20 @@
+#!/bin/bash
+#$1 國語
+#$2 閩南語
+name=$1_$2
+src_type=$1
+trg_type=$2
+
+source 公家指令
+
+set_var
+
+make_model
+
+exit
+bash -x 通用指令 華臺斷字 華臺斷詞 &
+bash -x 通用指令 華臺斷字 華臺斷詞組 &
+bash -x 通用指令 華臺斷詞 華臺斷字 &
+bash -x 通用指令 華臺斷詞 華臺斷詞組 &
+bash -x 通用指令 華臺斷詞組 華臺斷字 &
+bash -x 通用指令 華臺斷詞組 華臺斷詞 &
