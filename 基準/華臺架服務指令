@@ -1,0 +1,16 @@
+#!/bin/bash
+declare -i port=8101
+for i in 華臺斷字 華臺斷詞 華臺斷詞組
+do
+	mosesserver -f $i/model/moses.ini --server-port $port &
+	port=$port+1
+	for j in 華臺斷字 華臺斷詞 華臺斷詞組
+	do
+		if [ $i != $j ] 
+		then
+			echo $i $j $port
+			mosesserver -f $i_$j/model/moses.ini --server-port $port &
+			port=$port+1
+		fi
+	done
+done
