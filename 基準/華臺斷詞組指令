@@ -7,10 +7,10 @@ source 公家指令
 
 set_var
 
-zcat ../語料/訓.華臺國語字.txt | python3 ../資料處理/編碼.py > ${src_text}
+zcat ../語料/訓.華臺國語字.txt.gz | python3 ../資料處理/編碼.py > ${src_text}
 zcat ../語料/訓.華臺一對一斷詞組.txt.gz | python3 ../資料處理/編碼.py > ${trg_text}
 cp ${trg_text} ${lm_text}
-zcat ../語料/試.華臺國語字.txt | python3 ../資料處理/編碼.py > ${test_text}
+zcat ../語料/試.華臺國語字.txt.gz | python3 ../資料處理/編碼.py > ${test_text}
 zcat ../語料/試.華臺一對一斷詞組.txt.gz | python3 ../資料處理/編碼.py > ${ans_text}
 
 prepare_data
