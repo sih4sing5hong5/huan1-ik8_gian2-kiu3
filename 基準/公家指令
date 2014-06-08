@@ -20,5 +20,8 @@ function prepare_data
 function make_model
 {
 	$SCRIPTS_ROOTDIR/training/train-model.perl -root-dir ${name} -corpus `pwd`/訓 -f ${src} -e ${trg} -alignment grow-diag-final-and -reordering msd-bidirectional-fe -lm 0:3:`pwd`/${lm_text}.lm -external-bin-dir=${HOME}/mt/
+}
+function translation
+{
 	moses -f ${name}/model/moses.ini < ${test_text} > ${result_text}
 }

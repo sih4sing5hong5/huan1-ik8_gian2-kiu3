@@ -15,3 +15,4 @@ zcat ../語料/試.華臺一對一斷字.txt.gz | python3 ../資料處理/編碼
 
 prepare_data
 make_model
+translation
