@@ -1,0 +1,11 @@
+#!/bin/bash
+declare -i port=8101
+for i in 華臺斷字 華臺斷詞 華臺斷詞組
+do
+	for j in 華臺斷字 華臺斷詞 華臺斷詞組
+	do
+		echo $i $j $port
+		PYTHONPATH=..:../../tai5_uan5_gian5_gi2_kang1_ku7/ python3 ../翻譯研究/對 摩西翻譯改通用.py 試驗結果_$i_$j $i $port &
+		port=$port+1
+	done
+done
