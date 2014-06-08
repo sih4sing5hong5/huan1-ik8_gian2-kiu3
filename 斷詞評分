@@ -1,25 +1,17 @@
 #!/bin/bash
+zcat 語料/試.華臺一對一斷字.txt.gz > 基準/試.華臺一對一斷字.txt
+echo 斷詞組
+cat 基準/moses斷詞組試驗結果.txt | python3 資料處理/解碼.py | python3 資料處理/斷一對一字.py | ${SCRIPTS_ROOTDIR}/generic/multi-bleu.perl -lc 基準/試.華臺一對一斷字.txt 
 echo 斷詞
-cat 翻譯研究/試驗結果斷詞.txt | python3 資料處理/編碼.py | ${SCRIPTS_ROOTDIR}/generic/multi-bleu.perl -lc 基準/斷字.閩南語答案.txt 
- 1003  ${SCRIPTS_ROOTDIR}/generic/multi-bleu.perl -lc 語料/試.例句一對一斷詞.txt < 基準/moses試驗結果.txt 
- 1004  ${SCRIPTS_ROOTDIR}/generic/multi-bleu.perl -lc 語料/試.例句一對一斷詞.txt < 基準/moses斷詞組試驗結果.txt 
- 1005  ${SCRIPTS_ROOTDIR}/generic/multi-bleu.perl -lc 語料/試.例句一對一斷詞.txt < 基準/moses斷詞組試驗結果.txt
- 1006  ${SCRIPTS_ROOTDIR}/generic/multi-bleu.perl -lc 語料/試.例句一對一斷詞.txt < 基準/moses斷詞組試驗結果.txt 
- 1007  ${SCRIPTS_ROOTDIR}/generic/multi-bleu.perl -lc 基準/斷詞組.閩南語答案.txt < 基準/moses斷詞組試驗結果.txt
- 1008  ${SCRIPTS_ROOTDIR}/generic/multi-bleu.perl -lc 基準/斷詞.閩南語答案.txt < 基準/moses斷詞試驗結果.txt
- 1009  ${SCRIPTS_ROOTDIR}/generic/multi-bleu.perl -lc 基準/斷字.閩南語答案.txt < 基準/moses斷字試驗結果.txt
-
-cat 翻譯研究/試驗結果斷詞.txt | sed 's/\-/ /g' | ${SCRIPTS_ROOTDIR}/generic/multi-bleu.perl -lc 語料/試.閩南語音斷字.txt
-cat 基準/moses試驗結果斷詞.txt  | sed 's/\-/ /g' | ${SCRIPTS_ROOTDIR}/generic/multi-bleu.perl -lc 語料/試.閩南語音斷字.txt
-${SCRIPTS_ROOTDIR}/generic/multi-bleu.perl -lc 語料/試.閩南語音斷詞.txt < 基準/moses試驗結果斷詞.txt 
-echo 國語斷詞
-cat 翻譯研究/試驗結果國語斷詞.txt | sed 's/\-/ /g' | ${SCRIPTS_ROOTDIR}/generic/multi-bleu.perl -lc 語料/試.閩南語音斷字.txt
-${SCRIPTS_ROOTDIR}/generic/multi-bleu.perl -lc 語料/試.閩南語音斷字.txt < 基準/moses試驗結果國語斷詞.txt 
+cat 基準/moses斷詞試驗結果.txt | python3 資料處理/解碼.py | python3 資料處理/斷一對一字.py | ${SCRIPTS_ROOTDIR}/generic/multi-bleu.perl -lc 基準/試.華臺一對一斷字.txt 
 echo 斷字
-${SCRIPTS_ROOTDIR}/generic/multi-bleu.perl -lc 語料/試.閩南語音斷字.txt < 基準/moses試驗結果斷字.txt 
-echo 斷字閣組
-cat 翻譯研究/試驗結果斷字閣組.txt | ${SCRIPTS_ROOTDIR}/generic/multi-bleu.perl -lc 語料/試.閩南語音.txt  
-echo 原本斷詞組：
-cat 翻譯研究/試驗結果.txt | sed 's/\-/ /g' | ${SCRIPTS_ROOTDIR}/generic/multi-bleu.perl -lc 語料/試.閩南語音斷字.txt
-cat 基準/moses試驗結果.txt  | sed 's/\-/ /g' | ${SCRIPTS_ROOTDIR}/generic/multi-bleu.perl -lc 語料/試.閩南語音斷字.txt
-${SCRIPTS_ROOTDIR}/generic/multi-bleu.perl -lc 語料/試.閩南語音.txt < 基準/moses試驗結果.txt 
+cat 基準/moses斷字試驗結果.txt | python3 資料處理/解碼.py | python3 資料處理/斷一對一字.py | ${SCRIPTS_ROOTDIR}/generic/multi-bleu.perl -lc 基準/試.華臺一對一斷字.txt 
+# 1003  ${SCRIPTS_ROOTDIR}/generic/multi-bleu.perl -lc 語料/試.例句一對一斷詞.txt < 基準/moses試驗結果.txt 
+#${SCRIPTS_ROOTDIR}/generic/multi-bleu.perl -lc 語料/試.例句一對一斷詞.txt < 基準/moses斷詞組試驗結果.txt 
+# 1005  ${SCRIPTS_ROOTDIR}/generic/multi-bleu.perl -lc 語料/試.例句一對一斷詞.txt < 基準/moses斷詞組試驗結果.txt
+# 1006  ${SCRIPTS_ROOTDIR}/generic/multi-bleu.perl -lc 語料/試.例句一對一斷詞.txt < 基準/moses斷詞組試驗結果.txt 
+# 1007  ${SCRIPTS_ROOTDIR}/generic/multi-bleu.perl -lc 基準/斷詞組.閩南語答案.txt < 基準/moses斷詞組試驗結果.txt
+# 1008  ${SCRIPTS_ROOTDIR}/generic/multi-bleu.perl -lc 基準/斷詞.閩南語答案.txt < 基準/moses斷詞試驗結果.txt
+ #1009  ${SCRIPTS_ROOTDIR}/generic/multi-bleu.perl -lc 基準/斷字.閩南語答案.txt < 基準/moses斷字試驗結果.txt
+
+#cat 翻譯研究/試驗結果斷詞.txt | sed 's/\-/ /g' | ${SCRIPTS_ROOTDIR}/generic/multi-bleu.perl -lc 語料/試.閩南語音斷字.txt
