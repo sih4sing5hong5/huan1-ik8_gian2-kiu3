@@ -70,12 +70,13 @@ class 語言判斷:
 # 		elif 無空白 in  self.舊斷詞 :
 # 			print(處理減號,self.舊斷詞[無空白])
 		else:
-			斷詞結果 = self.__斷詞剖析工具.斷詞(處理減號, 一定愛成功 = True)
+			斷詞結果 = self.__斷詞剖析工具.斷詞(處理減號, 等待 = 10, 一定愛成功 = True)
 			章物件 = self.__斷詞結構化工具.斷詞轉章物件(斷詞結果)
 			self.斷詞[處理減號] = 章物件
-			斷詞物件檔案 = gzip.open('../語料/TGB/斷詞物件.pickle.gz', 'wb')
+			斷詞物件檔案 = gzip.open('../語料/TGB/斷詞物件.tmp.pickle.gz', 'wb')
 			pickle.dump(self.斷詞, 斷詞物件檔案)
 			斷詞物件檔案.close()
+			os.rename('../語料/TGB/斷詞物件.tmp.pickle.gz','../語料/TGB/斷詞物件.pickle.gz')
 		標好, 分數, 詞數 = self.判斷模型.國語分數(章物件)
 		return 標好, 分數, 詞數
 	def 閩南語分數(self, 處理減號):
