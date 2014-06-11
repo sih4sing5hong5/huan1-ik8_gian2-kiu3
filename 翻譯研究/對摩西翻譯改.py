@@ -2,17 +2,17 @@
 import json
 import urllib.request
 from 臺灣言語工具.解析整理.拆文分析器 import 拆文分析器
-from 臺灣言語工具.標音.語句連詞 import 語句連詞
+from 臺灣言語工具.表單.語句連詞 import 語句連詞
 from 翻譯研究.讀語料 import 讀語料
 from 臺灣言語工具.解析整理.文章粗胚 import 文章粗胚
 import pickle
 import os
-from 臺灣言語工具.標音.動態規劃標音 import 動態規劃標音
+from 臺灣言語工具.斷詞.連詞揀集內組 import 連詞揀集內組
 from 臺灣言語工具.解析整理.物件譀鏡 import 物件譀鏡
 from 臺灣言語工具.基本元素.句 import 句
 from 臺灣言語工具.翻譯.摩西工具.摩西用戶端 import 摩西用戶端
-from 臺灣言語工具.斷詞.型音辭典 import 型音辭典
-from 臺灣言語工具.斷詞.動態規劃斷詞 import 動態規劃斷詞
+from 臺灣言語工具.表單.型音辭典 import 型音辭典
+from 臺灣言語工具.斷詞.辭典揣詞 import 辭典揣詞
 from 臺灣言語工具.翻譯.摩西工具.語句編碼器 import 語句編碼器
 from 臺灣言語工具.解析整理.字物件篩仔 import 字物件篩仔
 
@@ -85,8 +85,8 @@ class 對摩西翻譯改:
 	def 試驗(self):
 		self.__分析器 = 拆文分析器()
 		self.__粗胚 = 文章粗胚()
-		斷詞工具 = 動態規劃斷詞()
-		標音工具 = 動態規劃標音()
+		斷詞工具 = 辭典揣詞()
+		標音工具 = 連詞揀集內組()
 		譀鏡 = 物件譀鏡()
 		篩仔 = 字物件篩仔()
 		結果檔案 = open(self.結果檔名, 'w')

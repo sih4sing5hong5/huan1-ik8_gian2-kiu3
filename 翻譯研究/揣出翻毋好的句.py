@@ -2,18 +2,18 @@
 import json
 import urllib.request
 from 臺灣言語工具.解析整理.拆文分析器 import 拆文分析器
-from 臺灣言語工具.標音.語句連詞 import 語句連詞
+from 臺灣言語工具.表單.語句連詞 import 語句連詞
 from 翻譯研究.讀語料 import 讀語料
 from 臺灣言語工具.解析整理.文章粗胚 import 文章粗胚
 from 臺灣言語工具.音標系統.閩南語.臺灣閩南語羅馬字拼音 import 臺灣閩南語羅馬字拼音
 import pickle
 import os
-from 臺灣言語工具.標音.動態規劃標音 import 動態規劃標音
+from 臺灣言語工具.斷詞.連詞揀集內組 import 連詞揀集內組
 from 臺灣言語工具.解析整理.物件譀鏡 import 物件譀鏡
 from 臺灣言語工具.基本元素.句 import 句
 from 臺灣言語工具.翻譯.摩西工具.摩西用戶端 import 摩西用戶端
-from 臺灣言語工具.斷詞.型音辭典 import 型音辭典
-from 臺灣言語工具.斷詞.動態規劃斷詞 import 動態規劃斷詞
+from 臺灣言語工具.表單.型音辭典 import 型音辭典
+from 臺灣言語工具.斷詞.辭典揣詞 import 辭典揣詞
 
 class 揣出翻毋好的句:
 	def 比較(self,來源檔名,標準答案檔名,試驗檔名,摩西檔名,門檻=0.5):

@@ -4,11 +4,11 @@ import json
 import urllib.request
 from 臺灣言語工具.解析整理.文章粗胚 import 文章粗胚
 from 臺灣言語工具.解析整理.拆文分析器 import 拆文分析器
-from 臺灣言語工具.標音.語句連詞 import 語句連詞
+from 臺灣言語工具.表單.語句連詞 import 語句連詞
 from 臺灣言語工具.音標系統.閩南語.臺灣閩南語羅馬字拼音 import 臺灣閩南語羅馬字拼音
 from 臺灣言語工具.解析整理.轉物件音家私 import 轉物件音家私
 from 臺灣言語工具.解析整理.物件譀鏡 import 物件譀鏡
-from 臺灣言語工具.斷詞.型音辭典 import 型音辭典
+from 臺灣言語工具.表單.型音辭典 import 型音辭典
 
 class 讀語料:
 	__分析器 = 拆文分析器()

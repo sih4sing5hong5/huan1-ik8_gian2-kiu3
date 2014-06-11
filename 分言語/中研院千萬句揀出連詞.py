@@ -2,7 +2,7 @@ import re
 from 翻譯研究.讀語料 import 讀語料
 import os
 from 臺灣言語工具.解析整理.拆文分析器 import 拆文分析器
-from 臺灣言語工具.標音.語句連詞 import 語句連詞
+from 臺灣言語工具.表單.語句連詞 import 語句連詞
 import pickle
 from 臺灣言語工具.斷詞.中研院工具.官方斷詞剖析工具 import 官方斷詞剖析工具
 from 臺灣言語工具.斷詞.中研院工具.斷詞結構化工具 import 斷詞結構化工具
