@@ -2,13 +2,13 @@
 import json
 import urllib.request
 from 臺灣言語工具.解析整理.拆文分析器 import 拆文分析器
-from 臺灣言語工具.標音.語句連詞 import 語句連詞
+from 臺灣言語工具.表單.語句連詞 import 語句連詞
 from 翻譯研究.讀語料 import 讀語料
 from 臺灣言語工具.解析整理.文章粗胚 import 文章粗胚
 from 臺灣言語工具.音標系統.閩南語.臺灣閩南語羅馬字拼音 import 臺灣閩南語羅馬字拼音
 import pickle
 import os
-from 臺灣言語工具.標音.動態規劃標音 import 動態規劃標音
+from 臺灣言語工具.斷詞.連詞揀集內組 import 連詞揀集內組
 from 臺灣言語工具.解析整理.物件譀鏡 import 物件譀鏡
 from 臺灣言語工具.基本元素.句 import 句
 
@@ -60,7 +60,7 @@ class 翻譯:
 			pickle.dump(self.連詞, 語言模型檔案, protocol = pickle.HIGHEST_PROTOCOL)
 			語言模型檔案.close()
 	def 試驗(self):
-		標音工具 = 動態規劃標音()
+		標音工具 = 連詞揀集內組()
 		譀鏡 = 物件譀鏡()
 		結果檔案 = open('試驗結果.txt', 'w')
 		for 一逝 in self.語料.讀語料檔案('../語料/試.國語字.txt'):
