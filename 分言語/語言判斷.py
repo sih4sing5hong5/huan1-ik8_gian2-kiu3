@@ -18,6 +18,7 @@ from 分言語.語言判斷模型 import 語言判斷模型
 from 分言語.語言判斷詞表 import 語言判斷詞表
 from 臺灣言語工具.解析整理.詞物件網仔 import 詞物件網仔
 import itertools
+from 處理TGB.資料檔 import 資料檔
 
 class 語言判斷:
 	國語連詞 = None
@@ -32,8 +33,10 @@ class 語言判斷:
 	__標音 = 連詞揀集內組()
 	__斷詞 = 辭典揣詞()
 	__網仔 = 詞物件網仔()
+	__資料檔 = 資料檔()
 	判斷模型 = 語言判斷模型()
 	詞表 = {}
+	斷詞 = {}
 	def 分數(self, 語句):
 		處理減號 = self.__粗胚.建立物件語句前處理減號(教會羅馬字音標, 語句)
 		標好國語, 國語分數, 國語詞數 = self.國語分數(處理減號)
@@ -61,8 +64,18 @@ class 語言判斷:
 				通用 += 1
 		return 教羅 / len(字陣列), 通用 / len(字陣列),
 	def 國語分數(self, 處理減號):
-		斷詞結果 = self.__斷詞剖析工具.斷詞(處理減號, 一定愛成功 = True)
-		章物件 = self.__斷詞結構化工具.斷詞轉章物件(斷詞結果)
+		無空白 = ''.join(處理減號.split())
+		if 處理減號 in self.斷詞:
+			章物件 = self.斷詞[處理減號]
+# 		elif 無空白 in  self.舊斷詞 :
+# 			print(處理減號,self.舊斷詞[無空白])
+		else:
+			斷詞結果 = self.__斷詞剖析工具.斷詞(處理減號, 一定愛成功 = True)
+			章物件 = self.__斷詞結構化工具.斷詞轉章物件(斷詞結果)
+			self.斷詞[處理減號] = 章物件
+			斷詞物件檔案 = gzip.open('../語料/TGB/斷詞物件.pickle.gz', 'wb')
+			pickle.dump(self.斷詞, 斷詞物件檔案)
+			斷詞物件檔案.close()
 		標好, 分數, 詞數 = self.判斷模型.國語分數(章物件)
 		return 標好, 分數, 詞數
 	def 閩南語分數(self, 處理減號):
@@ -100,6 +113,11 @@ if os.path.isfile('../語料/分言語/語言判斷詞表.pickle.gz'):
 	語言判斷詞表檔案.close()
 else:
 	判斷.詞表 = 語言判斷詞表().產生()
+if os.path.isfile('../語料/TGB/斷詞物件.pickle.gz'):
+	斷詞物件檔案 = gzip.open('../語料/TGB/斷詞物件.pickle.gz', 'rb')
+	判斷.斷詞 = pickle.load(斷詞物件檔案)
+	斷詞物件檔案.close()
+
 
 def __試驗():
 	print(判斷.分數('tsiong1-hua3-kuan7 ting2-jim7 gi7-tiunn2 peh8-hong5-sim1 e5 hau7-senn1 peh8-bin2-kiat8 '))
