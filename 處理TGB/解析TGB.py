@@ -63,7 +63,7 @@ class 解析TGB:
 			答案.append(1)
 		for 一逝 in self.海東分析(海東檔名)[:]:
 			問題.append(判斷.分數(一逝))
-			答案.append(1)
+			答案.append(2)
 		self.__資料檔.寫(分數檔名, (問題, 答案))
 
 	def 海東分析(self, 海東檔名):
