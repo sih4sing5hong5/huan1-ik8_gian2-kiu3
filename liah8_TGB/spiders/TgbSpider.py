@@ -31,7 +31,7 @@ class TgbSpider(CrawlSpider):
 		sel = Selector(response)
 		item = Liah8TgbItem()
 		item['url'] = response.url
-		item['title'] = sel.css('li.publish').extract()
-		item['date'] = sel.css('li.title').extract()
+		item['title'] = sel.css('li.title').extract()
+		item['date'] = sel.css('li.publish').extract()
 		item['context'] = sel.css('div.article-content-inner').extract()
 		yield item
