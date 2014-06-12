@@ -19,6 +19,7 @@ from 分言語.語言判斷詞表 import 語言判斷詞表
 from 臺灣言語工具.解析整理.詞物件網仔 import 詞物件網仔
 import itertools
 from 處理TGB.資料檔 import 資料檔
+import random
 
 class 語言判斷:
 	國語連詞 = None
@@ -73,10 +74,11 @@ class 語言判斷:
 			斷詞結果 = self.__斷詞剖析工具.斷詞(處理減號, 等待 = 10, 一定愛成功 = True)
 			章物件 = self.__斷詞結構化工具.斷詞轉章物件(斷詞結果)
 			self.斷詞[處理減號] = 章物件
-			斷詞物件檔案 = gzip.open('../語料/TGB/斷詞物件.tmp.pickle.gz', 'wb')
-			pickle.dump(self.斷詞, 斷詞物件檔案)
-			斷詞物件檔案.close()
-			os.rename('../語料/TGB/斷詞物件.tmp.pickle.gz','../語料/TGB/斷詞物件.pickle.gz')
+			if random.randint(0,99)==3:
+				斷詞物件檔案 = gzip.open('../語料/TGB/斷詞物件.tmp.pickle.gz', 'wb')
+				pickle.dump(self.斷詞, 斷詞物件檔案)
+				斷詞物件檔案.close()
+				os.rename('../語料/TGB/斷詞物件.tmp.pickle.gz','../語料/TGB/斷詞物件.pickle.gz')
 		標好, 分數, 詞數 = self.判斷模型.國語分數(章物件)
 		return 標好, 分數, 詞數
 	def 閩南語分數(self, 處理減號):
