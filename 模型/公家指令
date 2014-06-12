@@ -13,6 +13,18 @@ function set_var
 	trg_text=訓.${trg}
 }
 
+function set_huan1_kok4_var
+{
+	src=${src_type}.閩南語文本.txt
+	trg=${trg_type}.國語文本.txt
+	lm_text=1000ban7.txt.lm
+	test_text=試.${src_type}.閩南語答案.txt
+	ans_text=試.${trg_type}.試驗文本.txt
+	
+	src_text=訓.${src}
+	trg_text=訓.${trg}
+}
+
 function prepare_data
 {	
 	ngram-count -order 3 -interpolate -wbdiscount -unk -text ${lm_text} -lm ${lm_text}.lm

@@ -1,0 +1,11 @@
+#!/bin/bash
+num=$1
+name=${num}.斷詞
+src_type=${num}.斷詞
+trg_type=${num}.斷詞
+
+source 公家指令
+
+set_huan1_kok4_var
+
+make_model
