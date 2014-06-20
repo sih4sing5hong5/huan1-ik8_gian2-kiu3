@@ -38,7 +38,10 @@ class 語言判斷:
 	判斷模型 = 語言判斷模型()
 	詞表 = {}
 	斷詞 = {}
+	句對應分數={}
 	def 分數(self, 語句):
+		if 語句 in self.句對應分數:
+			return self.句對應分數[語句]
 		處理減號 = self.__粗胚.建立物件語句前處理減號(教會羅馬字音標, 語句)
 		標好國語, 國語分數, 國語詞數 = self.國語分數(處理減號)
 		標好閩南語, 閩南語分數, 閩南語詞數, 教羅, 通用 = self.閩南語分數(處理減號)
@@ -74,7 +77,7 @@ class 語言判斷:
 			斷詞結果 = self.__斷詞剖析工具.斷詞(處理減號, 等待 = 10, 一定愛成功 = True)
 			章物件 = self.__斷詞結構化工具.斷詞轉章物件(斷詞結果)
 			self.斷詞[處理減號] = 章物件
-			if random.randint(0,99)==3:
+			if 3==3:
 				斷詞物件檔案 = gzip.open('../語料/TGB/斷詞物件.tmp.pickle.gz', 'wb')
 				pickle.dump(self.斷詞, 斷詞物件檔案)
 				斷詞物件檔案.close()
@@ -120,7 +123,11 @@ if os.path.isfile('../語料/TGB/斷詞物件.pickle.gz'):
 	斷詞物件檔案 = gzip.open('../語料/TGB/斷詞物件.pickle.gz', 'rb')
 	判斷.斷詞 = pickle.load(斷詞物件檔案)
 	斷詞物件檔案.close()
-
+	
+句對應分數檔名='../語料/TGB/全部句分數.json.gz'
+if os.path.isfile(句對應分數檔名):
+	_資料檔 = 資料檔()
+	判斷.句對應分數 = _資料檔.讀(句對應分數檔名)
 
 def __試驗():
 	print(判斷.分數('tsiong1-hua3-kuan7 ting2-jim7 gi7-tiunn2 peh8-hong5-sim1 e5 hau7-senn1 peh8-bin2-kiat8 '))

@@ -104,7 +104,13 @@ class 解析TGB:
 					逝.append(一逝)
 # 		print(len(逝))
 		return 逝
-
+	def 提一逝一逝資料出來(self,分數檔名= '../語料/TGB/分數.json.gz'):
+		全部 = self.__資料檔.讀(分數檔名)
+		for 資料 in 全部:
+			for 一逝 in 資料['內容'].split('\n'):
+				一逝 = 一逝.strip()
+				if 一逝 != '':
+					yield 一逝
 
 if __name__ == '__main__':
 	TGB = 解析TGB()
