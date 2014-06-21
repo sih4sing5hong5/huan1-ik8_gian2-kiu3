@@ -17,7 +17,7 @@ function set_huan1_kok4_var
 {
 	src=${src_type}.閩南語文本.txt
 	trg=${trg_type}.國語文本.txt
-	lm_text=1000ban7.txt.lm
+	lm_text=1000ban7.txt
 	test_text=試.${src_type}.閩南語答案.txt
 	ans_text=試.${trg_type}.試驗文本.txt
 	
