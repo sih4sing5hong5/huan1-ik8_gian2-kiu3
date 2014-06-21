@@ -21,6 +21,8 @@ import itertools
 from 處理TGB.資料檔 import 資料檔
 import random
 
+句對應分數檔名='../語料/TGB/全部句分數.json.gz'
+
 class 語言判斷:
 	國語連詞 = None
 	閩南語辭典 = None
@@ -49,6 +51,11 @@ class 語言判斷:
 		結果 = [國語分數, 國語詞數, \
 				閩南語分數, 閩南語詞數, 教羅, 通用]
 		結果.extend(定用詞)
+		self.句對應分數[語句]=結果
+		if len(self.句對應分數) % 1 == 0:
+			self.__資料檔.寫(句對應分數檔名+'.tmp', self.句對應分數)
+			os.rename(句對應分數檔名+'.tmp', 句對應分數檔名)
+			print('第', len(self.句對應分數), '句')
 		return 結果
 	def 有偌濟漢字(self, 語句):
 		漢字 = 0
@@ -124,7 +131,6 @@ if os.path.isfile('../語料/TGB/斷詞物件.pickle.gz'):
 	判斷.斷詞 = pickle.load(斷詞物件檔案)
 	斷詞物件檔案.close()
 	
-句對應分數檔名='../語料/TGB/全部句分數.json.gz'
 if os.path.isfile(句對應分數檔名):
 	_資料檔 = 資料檔()
 	判斷.句對應分數 = _資料檔.讀(句對應分數檔名)
