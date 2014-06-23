@@ -16,10 +16,11 @@ class 分TGB語料:
 		閩南句 = set(self._讀語料.讀語料檔案(閩南檔))
 		全部 = self._資料檔.讀(分數檔名)
 		切標題 = re.compile('(.*)／(.*)@(.*)')
-		狀況 = {}
 		分析 = {}
+		揣文章編號=re.compile(r'/blog/post/(\d+)')
 		for 資料 in 全部:
-			網址 = 資料['網址']
+# 			網址 = 資料['網址'].split('/blog/post/', 1)[1]
+			網址 = int(揣文章編號.search(資料['網址']).group(1))
 			if 網址 not in 分析:
 				分析[網址] = {'國語':[], '閩南語':[]}
 			分開 = 分析[網址]
@@ -39,7 +40,7 @@ class 分TGB語料:
 						print(逝)
 		國集, 閩集 = [], []
 		編號 = 0
-		for 網址, 分開 in 分析.items():
+		for 網址, 分開 in sorted(分析.items()):
 			國 = '\n'.join(分開['國語'])
 			閩 = '\n'.join(分開['閩南語'])
 			國集.append(國)
@@ -51,12 +52,6 @@ class 分TGB語料:
 					檔.close()
 			編號 += 1
 
-		for 文, 類 in zip([國集, 閩集], ['國', '閩']):
-			檔 = open('../語料/TGB/分開/{1}'.format(編號, 類), 'w')
-			print('\n'.join(文), file = 檔)
-			檔.close()
-		for a, b in 狀況.items():
-			print (a, b)
 if __name__ == '__main__':
 	TGB = 分TGB語料()
 # 	TGB.段落字分析('../語料/TGB/原來TGB.json.gz', '../語料/TGB/分數.json.gz')
