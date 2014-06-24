@@ -1,16 +1,31 @@
 from 臺灣言語工具.解析整理.拆文分析器 import 拆文分析器
-from 臺灣言語工具.解析整理.物件譀鏡 import 物件譀鏡
-from 翻譯研究.讀語料 import 讀語料
-from 資料處理.產生一對一 import 產生一對一
-from 校對.公家辭典連詞 import 公家辭典連詞
 from 臺灣言語工具.解析整理.字物件篩仔 import 字物件篩仔
 from 臺灣言語工具.基本元素.公用變數 import 標點符號
 
+'''
+試驗：	
+一般
+	稽 考 在 早 tsiah4 e5 博 學 e5 人 ，
+	khe1-kho2 tsai7-tsa2 tsiah4-e5 phok4-hak8 e5 lang5 ,
+	khe1-考｜kho2 在-早｜tsai7-tsa2 tsiah4-e5｜tsiah4-e5 博-學｜phok4-hak8 e5｜e5 人｜lang5 ，｜,
+漢羅詞
+	攏 總 會 曉 tit4 寫 批 ，
+	long2-tsong2 ue7-hiau2-tit4 sia2 phue1 ,
+	攏-總｜long2-tsong2 會-曉-tit4｜ue7-hiau2-tit4 寫｜sia2 批｜phue1 ，｜,
+毋著字
+	看 見 園 丁 企 hi2 路 邊 ，
+	khuann3-kinn3 hng5-ting1 khia7 hi2 loo7-pinn1 ,
+	看-見｜khuann3-kinn3 園-丁｜hng5-ting1 khia7｜khia7 hi2｜hi2 路-邊｜loo7-pinn1 ，｜,
+頭前毋著字
+	廈 門 e5 牧 師 ，
+	e7-mng5 e5 bok8-su1 , 
+	e7-門｜e7-mng5 e5｜e5 牧-師｜bok8-su1 ，｜,  
+型音數量無對齊
+數字 
+'''
 class 辭典照音排型:
 	_分析器 = 拆文分析器()
-	_公家辭典連詞 = 公家辭典連詞()
 	_篩仔 = 字物件篩仔()
-	_譀鏡 = 物件譀鏡()
 	def 對齊(self, 辭典, 型, 音):
 		型物件 = self._分析器.建立章物件(型)
 		型字陣列 = self._篩仔.篩出字物件(型物件)
@@ -51,8 +66,12 @@ class 辭典照音排型:
 		while 音所在 > 0:
 			音字陣列[音所在 - 1].音 = 音字陣列[音所在 - 1].型
 			音所在 -= 1
+			
+# 		from 臺灣言語工具.解析整理.物件譀鏡 import 物件譀鏡
+# 		_譀鏡 = 物件譀鏡()
 # 		print(型, 音)
-# 		print(self._譀鏡.看斷詞(音物件))
+# 		print(_譀鏡.看斷詞(音物件))
+		
 		return 音物件
 	def 佇辭典內底(self, 辭典, 型, 音):
 		if 型 == 音:
@@ -70,33 +89,3 @@ class 辭典照音排型:
 				return False
 		except:
 			return False
-	'''
-	試驗：	
-	一般
-		稽 考 在 早 tsiah4 e5 博 學 e5 人 ，
-		khe1-kho2 tsai7-tsa2 tsiah4-e5 phok4-hak8 e5 lang5 ,
-		khe1-考｜kho2 在-早｜tsai7-tsa2 tsiah4-e5｜tsiah4-e5 博-學｜phok4-hak8 e5｜e5 人｜lang5 ，｜,
-	漢羅詞
-		攏 總 會 曉 tit4 寫 批 ，
-		long2-tsong2 ue7-hiau2-tit4 sia2 phue1 ,
-		攏-總｜long2-tsong2 會-曉-tit4｜ue7-hiau2-tit4 寫｜sia2 批｜phue1 ，｜,
-	毋著字
-		看 見 園 丁 企 hi2 路 邊 ，
-		khuann3-kinn3 hng5-ting1 khia7 hi2 loo7-pinn1 ,
-		看-見｜khuann3-kinn3 園-丁｜hng5-ting1 khia7｜khia7 hi2｜hi2 路-邊｜loo7-pinn1 ，｜,
-	頭前毋著字
-		廈 門 e5 牧 師 ，
-		e7-mng5 e5 bok8-su1 , 
-		e7-門｜e7-mng5 e5｜e5 牧-師｜bok8-su1 ，｜,  
-	型音數量無對齊
-	數字 
-'''
-if __name__ == '__main__':
-	一對一 = 數位典藏一對一()
-# 	一對一.檔案合起來("../語料/臺語文數位典藏漢羅文.txt.gz",
-# 				"../語料/臺語文數位典藏全羅文.txt.gz",
-# 				"../語料/臺語文數位典藏一對一.txt.gz")
-	一對一.檔案合起來而且無愛無佇辭典的字("../語料/臺語文數位典藏漢羅文.txt.gz",
-				"../語料/臺語文數位典藏全羅文.txt.gz",
-				"../語料/臺語文數位典藏一對一.txt.gz")
-	
