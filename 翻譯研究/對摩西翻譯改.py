@@ -69,7 +69,7 @@ class 對摩西翻譯改:
 						protocol=pickle.HIGHEST_PROTOCOL)
 				語言模型檔案.close()
 			
-		self.用戶端 = 摩西用戶端('localhost', self.埠)
+		self.斷詞用戶端 = 摩西用戶端('localhost', self.埠)
 		self.斷字用戶端 = 摩西用戶端('localhost', self.斷字埠)
 		
 # 		self.辭典 = 型音辭典(4)
@@ -126,19 +126,19 @@ class 對摩西翻譯改:
 	def 翻譯一句(self, 一句, 揀幾个上好):
 		if 揀幾个上好 == 1:
 			揀幾个上好 = 0
-		翻譯結果 = self.用戶端.翻譯(
+		翻譯結果 = self.斷詞用戶端.翻譯(
 			一句, self.編碼器, 另外參數={'nbest':揀幾个上好})
 		全部句 = []
 		if 揀幾个上好 < 1:
-			句物件 = self.揣出猶未翻譯的詞(翻譯結果['text'])
+			句物件 = self._整理斷詞翻譯的結果(翻譯結果['text'])
 			全部句.append(句物件)
 		else:
 			for 上好句 in 翻譯結果['nbest']:
-				句物件 = self.揣出猶未翻譯的詞(上好句['hyp'])
+				句物件 = self._整理斷詞翻譯的結果(上好句['hyp'])
 				全部句.append(句物件)
 		return 全部句
 	未知詞記號 = '|UNK|UNK|UNK'
-	def 揣出猶未翻譯的詞(self, 斷詞翻譯結果):
+	def _整理斷詞翻譯的結果(self, 斷詞翻譯結果):
 		句物件 = self.__分析器.建立句物件('')
 		print('上好句', 斷詞翻譯結果)
 		for 一个詞 in 斷詞翻譯結果.split():
@@ -146,22 +146,31 @@ class 對摩西翻譯改:
 			if 一个詞.endswith(self.未知詞記號):
 				國語詞 = self.提掉後壁未知詞記號(一个詞)
 				print(國語詞)
-				翻譯結果 = self.斷字用戶端.翻譯(
-						' '.join(國語詞), self.編碼器,)
-				for 斷詞 in 翻譯結果['text'].split():
-					if 斷詞.endswith(self.未知詞記號):
-						集物件 = self.__分析器.建立集物件(
-							self.提掉後壁未知詞記號(斷詞)
-							)
-						句物件.內底集.append(集物件)
-					else:
-						集物件 = self.__分析器.轉做集物件(斷詞)
-						句物件.內底集.append(集物件)
+				詞物件=self._斷字翻譯一詞(國語詞)
+				組物件 = self.__分析器.建立組物件('')
+				組物件.內底詞.append(詞物件)
+				集物件 = self.__分析器.建立集物件('')
+				集物件.內底組.append(組物件)
+				句物件.內底集.append(集物件)
 			else:
 				print('一个詞', 一个詞)
 				集物件 = self.__分析器.轉做集物件(一个詞)
 				句物件.內底集.append(集物件)
 		return 句物件
+	def _斷字翻譯一詞(self,國語詞,):
+		詞物件 = self.__分析器.建立詞物件('')
+		翻譯結果 = self.斷字用戶端.翻譯(
+				' '.join(國語詞), self.編碼器,)
+		for 斷詞 in 翻譯結果['text'].split():
+			if 斷詞.endswith(self.未知詞記號):
+				字物件 = self.__分析器.建立字物件(
+					self.提掉後壁未知詞記號(斷詞)
+					)
+				詞物件.內底字.append(字物件)
+			else:
+				字物件 = self.__分析器.轉做字物件(斷詞)
+				詞物件.內底字.append(字物件)
+		return 詞物件
 	def 提掉後壁未知詞記號(self,詞):
 		return 詞[:-len(self.未知詞記號)]
 if __name__ == '__main__':
