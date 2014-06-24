@@ -1,10 +1,7 @@
-import json
-import gzip
+
 from 處理TGB.資料檔 import 資料檔
-import os
 import re
 from 臺灣言語工具.解析整理.文章粗胚 import 文章粗胚
-from 臺灣言語工具.音標系統.閩南語.教會羅馬字音標 import 教會羅馬字音標
 from 翻譯研究.讀語料 import 讀語料
 
 class 分TGB語料:
@@ -19,6 +16,9 @@ class 分TGB語料:
 		分析 = {}
 		揣文章編號=re.compile(r'/blog/post/(\d+)')
 		for 資料 in 全部:
+# 			http://taioanchouhap.pixnet.net/blog/post/49196746/%20
+			if not 資料['網址'][-3].isdigit():
+				continue
 # 			網址 = 資料['網址'].split('/blog/post/', 1)[1]
 			網址 = int(揣文章編號.search(資料['網址']).group(1))
 			if 網址 not in 分析:
