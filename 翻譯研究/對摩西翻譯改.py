@@ -93,37 +93,7 @@ class 對摩西翻譯改:
 		for 一逝 in self.語料.讀語料檔案(self.試驗檔名)[:]:
 # 			print(一逝)
 			一逝 = self.編碼器.解碼(一逝)
-			翻譯結果 = self.用戶端.翻譯(
-				一逝, self.編碼器, 另外參數={'nbest':self.摩西揀幾个})
-			全部句 = []
-			print('翻譯結果', 翻譯結果)
-			for 上好句 in 翻譯結果['nbest']:
-				句物件 = self.__分析器.建立句物件('')
-				print('上好句', 上好句['hyp'])
-				編號 = 0
-				for 一个詞 in 上好句['hyp'].split():
-# 					print(一个詞)
-					集物件 = self.__分析器.建立集物件('')
-					if 一个詞.endswith('|UNK|UNK|UNK'):
-						國語詞 = 一个詞.replace('|UNK|UNK|UNK', '')
-						print(國語詞)
-						翻譯結果 = self.斷字用戶端.翻譯(
-								' '.join(國語詞), self.編碼器,)
-						for 斷詞 in 翻譯結果['text'].split():
-							if 斷詞.endswith('|UNK|UNK|UNK'):
-								斷詞.replace('|UNK|UNK|UNK', '')
-								集物件 = self.__分析器.建立集物件(
-										斷詞.replace('|UNK|UNK|UNK', ''))
-								句物件.內底集.append(集物件)
-							else:
-								集物件 = self.__分析器.轉做集物件(斷詞)
-								句物件.內底集.append(集物件)
-					else:
-						print('一个詞', 一个詞)
-						集物件 = self.__分析器.轉做集物件(一个詞)
-						句物件.內底集.append(集物件)
-					編號 += 1
-				全部句.append(句物件)
+			全部句=self.翻譯一句(一逝, self.摩西揀幾个)
 			上好分數 = None
 			上好物件 = None
 			if self.摩西揀幾个 > 1:
@@ -152,7 +122,38 @@ class 對摩西翻譯改:
 				print(譀鏡.看斷詞(上好物件,
 					物件分型音符號='｜', 物件分字符號='-', 物件分詞符號=' '),
 				file=結果檔案)
-
+	def 翻譯一句(self, 一句,揀幾个上好):
+		翻譯結果 = self.用戶端.翻譯(
+			一句, self.編碼器, 另外參數={'nbest':揀幾个上好})
+		全部句 = []
+		for 上好句 in 翻譯結果['nbest']:
+			句物件 = self.揣出猶未翻譯的詞(上好句['hyp'])
+			全部句.append(句物件)
+		return 全部句
+	def 揣出猶未翻譯的詞(self, 斷詞翻譯結果):
+		句物件 = self.__分析器.建立句物件('')
+		print('上好句', 斷詞翻譯結果)
+		for 一个詞 in 斷詞翻譯結果.split():
+			集物件 = self.__分析器.建立集物件('')
+			if 一个詞.endswith('|UNK|UNK|UNK'):
+				國語詞 = 一个詞.replace('|UNK|UNK|UNK', '')
+				print(國語詞)
+				翻譯結果 = self.斷字用戶端.翻譯(
+						' '.join(國語詞), self.編碼器,)
+				for 斷詞 in 翻譯結果['text'].split():
+					if 斷詞.endswith('|UNK|UNK|UNK'):
+						斷詞.replace('|UNK|UNK|UNK', '')
+						集物件 = self.__分析器.建立集物件(
+								斷詞.replace('|UNK|UNK|UNK', ''))
+						句物件.內底集.append(集物件)
+					else:
+						集物件 = self.__分析器.轉做集物件(斷詞)
+						句物件.內底集.append(集物件)
+			else:
+				print('一个詞', 一个詞)
+				集物件 = self.__分析器.轉做集物件(一个詞)
+				句物件.內底集.append(集物件)
+		return 句物件
 if __name__ == '__main__':
 	翻譯研究 = 對摩西翻譯改()
 	翻譯研究.載入()
