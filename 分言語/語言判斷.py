@@ -21,9 +21,10 @@ import itertools
 from 處理TGB.資料檔 import 資料檔
 import random
 
-句對應分數檔名='../語料/TGB/全部句分數.json.gz'
+句對應分數檔名 = '../語料/TGB/全部句分數.json.gz'
 
 class 語言判斷:
+	偌濟存一擺 = 100
 	國語連詞 = None
 	閩南語辭典 = None
 	閩南語連詞 = None
@@ -40,21 +41,25 @@ class 語言判斷:
 	判斷模型 = 語言判斷模型()
 	詞表 = {}
 	斷詞 = {}
-	句對應分數={}
+	句對應分數 = {}
 	def 分數(self, 語句):
 		if 語句 in self.句對應分數:
 			return self.句對應分數[語句]
 		處理減號 = self.__粗胚.建立物件語句前處理減號(教會羅馬字音標, 語句)
+		print('算國語')
 		標好國語, 國語分數, 國語詞數 = self.國語分數(處理減號)
+		print('算閩南')
 		標好閩南語, 閩南語分數, 閩南語詞數, 教羅, 通用 = self.閩南語分數(處理減號)
+		print('算定用詞')
 		定用詞 = self.看國閩定用詞(標好國語, 標好閩南語)
 		結果 = [國語分數, 國語詞數, \
 				閩南語分數, 閩南語詞數, 教羅, 通用]
 		結果.extend(定用詞)
-		self.句對應分數[語句]=結果
-		if len(self.句對應分數) % 1 == 0:
-			self.__資料檔.寫(句對應分數檔名+'.tmp', self.句對應分數)
-			os.rename(句對應分數檔名+'.tmp', 句對應分數檔名)
+		self.句對應分數[語句] = 結果
+		print('好矣')
+		if len(self.句對應分數) % self.偌濟存一擺 == 0:
+			self.__資料檔.寫(句對應分數檔名 + '.tmp', self.句對應分數)
+			os.rename(句對應分數檔名 + '.tmp', 句對應分數檔名)
 			print('第', len(self.句對應分數), '句')
 		return 結果
 	def 有偌濟漢字(self, 語句):
@@ -84,11 +89,11 @@ class 語言判斷:
 			斷詞結果 = self.__斷詞剖析工具.斷詞(處理減號, 等待 = 10, 一定愛成功 = True)
 			章物件 = self.__斷詞結構化工具.斷詞轉章物件(斷詞結果)
 			self.斷詞[處理減號] = 章物件
-			if 3==3:
+			if len(self.斷詞) % self.偌濟存一擺 == 0:
 				斷詞物件檔案 = gzip.open('../語料/TGB/斷詞物件.tmp.pickle.gz', 'wb')
 				pickle.dump(self.斷詞, 斷詞物件檔案)
 				斷詞物件檔案.close()
-				os.rename('../語料/TGB/斷詞物件.tmp.pickle.gz','../語料/TGB/斷詞物件.pickle.gz')
+				os.rename('../語料/TGB/斷詞物件.tmp.pickle.gz', '../語料/TGB/斷詞物件.pickle.gz')
 		標好, 分數, 詞數 = self.判斷模型.國語分數(章物件)
 		return 標好, 分數, 詞數
 	def 閩南語分數(self, 處理減號):
@@ -130,7 +135,7 @@ if os.path.isfile('../語料/TGB/斷詞物件.pickle.gz'):
 	斷詞物件檔案 = gzip.open('../語料/TGB/斷詞物件.pickle.gz', 'rb')
 	判斷.斷詞 = pickle.load(斷詞物件檔案)
 	斷詞物件檔案.close()
-	
+
 if os.path.isfile(句對應分數檔名):
 	_資料檔 = 資料檔()
 	判斷.句對應分數 = _資料檔.讀(句對應分數檔名)
