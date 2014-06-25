@@ -5,6 +5,7 @@ from 處理TGB.資料檔 import 資料檔
 import os
 from 臺灣言語工具.音標系統.閩南語.教會羅馬字音標 import 教會羅馬字音標
 from 臺灣言語工具.解析整理.文章粗胚 import 文章粗胚
+import re
 
 class 解析TGB:
 	__資料檔 = 資料檔()
@@ -104,13 +105,38 @@ class 解析TGB:
 					逝.append(一逝)
 # 		print(len(逝))
 		return 逝
-	def 提一逝一逝資料出來(self,分數檔名= '../語料/TGB/分數.json.gz'):
+	切標題 = re.compile('(.*)／(.*)[@＠](.*)')
+	揣文章編號 = re.compile(r'/blog/post/(\d+)')
+	def 提一逝一逝資料佮編出來(self, 分數檔名 = '../語料/TGB/分數.json.gz'):
+		排好順序 = {}
 		全部 = self.__資料檔.讀(分數檔名)
 		for 資料 in 全部:
-			for 一逝 in 資料['內容'].split('\n'):
-				一逝 = 一逝.strip()
-				if 一逝 != '':
-					yield 一逝
+# 			http://taioanchouhap.pixnet.net/blog/post/49196746/%20
+			if not 資料['網址'][-3].isdigit():
+				continue
+			網址 = int(self.揣文章編號.search(資料['網址']).group(1))
+			if 網址 not in 排好順序:
+				排好順序[網址] = [0] * (1 + 資料['攏總幾段'])
+			排好順序[網址][資料['第幾段'] + 1] = 資料['內容']
+			if 資料['第幾段'] == 0:
+				標題 = 資料['標題']
+				結果 = self.切標題.split(標題)
+				if len(結果) == 5 and 結果[1] != '' and 結果[2] != '':
+					排好順序[網址][0] = \
+						'\n'.join([結果[1], 結果[2]])
+				else:
+					排好順序[網址][0] = 標題.strip()
+		for 編號, 資料 in sorted(排好順序.items()):
+# 			print(編號, 資料)
+			for 區 in 資料:
+				for 一逝 in 區.split('\n'):
+					一逝 = 一逝.strip()
+					if 一逝 != '':
+						yield 編號, 一逝
+	def 提一逝一逝資料出來(self, 分數檔名 = '../語料/TGB/分數.json.gz'):
+		for 編號, 一逝 in self.提一逝一逝資料佮編出來(分數檔名):
+			yield 一逝
+
 
 if __name__ == '__main__':
 	TGB = 解析TGB()
