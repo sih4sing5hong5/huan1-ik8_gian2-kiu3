@@ -9,12 +9,12 @@ class 一逝翻譯:
 	_斷詞斷字翻譯 = 斷詞斷字翻譯()
 	_譀鏡 = 物件譀鏡()
 	def __init__(self, 斷詞埠, 斷字埠):
-		self.斷詞用戶端 = 摩西用戶端('localhost', self.斷詞埠)
-		self.斷字用戶端 = 摩西用戶端('localhost', self.斷字埠)
+		self.斷詞用戶端 = 摩西用戶端('localhost', 斷詞埠)
+		self.斷字用戶端 = 摩西用戶端('localhost', 斷字埠)
 	def 譯(self, 一句):
 		句物件 = self._斷詞斷字翻譯.譯一句(
 			self.斷詞用戶端, self.斷字用戶端, self.編碼器,
-				一句)
+				一句)[0]
 		return self._譀鏡.看斷詞(句物件)
 
 if __name__ == '__main__':
