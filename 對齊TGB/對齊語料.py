@@ -12,6 +12,7 @@ import itertools
 from 對齊TGB.空白斷詞分析器 import 空白斷詞分析器
 from 臺灣言語工具.基本元素.公用變數 import 分詞符號
 from 資料處理.斷一對一字 import 斷一對一字
+import os
 
 class 對齊語料:
 	_資料檔 = 資料檔()
@@ -106,7 +107,8 @@ class 對齊語料:
 		self._讀語料.寫語料檔案(斷字, '\n'.join(斷字資料))
 if __name__ == '__main__':
 	TGB = 對齊語料()
-# 	TGB.段落字分析('../語料/TGB/原來TGB.json.gz', '../語料/TGB/分數.json.gz')
-	編 = 1166
-# 	TGB.對齊一段一段(編)
-	TGB.對齊一逝一逝(編)
+	for 編 in range(1179):
+		if os.path.isfile(TGB.國語檔名.format(編)) and\
+				os.path.isfile(TGB.閩南語檔名.format(編)):
+			TGB.對齊一段一段(編)
+			TGB.對齊一逝一逝(編)
