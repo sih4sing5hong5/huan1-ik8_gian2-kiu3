@@ -7,10 +7,11 @@ class 提掉文章標仔工具(HTMLParser):
 		super(提掉文章標仔工具, self).__init__()
 		self.剖析結果 = []
 	def handle_starttag(self, tag, attrs):
-		if tag == 'hr':
-			self.剖析結果.append('<hr>')
+# 		if tag == 'hr':
+# 			self.剖析結果.append('<hr>')
+		pass
 	def handle_endtag(self, tag):
-		if tag == 'p':
+		if tag == 'p' or tag == 'div':
 			self.剖析結果.append('\n')
 	def handle_data(self, data):
 		self.剖析結果.append(data)
@@ -22,6 +23,6 @@ class 提掉文章標仔工具(HTMLParser):
 			# <span>5--</span>月
 			# 24冬過--去-a
 			處理輕聲字 = 無雙空白逝.replace('- ', '-').replace(' -', '-')
-			if len(處理輕聲字)>0:
+			if len(處理輕聲字) > 0:
 				整理過文章.append(處理輕聲字)
 		return '\n'.join(整理過文章)
