@@ -13,7 +13,12 @@ class 解析TGB:
 		全部 = self.__資料檔.讀(json檔名)
 		分數狀況 = []
 		__粗胚 = 文章粗胚()
-		for 資料 in 全部:
+# 		h = html2text.HTML2Text()
+# 		h.ignore_links = True
+# 		h.ignore_emphasis=True
+# 		h.ignore_images=True
+# 		h.google_doc=False
+		for 第幾篇, 資料 in enumerate(全部):
 			標題工具 = 提掉網頁標仔工具()
 			標題工具.feed(資料['title'][0])
 # 			 print(標題工具.結果())
@@ -24,7 +29,7 @@ class 解析TGB:
 			文章工具.feed(資料['context'][0])
 			文章 = 文章工具.結果().replace('³', '3').split('<hr>')
 			第幾段 = 0
-			for 段 in 文章:
+			for 第幾段, 段 in enumerate(文章):
 				處理減號 = __粗胚.建立物件語句前處理減號(教會羅馬字音標, 段)
 				分數 = (判斷.有偌濟漢字(處理減號),) + 判斷.有偌濟音標(處理減號)
 				分數狀況.append({
@@ -36,7 +41,6 @@ class 解析TGB:
 					'內容':段.strip(),
 					'分數':分數
 					})
-				第幾段 += 1
 # 			print(分數狀況[-1])
 		self.__資料檔.寫(分數檔名, 分數狀況)
 		print(len(全部))
@@ -137,13 +141,16 @@ class 解析TGB:
 		for 編號, 一逝 in self.提一逝一逝資料佮編出來(分數檔名):
 			yield 一逝
 
-
-if __name__ == '__main__':
+def _main():
 	TGB = 解析TGB()
-# 	TGB.段落字分析('../語料/TGB/原來TGB.json.gz', '../語料/TGB/分數.json.gz')
+	TGB.段落字分析('../語料/TGB/原來TGB.json.gz', '../語料/TGB/分數.json.gz')
 # 	TGB.分國閩句('../語料/TGB/分數.json.gz', '../語料/TGB/國閩句.json.gz')
-	TGB.國閩分數('../語料/TGB/全部句分數.json.gz',
-			'../語料/TGB/國閩句.json.gz',
-			'../語料/TGB/逐句訓練分數.json.gz',
-			'../語料/TGB/原來Hai2Tong1.json.gz')
+# 	TGB.國閩分數('../語料/TGB/全部句分數.json.gz',
+# 			'../語料/TGB/國閩句.json.gz',
+# 			'../語料/TGB/逐句訓練分數.json.gz',
+# 			'../語料/TGB/原來Hai2Tong1.json.gz')
 # 	TGB.海東分析('../語料/TGB/原來Hai2Tong1.json.gz')
+
+import cProfile
+if __name__ == '__main__':
+	cProfile.run('_main()')
