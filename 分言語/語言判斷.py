@@ -60,8 +60,12 @@ class 語言判斷:
 		if len(self.句對應分數) % self.偌濟存一擺 == 0:
 			self.__資料檔.寫(句對應分數檔名 + '.tmp', self.句對應分數)
 			os.rename(句對應分數檔名 + '.tmp', 句對應分數檔名)
-			print('第', len(self.句對應分數), '句')
+		print('第', len(self.句對應分數), '句')
 		return 結果
+	def 標好國語(self, 語句):
+		處理減號 = self.__粗胚.建立物件語句前處理減號(教會羅馬字音標, 語句)
+		標好國語, 國語分數, 國語詞數 = self.國語分數(處理減號)
+		return 標好國語
 	def 有偌濟漢字(self, 語句):
 		漢字 = 0
 		for 字 in 語句:
@@ -94,6 +98,7 @@ class 語言判斷:
 				pickle.dump(self.斷詞, 斷詞物件檔案)
 				斷詞物件檔案.close()
 				os.rename('../語料/TGB/斷詞物件.tmp.pickle.gz', '../語料/TGB/斷詞物件.pickle.gz')
+			print('斷詞這馬', len(self.斷詞), '句')
 		標好, 分數, 詞數 = self.判斷模型.國語分數(章物件)
 		return 標好, 分數, 詞數
 	def 閩南語分數(self, 處理減號):
