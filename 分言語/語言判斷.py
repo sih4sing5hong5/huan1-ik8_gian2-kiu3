@@ -24,7 +24,7 @@ import random
 句對應分數檔名 = '../語料/TGB/全部句分數.json.gz'
 
 class 語言判斷:
-	偌濟存一擺 = 100
+	偌濟存一擺 = 1500
 	國語連詞 = None
 	閩南語辭典 = None
 	閩南語連詞 = None
