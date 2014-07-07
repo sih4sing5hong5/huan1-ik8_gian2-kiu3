@@ -42,4 +42,5 @@ class 斷語料:
 if __name__ == '__main__':
 	TGB = 斷語料()
 	for 編號 in range(1179):
+		print(編號)
 		TGB.對齊前處理(編號)
