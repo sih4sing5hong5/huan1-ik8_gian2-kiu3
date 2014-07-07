@@ -13,14 +13,19 @@ class 分TGB語料:
 	def 分國閩句(self, 分數檔名, 國語檔, 閩南檔):
 		國語句 = set(self._讀語料.讀語料檔案(國語檔))
 		閩南句 = set(self._讀語料.讀語料檔案(閩南檔))
+		for 國語 in list(國語句):
+			國語句.add(''.join(國語.split()))
+		for 閩南 in list(閩南句):
+			閩南句.add(''.join(閩南.split()))
 		全部 = self._資料檔.讀(分數檔名)
 		分析 = {}
 		for 編號, 逝 in self.解析.提一逝一逝資料佮編出來(分數檔名):
+			無空白 = ''.join(逝.split())
 			if 編號 not in 分析:
 				分析[編號] = {'國語':[], '閩南語':[]}
-			if 逝 in 國語句:
+			if 無空白 in 國語句:
 				分析[編號]['國語'].append(逝)
-			elif 逝 in 閩南句:
+			elif 無空白 in 閩南句:
 				分析[編號]['閩南語'].append(逝)
 			else:
 				print(逝)
