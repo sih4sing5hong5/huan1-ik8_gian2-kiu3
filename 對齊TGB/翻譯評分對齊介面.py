@@ -1,5 +1,5 @@
 
-from bleualign import Aligner
+from bleualign.align import Aligner
 
 class 翻譯評分對齊介面:
 	公家參數 = {}
@@ -20,10 +20,8 @@ class 翻譯評分對齊介面:
 		參數['targetfile'] = 目標
 		參數['srctotarget'] = 原來翻目標
 		參數['targettosrc'] = 目標翻原來
-		if 原來對齊!=None:
-			參數['output-src'] = 原來對齊
-		if 目標對齊!=None:
-			參數['output-target'] = 目標對齊
+		參數['output-src'] = 原來對齊
+		參數['output-target'] = 目標對齊
 
 		a = Aligner(參數)
 		return a.mainloop()

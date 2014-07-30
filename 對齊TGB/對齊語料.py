@@ -116,6 +116,7 @@ class 對齊語料:
 if __name__ == '__main__':
 	TGB = 對齊語料()
 	for 編 in range(1179):
+		print(編)
 		if os.path.isfile(TGB.國語檔名.format(編)) and\
 				os.path.isfile(TGB.閩南語檔名.format(編)):
 			TGB.對齊一段一段(編)
