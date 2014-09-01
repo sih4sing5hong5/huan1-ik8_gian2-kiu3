@@ -134,8 +134,8 @@ if os.path.isfile('../語料/分言語/語言判斷詞表.pickle.gz'):
 	語言判斷詞表檔案 = gzip.open('../語料/分言語/語言判斷詞表.pickle.gz', 'rb')
 	判斷.詞表 = pickle.load(語言判斷詞表檔案)
 	語言判斷詞表檔案.close()
-else:
-	判斷.詞表 = 語言判斷詞表().產生()
+# else:
+# 	判斷.詞表 = 語言判斷詞表().產生()
 if os.path.isfile('../語料/TGB/斷詞物件.pickle.gz'):
 	斷詞物件檔案 = gzip.open('../語料/TGB/斷詞物件.pickle.gz', 'rb')
 	判斷.斷詞 = pickle.load(斷詞物件檔案)
