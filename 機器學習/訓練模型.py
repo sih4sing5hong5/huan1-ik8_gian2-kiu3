@@ -6,33 +6,34 @@ import numpy as np
 from sklearn import svm
 from 翻譯研究.讀語料 import 讀語料
 from sklearn.decomposition.pca import PCA
+import time
 
 class 訓練模型:
 	_資料檔 = 資料檔()
 	_讀語料 = 讀語料()
 	_解析TGB = 解析TGB()
-	def 訓練(self, 分數檔名):
-		問題, 答案 = self._資料檔.讀(分數檔名)
-		訓練問題 = []
-		前幾常用 = 1000
-		for 問 in 問題:
-			訓練問題.append(問[0:14] + 問[14:14 + 前幾常用] + 問[1014:1014 + 前幾常用])
-		試驗函式 = self.LDA佮SVM模型(訓練問題, 答案)
-		結果 = 試驗函式(訓練問題)
-		毋著 = 0
-		第幾个 = 0
-		for 結, 答 in zip(結果, 答案):
-			if 結 != 答:
-				print(結, 答, 第幾个)
-				毋著 += 1
-			第幾个 += 1
-		print(毋著, len(答案))
-		return 試驗函式
+# 	def 訓練(self, 分數檔名):
+# 		問題, 答案 = self._資料檔.讀(分數檔名)
+# 		訓練問題 = []
+# 		前幾常用 = 1000
+# 		for 問 in 問題:
+# 			訓練問題.append(問[0:14] + 問[14:14 + 前幾常用] + 問[1014:1014 + 前幾常用])
+# 		試驗函式 = self.LDA佮SVM模型(訓練問題, 答案)
+# 		結果 = 試驗函式(訓練問題)
+# 		毋著 = 0
+# 		第幾个 = 0
+# 		for 結, 答 in zip(結果, 答案):
+# 			if 結 != 答:
+# 				print(結, 答, 第幾个)
+# 				毋著 += 1
+# 			第幾个 += 1
+# 		print(毋著, len(答案))
+# 		return 試驗函式
 	def SVM模型(self, 問題, 答案):
 		sample_weight_constant = np.ones(len(問題))
-		clf = svm.SVC(C = 1)
+		clf = svm.SVC(C=1)
 		print('訓練SVM')
-		clf.fit(問題, 答案, sample_weight = sample_weight_constant)
+		clf.fit(問題, 答案, sample_weight=sample_weight_constant)
 		print('訓練了')
 		return lambda 問:clf.predict(問)
 	def LDA模型(self, 問題, 答案):
@@ -44,27 +45,27 @@ class 訓練模型:
 		return lambda 問:lda.predict(問)
 	def PCA佮SVM模型(self, 問題, 答案):
 		sample_weight_constant = np.ones(len(問題))
-		clf = svm.SVC(C = 1)
-		pca = PCA(n_components = 100)
+		clf = svm.SVC(C=1)
+		pca = PCA(n_components=100)
 # 		clf = svm.NuSVC()
 		print('訓練PCA')
 		pca.fit(問題)
 		print('訓練SVM')
-		clf.fit(pca.transform(問題), 答案, sample_weight = sample_weight_constant)
+		clf.fit(pca.transform(問題), 答案, sample_weight=sample_weight_constant)
 		print('訓練了')
 		return lambda 問:clf.predict(pca.transform(問))
 	def LDA佮SVM模型(self, 問題, 答案):
 		sample_weight_constant = np.ones(len(問題))
-		clf = svm.SVC(C = 1)
+		clf = svm.SVC(C=1)
 		lda = LDA()
 # 		clf = svm.NuSVC()
 		print('訓練LDA')
 		lda.fit(問題, 答案)
 		print('訓練SVM')
-		clf.fit(lda.transform(問題), 答案, sample_weight = sample_weight_constant)
+		clf.fit(lda.transform(問題), 答案, sample_weight=sample_weight_constant)
 		print('訓練了')
 		return lambda 問:clf.predict(lda.transform(問))
-	def 試驗(self, 函式, 國語結果 = None, 閩南語結果 = None):
+	def 試驗(self, 函式, 國語結果=None, 閩南語結果=None):
 		分類 = {0:[], 1:[], 2:[]}
 		段資料 = []
 		分數資料 = []
@@ -82,7 +83,7 @@ class 訓練模型:
 # 		print(分類[1][:10])
 # 		print(分類[2][:10])
 		return 分類
-	def 試驗著毋著(self, 函式, 題目檔, 答案, 前幾常用 = None):
+	def 試驗著毋著(self, 函式, 題目檔, 答案, 前幾常用=None):
 		段資料 = []
 		分數資料 = []
 		for 段 in self._讀語料.讀語料檔案(題目檔):
@@ -136,8 +137,8 @@ class 訓練模型:
 	def 重產生檔案(self, 國語檔, 閩南檔, 新國語檔, 新閩南檔):
 		舊國語句 = set(self._讀語料.讀語料檔案(國語檔))
 		舊閩南句 = set(self._讀語料.讀語料檔案(閩南檔))
-		國語句=set()
-		閩南句=set()
+		國語句 = set()
+		閩南句 = set()
 		for 國語 in 舊國語句:
 			國語句.add(''.join(國語.split()))
 		for 閩南 in 舊閩南句:
@@ -155,9 +156,11 @@ class 訓練模型:
 		self._讀語料.寫語料檔案(新國語檔, '\n'.join(國))
 		self._讀語料.寫語料檔案(新閩南檔, '\n'.join(閩))
 	def 調整問題(self, 問題, 前幾常用):
+		定用詞數量 = (len(問題[0]) - 14) // 2
+# 		print(定用詞數量)
 		訓練問題 = []
 		for 問 in 問題:
-			訓練問題.append(問[0:4] + 問[6:14] + 問[14:14 + 前幾常用] + 問[1014:1014 + 前幾常用])
+			訓練問題.append(問[0:4] + 問[6:14] + 問[14:14 + 前幾常用] + 問[14 + 定用詞數量:14 + 定用詞數量 + 前幾常用])
 		return 訓練問題
 if __name__ == '__main__':
 	TGB = 訓練模型()
@@ -172,10 +175,11 @@ if __name__ == '__main__':
 		'../語料/TGB/分國閩/訓.閩南.gz')
 	for 定用詞 in [0, 10, 20, 50, 100, 200, 500, 1000, 2000, 5000, 7000]:
 		訓練問題 = TGB.調整問題(問題, 定用詞)
-		for 名, 方法 in zip(['SVM', ],#'LDA', 'LDA佮SVM', 'PCA佮SVM'],
+		for 名, 方法 in zip(['SVM', ],  # 'LDA', 'LDA佮SVM', 'PCA佮SVM'],
 				[TGB.SVM模型, TGB.LDA模型, TGB.LDA佮SVM模型, TGB.PCA佮SVM模型]):
+			print('試驗函式', 名, '定用詞', 定用詞, '訓練開始', time.ctime())
 			試驗函式 = 方法(訓練問題, 答案)
-			print('試驗函式', 名, '定用詞', 定用詞)
+			print('訓練結束', time.ctime())
 			國毋著, 國全部 = TGB.試驗著毋著(試驗函式, '../語料/TGB/分國閩/試.國語.gz', 0, 定用詞)
 			閩毋著, 閩全部 = TGB.試驗著毋著(試驗函式, '../語料/TGB/分國閩/試.閩南.gz', 1, 定用詞)
-			print('毋著', 國毋著, 閩毋著, 國毋著 + 閩毋著, '全部', 國全部 + 閩全部)
+			print('毋著', 國毋著, 閩毋著, 國毋著 + 閩毋著, '全部', 國全部 + 閩全部, '時間', time.ctime())
