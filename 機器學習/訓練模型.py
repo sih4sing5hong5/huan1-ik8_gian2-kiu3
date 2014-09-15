@@ -172,7 +172,7 @@ if __name__ == '__main__':
 		'../語料/TGB/分國閩/訓.閩南.gz')
 	for 定用詞 in [0, 10, 20, 50, 100, 200, 500, 1000, 2000, 5000, 7000]:
 		訓練問題 = TGB.調整問題(問題, 定用詞)
-		for 名, 方法 in zip(['SVM', 'LDA', 'LDA佮SVM', 'PCA佮SVM'],
+		for 名, 方法 in zip(['SVM', ],#'LDA', 'LDA佮SVM', 'PCA佮SVM'],
 				[TGB.SVM模型, TGB.LDA模型, TGB.LDA佮SVM模型, TGB.PCA佮SVM模型]):
 			試驗函式 = 方法(訓練問題, 答案)
 			print('試驗函式', 名, '定用詞', 定用詞)
