@@ -2,7 +2,7 @@ import re
 from 翻譯研究.讀語料 import 讀語料
 import os
 from 臺灣言語工具.解析整理.拆文分析器 import 拆文分析器
-from 臺灣言語工具.表單.語句連詞 import 語句連詞
+from 臺灣言語工具.表單.實際語句連詞 import 實際語句連詞
 import pickle
 from 臺灣言語工具.斷詞.中研院工具.官方斷詞剖析工具 import 官方斷詞剖析工具
 from 臺灣言語工具.斷詞.中研院工具.斷詞結構化工具 import 斷詞結構化工具
@@ -31,7 +31,7 @@ class 中研院千萬句揀出連詞:
 # 		for 一逝 in self.揣標題.split(文章)[1::2]:
 # 			while True:
 # 				try:
-# 					斷詞結果 = self.__斷詞剖析工具.斷詞(一逝)
+# 					斷詞結果 = self.__斷詞剖析工具.揣詞(一逝)
 # 				except:
 # 					pass
 # 				else:
@@ -53,7 +53,7 @@ class 中研院千萬句揀出連詞:
 			連詞.看(組物件)
 
 if __name__ == '__main__':
-	連詞 = 語句連詞(3)
+	連詞 = 實際語句連詞(3)
 	中研院千萬句揀出連詞().處理全部檔案(連詞, '/dev/shm/1000萬(XML)/')
 	中研院連詞檔案 = gzip.open('../語料/分言語/中研院連詞.pickle.gz', 'wb')
 	pickle.dump(連詞, 中研院連詞檔案,

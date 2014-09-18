@@ -2,7 +2,7 @@
 import json
 import urllib.request
 from 臺灣言語工具.解析整理.拆文分析器 import 拆文分析器
-from 臺灣言語工具.表單.語句連詞 import 語句連詞
+from 臺灣言語工具.表單.實際語句連詞 import 實際語句連詞
 from 翻譯研究.讀語料 import 讀語料
 from 臺灣言語工具.解析整理.文章粗胚 import 文章粗胚
 from 臺灣言語工具.音標系統.閩南語.臺灣閩南語羅馬字拼音 import 臺灣閩南語羅馬字拼音
