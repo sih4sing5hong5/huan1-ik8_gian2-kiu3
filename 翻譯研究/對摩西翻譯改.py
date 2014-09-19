@@ -64,8 +64,8 @@ class 對摩西翻譯改:
 						protocol=pickle.HIGHEST_PROTOCOL)
 				語言模型檔案.close()
 			
-		self.斷詞用戶端 = 摩西用戶端('localhost', self.埠)
-		self.斷字用戶端 = 摩西用戶端('localhost', self.斷字埠)
+		self.斷詞用戶端 = 摩西用戶端('localhost', self.埠,編碼器=self.編碼器)
+		self.斷字用戶端 = 摩西用戶端('localhost', self.斷字埠,編碼器=self.編碼器)
 		
 # 		self.辭典 = 型音辭典(4)
 # 		for 型, 音陣列 in self.字典對應表.items():
