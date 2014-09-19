@@ -4,8 +4,9 @@ for i in 華臺斷字 華臺斷詞 華臺斷詞組
 do
 	for j in 華臺斷字 華臺斷詞 華臺斷詞組 上長詞對前 上長詞對後
 	do
-		echo $i $j $port
-		mosesserver -f ${i}_${j}/model/moses.ini --server-port $port &
-		port=$port+1
+		if [ $i != $j ]; then
+			echo $i $j
+			bash -x 華臺通用指令 華臺斷字 華臺斷詞 &
+		fi
 	done
 done
