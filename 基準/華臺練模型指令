@@ -6,7 +6,7 @@ do
 	do
 		if [ $i != $j ]; then
 			echo $i $j
-			bash -x 華臺通用指令 華臺斷字 華臺斷詞 &
+			bash -x 華臺通用指令 $i $j &
 		fi
 	done
 done
