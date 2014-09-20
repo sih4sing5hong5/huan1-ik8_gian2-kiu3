@@ -67,7 +67,7 @@ class 語言判斷詞表:
 		for 詞物件, 擺 in 孤詞表:
 			if 詞物件 == None:
 				continue
-			字串 = self.__物件譀鏡.看斷詞(詞物件)
+			字串 = self.__物件譀鏡.看分詞(詞物件)
 			孤詞資料.append((詞物件, 擺, 字串))
 		孤詞資料.sort(key=排法)
 		return 孤詞資料[:self.定用詞數量]

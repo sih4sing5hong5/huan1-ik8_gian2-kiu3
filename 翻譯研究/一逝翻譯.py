@@ -15,7 +15,7 @@ class 一逝翻譯:
 		句物件 = self._斷詞斷字翻譯.譯一句(
 			self.斷詞用戶端, self.斷字用戶端, self.編碼器,
 				一句)[0]
-		return self._譀鏡.看斷詞(句物件)
+		return self._譀鏡.看分詞(句物件)
 
 if __name__ == '__main__':
 	翻譯 = 一逝翻譯(sys.argv[1], sys.argv[2])
