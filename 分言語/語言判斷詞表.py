@@ -6,8 +6,8 @@ import Pyro4
 
 class 語言判斷詞表:
 	__物件譀鏡 = 物件譀鏡()
-	定用詞數量 = 15000
-	特徵詞數量 = 7000
+	定用詞數量 = 7000
+	特徵詞數量 = 3000
 	def 產生(self):
 		Pyro4.config.SERIALIZER = 'pickle'
 		判斷模型 = Pyro4.Proxy("PYRO:判斷模型@localhost:9091")
