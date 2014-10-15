@@ -21,6 +21,9 @@ export SCRIPTS_ROOTDIR=/usr/local/mosesdecoder/scripts/
 
 ###語料樣式探討
 ##產生文本
+請看`資料處理/處理`
+這馬無維護
+
 ##走華臺樣式實驗
 下跤的程式是佇國網中心平行處理的
 一个樣式愛3~4G的記憶體
