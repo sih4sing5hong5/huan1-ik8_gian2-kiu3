@@ -1,5 +1,5 @@
 #!/bin/bash
-declare -i port=8101
+declare -i port=8001
 for i in 華臺斷字 華臺斷詞 華臺斷詞組
 do
 	for j in 華臺斷字 華臺斷詞 華臺斷詞組 上長詞對前 上長詞對後

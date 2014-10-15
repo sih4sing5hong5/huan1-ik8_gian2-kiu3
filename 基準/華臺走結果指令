@@ -2,7 +2,7 @@
 zcat ../語料/試.華臺國語字斷字.txt.gz | python3 ../資料處理/編碼.py > ../基準/試.華臺國語字斷字.txt
 zcat ../語料/試.華臺國語字斷詞.txt.gz | python3 ../資料處理/編碼.py > ../基準/試.華臺國語字斷詞.txt
 zcat ../語料/試.華臺國語字.txt.gz | python3 ../資料處理/編碼.py > ../基準/試.華臺國語字斷詞組.txt
-declare -i port=8101
+declare -i port=8001
 for i in 華臺斷字 華臺斷詞 華臺斷詞組
 do
 	for j in 華臺斷字 華臺斷詞 華臺斷詞組 上長詞對前 上長詞對後
