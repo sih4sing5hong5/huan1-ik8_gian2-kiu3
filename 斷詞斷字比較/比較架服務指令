@@ -1,0 +1,8 @@
+#!/bin/bash
+declare -i port=8001
+for i in 華斷字_閩斷字 華斷詞_閩斷字 華斷字_閩斷詞 華斷詞_閩斷詞
+do
+	echo $i $port
+	mosesserver -f ${i}暫存資料夾/翻譯模型資料夾/model/moses.ini --server-port $port &
+	port=$port+1
+done

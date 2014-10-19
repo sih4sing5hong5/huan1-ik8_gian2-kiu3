@@ -19,6 +19,24 @@ PATH=$PATH:/usr/local/srilm/bin/i686-m64/
 export SCRIPTS_ROOTDIR=/usr/local/mosesdecoder/scripts/
 ```
 
+###斷詞斷字比較
+####訓練模型
+```bash
+訓練摩西斷詞佮斷字模型.py
+```
+####架摩西服務
+```bash
+bash 比較走結果指令
+```
+####走實驗
+```bash
+bash 比較架服務指令
+```
+####看實驗分數
+```bash
+bash 比較看分數指令
+```
+
 ###語料樣式探討
 ##產生文本
 請看`資料處理/處理`

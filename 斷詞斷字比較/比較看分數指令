@@ -1,0 +1,8 @@
+#!/bin/bash
+zcat ../語料/試.例句一對一斷字.txt.gz > ../斷詞斷字比較/試.例句一對一斷字.txt
+ 
+for i in 華斷字_閩斷字 華斷詞_閩斷字 華斷字_閩斷詞 華斷詞_閩斷詞
+do
+	echo $i
+	cat 試驗結果_${i} | ${SCRIPTS_ROOTDIR}/generic/multi-bleu.perl -lc ../斷詞斷字比較/試.例句一對一斷字.txt
+done
