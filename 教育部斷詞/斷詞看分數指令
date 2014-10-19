@@ -1,0 +1,10 @@
+#!/bin/bash
+zcat ../語料/例句一對一.txt.gz > ../教育部斷詞/例句一對一.txt
+for i in 例句一對一拄好斷詞 例句一對一上長詞對前斷詞 例句一對一上長詞對後斷詞
+do
+	zcat ../語料/${i}.txt.gz > ../教育部斷詞/${i}.txt
+	echo $i 召回率
+	cat ../教育部斷詞/${i}.txt | ${SCRIPTS_ROOTDIR}/generic/multi-bleu.perl -lc ../教育部斷詞/例句一對一.txt
+	echo $i 準確率
+	cat ../教育部斷詞/例句一對一.txt | ${SCRIPTS_ROOTDIR}/generic/multi-bleu.perl -lc ../教育部斷詞/${i}.txt
+done
