@@ -1,7 +1,0 @@
-#!/bin/bash
-for i in {00..05}
-do
-	echo $i
-	bash ../模型/無典藏斷詞指令 $i &
-	bash ../模型/無典藏斷字指令 $i &
-done

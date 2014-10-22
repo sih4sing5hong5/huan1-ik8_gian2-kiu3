@@ -1,4 +1,6 @@
 #!/bin/bash
+bash 原本斷詞指令 &
+bash 原本斷字指令 &
 for i in {01..05}
 do
 	echo $i
