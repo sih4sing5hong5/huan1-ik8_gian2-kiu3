@@ -24,4 +24,5 @@ class 翻譯評分對齊介面:
 		參數['output-target'] = 目標對齊
 
 		a = Aligner(參數)
-		return a.mainloop()
+		a.mainloop()
+		return a.results()
