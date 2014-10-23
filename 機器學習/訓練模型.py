@@ -7,6 +7,7 @@ from sklearn import svm
 from 翻譯研究.讀語料 import 讀語料
 from sklearn.decomposition.pca import PCA
 import time
+from 分言語.語言判斷模型 import 無例句訓練的語料
 
 class 訓練模型:
 	_資料檔 = 資料檔()
@@ -163,6 +164,8 @@ class 訓練模型:
 			訓練問題.append(問[0:4] + 問[6:14] + 問[14:14 + 前幾常用] + 問[14 + 定用詞數量:14 + 定用詞數量 + 前幾常用])
 		return 訓練問題
 if __name__ == '__main__':
+	if 無例句訓練的語料:
+		raise RuntimeError('實驗設定是愛有例句訓練的語料')
 	TGB = 訓練模型()
 # 	試驗函式 = TGB.訓練('../語料/TGB/逐句訓練分數.json.gz')
 # 	TGB.試驗('../語料/TGB/全部句分數.json.gz', 試驗函式)

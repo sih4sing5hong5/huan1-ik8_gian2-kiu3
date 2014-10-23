@@ -15,11 +15,10 @@ import Pyro4
 from 臺灣言語工具.解析整理.文章粗胚 import 文章粗胚
 from 臺灣言語工具.解析整理.轉物件音家私 import 轉物件音家私
 from 分言語.語言判斷模型 import 語言判斷模型
-from 分言語.語言判斷詞表 import 語言判斷詞表
 from 臺灣言語工具.解析整理.詞物件網仔 import 詞物件網仔
 import itertools
 from 處理TGB.資料檔 import 資料檔
-import random
+from 分言語.語言判斷模型 import 遠端連接埠
 
 句對應分數檔名 = '../語料/TGB/全部句分數.json.gz'
 
@@ -128,7 +127,7 @@ class 語言判斷:
 
 判斷 = 語言判斷()
 Pyro4.config.SERIALIZER = 'pickle'
-判斷.判斷模型 = Pyro4.Proxy("PYRO:判斷模型@localhost:9091")
+判斷.判斷模型 = Pyro4.Proxy("PYRO:判斷模型@localhost:"+str(遠端連接埠))
 
 if os.path.isfile('../語料/分言語/語言判斷詞表.pickle.gz'):
 	語言判斷詞表檔案 = gzip.open('../語料/分言語/語言判斷詞表.pickle.gz', 'rb')
