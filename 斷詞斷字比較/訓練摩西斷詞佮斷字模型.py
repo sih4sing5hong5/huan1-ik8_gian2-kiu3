@@ -22,7 +22,7 @@ from 臺灣言語工具.翻譯.摩西工具.摩西翻譯模型訓練 import 摩�
 from 翻譯研究.讀語料 import 讀語料
 from 資料處理.斷一對一字 import 斷一對一字
 
-這馬路徑 = os.path.dirname(__file__)
+這馬路徑 = os.path.dirname(os.path.abspath(__file__))
 
 def 檔案陣列斷字(檔案陣列):
 	暫存 = os.path.join(這馬路徑, '暫存')

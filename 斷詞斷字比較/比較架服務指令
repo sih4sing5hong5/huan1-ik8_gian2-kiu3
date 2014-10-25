@@ -1,5 +1,5 @@
 #!/bin/bash
-declare -i port=8001
+declare -i port=8501
 for i in 華斷字_閩斷字 華斷詞_閩斷字 華斷字_閩斷詞 華斷詞_閩斷詞
 do
 	echo $i $port

@@ -16,9 +16,9 @@ class 對摩西翻譯改:
 	結果檔名 = None
 	試驗檔名 = None
 	
-	斷字埠 = 8101
+	斷字埠 = None
 	摩西揀幾个 = 0
-	愛斷字 = True
+	愛斷字 = False
 	語料 = None
 	對齊語料對應表 = None
 	對齊片語表 = None
