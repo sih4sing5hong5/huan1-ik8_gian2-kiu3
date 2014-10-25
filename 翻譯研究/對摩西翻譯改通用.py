@@ -21,5 +21,7 @@ if __name__ == '__main__':
 			sys.argv[2][-5])
 	翻譯研究.埠 = sys.argv[3]
 	翻譯研究.斷字埠 = sys.argv[4]
+	if len(sys.argv)>5:
+		翻譯研究.愛斷字=False
 	翻譯研究.載入()
 	翻譯研究.試驗()

@@ -13,3 +13,5 @@ do
 	PYTHONPATH=..:../../tai5_uan5_gian5_gi2_kang1_ku7/ python3 ../翻譯研究/對摩西翻譯改通用.py 試驗結果_攏無配_${i} $i $port ${port} & 
 	port=$port+1
 done
+port=$port-1
+PYTHONPATH=..:../../tai5_uan5_gian5_gi2_kang1_ku7/ python3 ../翻譯研究/對摩西翻譯改通用.py 試驗結果_無斷詞_${i} $i $port ${first_port} 莫斷詞 &

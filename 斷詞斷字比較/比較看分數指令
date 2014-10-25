@@ -11,4 +11,4 @@ do
 	done
 done
 echo 最後TGB配斷字的斷詞結果
-cat 試驗結果_配斷字_華斷詞_閩斷詞 | ${SCRIPTS_ROOTDIR}/generic/multi-bleu.perl -lc ../斷詞斷字比較/例句一對一斷詞.txt
+cat 試驗結果_無斷詞_華斷詞_閩斷詞 | ${SCRIPTS_ROOTDIR}/generic/multi-bleu.perl -lc ../斷詞斷字比較/例句一對一斷詞.txt
