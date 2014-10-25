@@ -1,9 +1,9 @@
 #!/bin/bash
 zcat ../語料/例句華語字斷詞.txt.gz | PYTHONPATH=..:../../tai5_uan5_gian5_gi2_kang1_ku7/ python3 ../資料處理/斷一對一字.py > ../斷詞斷字比較/例句華語字斷字.txt
 zcat ../語料/例句華語字斷詞.txt.gz > ../斷詞斷字比較/例句華語字斷詞.txt
-zcat ../語料/例句華語字斷詞.txt.gz |head
+
 declare -i first_port=8501
-declare -i su5_port=8501+${first_port}
+declare -i su5_port=${first_port}+2
 declare -i port=${first_port}
 for i in 華斷字_閩斷字 華斷詞_閩斷字 華斷字_閩斷詞 華斷詞_閩斷詞
 do
