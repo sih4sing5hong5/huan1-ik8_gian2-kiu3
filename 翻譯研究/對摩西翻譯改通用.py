@@ -7,7 +7,7 @@ class 對摩西翻譯改通用(對摩西翻譯改):
 	斷字埠 = None
 	結果檔名 = None
 	試驗檔名 = None
-	愛斷字 = False
+	愛斷字 = True
 	
 # mosesserver -f 閩南語斷詞/model/moses.ini --server-port 8201
 # mosesserver -f 國語斷詞組/model/moses.ini --server-port 8202
