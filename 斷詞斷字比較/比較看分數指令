@@ -19,6 +19,6 @@ do
 	echo $i 重斷詞比較
 	for j in 攏無配 配斷字 配斷詞
 	do
-		cat 試驗結果_${j}_${i} | PYTHONPATH=..:../../tai5_uan5_gian5_gi2_kang1_ku7/ python3 ../資料處理/斷一對一字.py | ${SCRIPTS_ROOTDIR}/generic/multi-bleu.perl -lc ../斷詞斷字比較/例句一對一斷詞.txt
+		cat 試驗結果_${j}_${i} | PYTHONPATH=..:../../tai5_uan5_gian5_gi2_kang1_ku7/ python3 ../資料處理/斷一對一詞.py | ${SCRIPTS_ROOTDIR}/generic/multi-bleu.perl -lc ../斷詞斷字比較/例句一對一斷詞.txt
 	done
 done
