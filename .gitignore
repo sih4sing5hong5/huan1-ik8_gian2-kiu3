@@ -4,3 +4,6 @@ __pycache__/
 /.settings
 *.pickle
 *.pyc
+.pydevproject
+.project
+
